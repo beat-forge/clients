@@ -66,11 +66,13 @@ jobs:
           restore-keys: ${{ runner.os }}-cargo-
 
       - name: delete existing bundles on linux and macos
+        continue-on-error: true
         if: matrix.platform == 'macos-latest' || matrix.platform == 'ubuntu-20.04'
         run: |
           rm -rf apps/gui/src-tauri/target/release/bundle
 
       - name: delete existing bundles on windows
+        continue-on-error: true
         if: matrix.platform == 'windows-latest'
         run: |
           Remove-Item -Recurse -Force apps/gui/src-tauri/target/release/bundle
