@@ -12,5 +12,10 @@
     "source.fixAll.eslint": true
   },
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "eslint.validate": ["svelte"]
+  "eslint.validate": [
+    "svelte"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+  }
 }
