@@ -17,3 +17,5 @@ export { default as VerifiedIcon } from './components/icons/Verified.svelte';
 
 // BUTTON
 export { default as Button } from './components/button/Button.svelte'
+// TEXT
+export { default as Text } from './components/text/Text.svelte'

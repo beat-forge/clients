@@ -1,9 +1,6 @@
 <script>
   import { Button, LogoIcon } from 'ui/index.ts';
-
-  /**
-   *
-   */
+  
   function handleClick() {
     console.log('clicked');
   }
