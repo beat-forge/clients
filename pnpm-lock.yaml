@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -185,6 +189,9 @@ importers:
       '@melt-ui/svelte':
         specifier: ^0.34.0
         version: 0.34.0(svelte@3.59.1)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.1.6
     devDependencies:
       eslint-config-custom:
         specifier: workspace:*
@@ -9267,8 +9274,8 @@ packages:
       picocolors: 1.0.0
       sade: 1.8.1
       svelte: 4.0.5
-      svelte-preprocess: 5.0.3(postcss-load-config@4.0.1)(postcss@8.4.27)(svelte@4.0.5)(typescript@5.0.4)
-      typescript: 5.0.4
+      svelte-preprocess: 5.0.3(postcss-load-config@4.0.1)(postcss@8.4.27)(svelte@4.0.5)(typescript@5.1.6)
+      typescript: 5.1.6
     transitivePeerDependencies:
       - '@babel/core'
       - coffeescript
@@ -9314,7 +9321,7 @@ packages:
       svelte: 4.0.5
     dev: true
 
-  /svelte-preprocess@5.0.3(postcss-load-config@4.0.1)(postcss@8.4.27)(svelte@4.0.5)(typescript@5.0.4):
+  /svelte-preprocess@5.0.3(postcss-load-config@4.0.1)(postcss@8.4.27)(svelte@4.0.5)(typescript@5.1.6):
     resolution: {integrity: sha512-GrHF1rusdJVbOZOwgPWtpqmaexkydznKzy5qIC2FabgpFyKN57bjMUUUqPRfbBXK5igiEWn1uO/DXsa2vJ5VHA==}
     engines: {node: '>= 14.10.0'}
     requiresBuild: true
@@ -9360,7 +9367,7 @@ packages:
       sorcery: 0.11.0
       strip-indent: 3.0.0
       svelte: 4.0.5
-      typescript: 5.0.4
+      typescript: 5.1.6
     dev: true
 
   /svelte@3.59.1:
@@ -9818,7 +9825,6 @@ packages:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
@@ -10326,7 +10332,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
