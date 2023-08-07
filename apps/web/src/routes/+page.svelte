@@ -1,43 +1,59 @@
 <script>
-  import { Meta, SectionFrame } from 'ui';
-  import { user } from '$lib/nhost';
-  import CommentForm from './CommentForm.svelte';
-  import Comments from './Comments.svelte';
-  import LoginMessage from './LoginMessage.svelte';
-
-  /** @type { import('./$houdini').PageData } */
-  export let data;
-
-  $: ({ Comments: CommentsData } = data);
-  $: comments = $CommentsData.data?.comments ?? [];
-
-  $: meta = {
-    /** @type {'website'} */
-    type: 'website',
-    title: `WebApp Template (web)`,
-    canonical: 'https://webapp-template.usagizmo.com',
-  };
+	import Counter from './Counter.svelte';
+	import welcome from '$lib/images/svelte-welcome.webp';
+	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
-<Meta {...meta} />
+<svelte:head>
+	<title>Home</title>
+	<meta name="description" content="Svelte demo app" />
+</svelte:head>
 
-<div class="mx-auto max-w-[792px] space-y-5">
-  {#if $user}
-    <CommentForm />
-  {:else}
-    <LoginMessage />
-  {/if}
+<section>
+	<h1>
+		<span class="welcome">
+			<picture>
+				<source srcset={welcome} type="image/webp" />
+				<img src={welcome_fallback} alt="Welcome" />
+			</picture>
+		</span>
 
-  <SectionFrame noPad="y">
-    <div class="pb-[14px]">
-      <!-- attention -->
-      <div class="flex items-center justify-center border-b border-slate-200 pb-2 pt-2.5">
-        <p class="text-sm text-zinc-500">Comments will be deleted as appropriate.</p>
-      </div>
+		to your new<br />SvelteKit app
+	</h1>
 
-      <div>
-        <Comments {comments} />
-      </div>
-    </div>
-  </SectionFrame>
-</div>
+	<h2>
+		try editing <strong>src/routes/+page.svelte</strong>
+	</h2>
+
+	<Counter />
+</section>
+
+<style>
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 0.6;
+	}
+
+	h1 {
+		width: 100%;
+	}
+
+	.welcome {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding: 0 0 calc(100% * 495 / 2048) 0;
+	}
+
+	.welcome img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		display: block;
+	}
+</style>
