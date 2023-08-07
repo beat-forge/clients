@@ -1,0 +1,33 @@
+name: Automatic Versioning
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-gui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+          package-name: "@beat-forge/gui"
+          monorepo-tags: true
+          release-type: node
+          path: "apps/gui"
+
+  release-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
+          package-name: "@beat-forge/web"
+          monorepo-tags: true
+          release-type: node
+          path: "apps/web"
