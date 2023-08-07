@@ -1,10 +1,10 @@
 on:
   push:
     paths:
-      - "apps/gui/**"
+      - 'apps/gui/**'
   pull_request:
     paths:
-      - "apps/gui/**"
+      - 'apps/gui/**'
 
 permissions:
   contents: write
@@ -12,7 +12,12 @@ permissions:
 
 jobs:
   release-gui:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macos-latest, ubuntu-20.04, windows-latest]
+
+    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v3
 
@@ -48,5 +53,11 @@ jobs:
           toolchain: stable
           override: true
 
+      - name: Install dependencies (ubuntu only)
+        if: matrix.platform == 'ubuntu-20.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+
       - name: Build
-        run: pnpm run build
+        run: pnpm run build --scope gui

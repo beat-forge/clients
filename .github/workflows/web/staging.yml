@@ -1,8 +1,7 @@
 on:
   push:
-    paths:
-      - 'apps/web/**'
-  pull_request:
+    branches:
+      - main
     paths:
       - 'apps/web/**'
 
