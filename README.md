@@ -2,7 +2,7 @@
 ![GitHub](https://img.shields.io/github/license/beat-forge/clients) ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beat-forge/clients/staging-web.yml?label=web)
  ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/beat-forge/clients/build-gui.yml?label=gui)
 
-This repository contains our SvelteKit web client and Electron GUI client. The web client is hosted at [beatforge.net](https://beatforge.net) and the GUI client is available for download on the front page of the website.
+This repository contains our SvelteKit web client and Tauri GUI client. The web client is hosted at [beatforge.net](https://beatforge.net) and the GUI client is available for download on the front page of the website.
 
 ## Development 🛠️
 
