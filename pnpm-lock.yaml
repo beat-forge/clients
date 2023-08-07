@@ -126,8 +126,8 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2(ts-node@10.9.1)
       tslib:
-        specifier: ^2.4.1
-        version: 2.5.2
+        specifier: ^2.6.1
+        version: 2.6.1
       typescript:
         specifier: ^5.0.0
         version: 5.0.4
@@ -10560,10 +10560,6 @@ packages:
 
   /tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
-    dev: true
-
-  /tslib@2.5.2:
-    resolution: {integrity: sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==}
     dev: true
 
   /tslib@2.6.1:
