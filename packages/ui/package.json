@@ -8,14 +8,30 @@
   "license": "MIT",
   "scripts": {
     "lint": "prettier --check --ignore-path=../../.prettierignore . && eslint \".\"",
-    "format": "prettier --write --ignore-path=../../.prettierignore ."
+    "format": "prettier --write --ignore-path=../../.prettierignore .",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.2.1",
+    "@storybook/addon-interactions": "^7.2.1",
+    "@storybook/addon-links": "^7.2.1",
+    "@storybook/blocks": "^7.2.1",
+    "@storybook/svelte": "^7.2.1",
+    "@storybook/svelte-vite": "^7.2.1",
+    "@storybook/testing-library": "^0.2.0",
     "autoprefixer": "^10.4.14",
     "eslint-config-custom": "workspace:*",
+    "eslint-plugin-storybook": "^0.6.13",
     "postcss": "^8.4.27",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.2.1",
     "svelte": "^3.9.2",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@melt-ui/svelte": "^0.34.0"
   }
 }
