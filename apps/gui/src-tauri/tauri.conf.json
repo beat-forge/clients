@@ -1,0 +1,78 @@
+{
+	"$schema": "../node_modules/@tauri-apps/cli/schema.json",
+	"build": {
+		"beforeBuildCommand": "npm run build",
+		"beforeDevCommand": "npm run vitedev",
+		"devPath": "http://localhost:5173",
+		"distDir": "../build"
+	},
+	"package": {
+		"productName": "BeatForge Client",
+		"version": "../package.json"
+	},
+	"tauri": {
+		"allowlist": {
+			"window": {
+				"close": true,
+				"hide": true,
+				"maximize": true,
+				"minimize": true,
+				"show": true,
+				"startDragging": true,
+				"unmaximize": true,
+				"unminimize": true
+			}
+		},
+		"bundle": {
+			"active": true,
+			"category": "DeveloperTool",
+			"copyright": "",
+			"deb": {
+				"depends": []
+			},
+			"externalBin": [],
+			"icon": [
+				"assets/icons/32x32.png",
+				"assets/icons/128x128.png",
+				"assets/icons/128x128@2x.png",
+				"assets/icons/icon.icns",
+				"assets/icons/icon.ico"
+			],
+			"identifier": "net.beatforge.client",
+			"macOS": {
+				"entitlements": null,
+				"exceptionDomain": "",
+				"frameworks": [],
+				"providerShortName": null,
+				"signingIdentity": null
+			},
+			"resources": [],
+			"shortDescription": "",
+			"targets": "all",
+			"windows": {
+				"certificateThumbprint": null,
+				"digestAlgorithm": "sha256",
+				"timestampUrl": ""
+			}
+		},
+		"security": {
+			"csp": null
+		},
+		"updater": {
+			"active": false
+		},
+		"windows": [
+			{
+				"fullscreen": false,
+				"minHeight": 650,
+				"minWidth": 1000,
+				"height": 800,
+				"resizable": true,
+				"title": "BeatForge Client",
+				"width": 1200,
+				"transparent": true,
+				"decorations": false
+			}
+		]
+	}
+}
