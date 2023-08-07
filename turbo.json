@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "web#generate": {
+      "outputs": [".svelte-kit/**", "schema.graphql"]
+    },
+    "mockup#build": {
+      "outputs": ["public/styles.css"]
+    },
+    "story#build": {
+      "outputs": ["storybook-static/**"]
+    },
+    "web#build": {
+      "dependsOn": ["web#generate"],
+      "outputs": [".svelte-kit/**", ".vercel/**", "$houdini/**", "schema.graphql"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "web#lint": {
+      "dependsOn": ["web#generate"],
+      "outputs": []
+    },
+    "test": {},
+    "mockup#test": {
+      "dependsOn": ["mockup#build"],
+      "outputs": ["tests/external-links.txt"]
+    },
+    "format": {}
+  }
+}

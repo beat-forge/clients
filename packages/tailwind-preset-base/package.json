@@ -1,0 +1,24 @@
+{
+  "name": "tailwind-preset-base",
+  "version": "0.0.0",
+  "type": "module",
+  "module": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./global.css": "./global.css"
+  },
+  "scripts": {
+    "lint:js": "eslint .",
+    "lint:cspell": "cspell \"**\"",
+    "lint:prettier": "prettier --check --ignore-path=../../.prettierignore .",
+    "lint": "concurrently pnpm:lint:*",
+    "format:js": "eslint --fix .",
+    "format:prettier": "prettier --write --ignore-path=../../.prettierignore .",
+    "format": "concurrently pnpm:format:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "eslint-config-custom": "workspace:*",
+    "tailwindcss": "^3.3.2"
+  }
+}

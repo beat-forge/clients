@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="h-screen">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>WebApp Template (mockup)</title>
+    <meta name="description" content="WebApp Template (mockup) Description" />
+    <meta property="og:title" content="WebApp Template (mockup)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://webapp-template-mockup.usagizmo.com" />
+    <meta
+      property="og:image"
+      content="https://webapp-template-mockup.usagizmo.com/images/ogp.png"
+    />
+    <meta property="og:site_name" content="WebApp Template (mockup)" />
+    <meta property="og:description" content="WebApp Template (mockup) Description" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WebApp Template (mockup)" />
+    <meta name="twitter:description" content="WebApp Template (mockup) Description" />
+    <meta
+      name="twitter:image"
+      content="https://webapp-template-mockup.usagizmo.com/images/ogp.png"
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://webapp-template-mockup.usagizmo.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Source+Code+Pro:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp-noto.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="relative h-full bg-gray-100 text-zinc-900">
+    <header class="border-b border-slate-200 bg-slate-50 px-4 md:sticky md:top-0 md:z-20">
+      <div
+        class="relative mx-auto flex max-w-[1120px] flex-col items-center justify-center py-5 md:h-16 md:flex-row md:py-0"
+      >
+        <h1 class="text-center text-[26px] font-bold leading-tight tracking-tighter lg:text-[32px]">
+          WebApp Template (mockup)
+        </h1>
+        <p class="mt-2 text-sm text-zinc-500 md:ml-auto md:mt-0 md:px-4 lg:px-5 lg:text-base">
+          A starting point for building a static site.
+        </p>
+        <div class="mt-5 md:mt-0">
+          <a
+            href="https://github.com/usagizmo/webapp-template"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex rounded-md bg-zinc-900 px-5 py-2 text-sm text-white hover:bg-opacity-80"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="px-4 pb-20 pt-10">
+      <div class="mx-auto max-w-[1120px] space-y-9">
+        <!-- Development -->
+        <div>
+          <h2 class="mb-4 text-2xl font-bold md:text-3xl">What's inside?</h2>
+          <section class="rounded-lg border border-slate-200 bg-slate-50 px-6 pb-8 pt-5">
+            <h3 class="mb-1.5 text-xl font-semibold md:text-2xl">Uses</h3>
+            <div>
+              <ul class="space-y-0.5">
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://turborepo.org/"
+                    class="font-semibold text-blue-500"
+                    >Turborepo</a
+                  >
+                  x
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://pnpm.io/"
+                    class="font-semibold text-blue-500"
+                    >pnpm</a
+                  >
+                </li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://prettier.io/"
+                    class="font-semibold text-blue-500"
+                    >Prettier</a
+                  >
+                  (w/
+                  <ul class="inline">
+                    <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/sveltejs/prettier-plugin-svelte"
+                        class="font-semibold text-blue-500"
+                        >prettier-plugin-svelte</a
+                      >
+                    </li>
+                    <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/tailwindlabs/prettier-plugin-tailwindcss"
+                        class="font-semibold text-blue-500"
+                        >prettier-plugin-tailwindcss</a
+                      >
+                    </li>
+                  </ul>
+                  )
+                </li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://eslint.org"
+                    class="font-semibold text-blue-500"
+                    >ESLint</a
+                  >
+                  (w/
+                  <ul class="inline">
+                    <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/import-js/eslint-plugin-import"
+                        class="font-semibold text-blue-500"
+                        >eslint-plugin-import</a
+                      >
+                    </li>
+                  </ul>
+                  ) /
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://cspell.org/"
+                    class="font-semibold text-blue-500"
+                    >CSpell</a
+                  >
+                </li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/okonet/lint-staged"
+                    class="font-semibold text-blue-500"
+                    >lint-staged</a
+                  >
+                  /
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/typicode/husky"
+                    class="font-semibold text-blue-500"
+                    >husky</a
+                  >
+                </li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  GitHub Actions (
+                  <ul class="inline">
+                    <li class="inline [&:not(:first-child):before]:content-['_+_']">Linting</li>
+                    <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                      Testing (Validate
+                      <code class="font-mono font-bold text-black">`href`</code> and
+                      <code class="font-mono font-bold text-black">`src`</code> paths)
+                    </li>
+                  </ul>
+                  )
+                </li>
+                <li
+                  class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                >
+                  Execute <code class="font-mono font-bold text-black">`eslint --fix`</code> and
+                  <code class="font-mono font-bold text-black">`prettier`</code> when saving with VS
+                  Code
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- Apps and Packages -->
+        <div>
+          <h2 class="mb-4 text-2xl font-bold md:text-3xl">Apps and Packages</h2>
+          <div class="space-y-6 md:flex md:gap-5 md:space-y-0">
+            <!-- apps/-->
+            <section
+              class="rounded-lg border border-slate-200 bg-slate-50 px-6 pb-8 pt-5 md:flex-1"
+            >
+              <h3 class="mb-1.5 text-xl font-semibold md:text-2xl">apps/</h3>
+              <div>
+                <ul class="space-y-0.5">
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">nhost</strong><br />
+                    Local environment test server and production
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://nhost.io/"
+                      class="font-semibold text-blue-500"
+                      >Nhost</a
+                    >
+                    migration.
+                  </li>
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">mockup</strong><br />
+                    A starting point for building a static site.<br />
+                    <ul class="inline">
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://tailwindcss.com"
+                          class="font-semibold text-blue-500"
+                          >Tailwind CSS</a
+                        >
+                      </li>
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        Vanilla JS
+                      </li>
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://vitest.dev/"
+                          class="font-semibold text-blue-500"
+                          >Vitest</a
+                        >
+                        (
+                        <ul class="inline">
+                          <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                            Check links
+                          </li>
+                          <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                            file names
+                          </li>
+                        </ul>
+                        )
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">story</strong><br />
+                    Stories for the Svelte Components.<br />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://storybook.js.org/"
+                      class="font-semibold text-blue-500"
+                      >Storybook</a
+                    >
+                    (w/
+                    <ul class="inline">
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://svelte.jp/"
+                          class="font-semibold text-blue-500"
+                          >Svelte</a
+                        >
+                      </li>
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://tailwindcss.com"
+                          class="font-semibold text-blue-500"
+                          >Tailwind CSS</a
+                        >
+                      </li>
+                    </ul>
+                    )
+                  </li>
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">web</strong><br />
+                    A starting point for building Svelte application.<br />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://kit.svelte.dev/"
+                      class="font-semibold text-blue-500"
+                      >SvelteKit</a
+                    >
+                    (w/
+                    <ul class="inline">
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://tailwindcss.com/"
+                          class="font-semibold text-blue-500"
+                          >Tailwind CSS</a
+                        >
+                      </li>
+                    </ul>
+                    )<br />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://nhost.io/"
+                      class="font-semibold text-blue-500"
+                      >Nhost</a
+                    >
+                    (w/
+                    <ul class="inline">
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.houdinigraphql.com/"
+                          class="font-semibold text-blue-500"
+                          >Houdini</a
+                        >
+                      </li>
+                    </ul>
+                    ) /
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://vitest.dev/"
+                      class="font-semibold text-blue-500"
+                      >Vitest</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <!-- packages/-->
+            <section
+              class="rounded-lg border border-slate-200 bg-slate-50 px-6 pb-8 pt-5 md:flex-1"
+            >
+              <h3 class="mb-1.5 text-xl font-semibold md:text-2xl">packages/</h3>
+              <div>
+                <ul class="space-y-0.5">
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">ui</strong><br />
+                    A stub Svelte component library.
+                  </li>
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">tailwind-preset-base</strong><br />
+                    A preset for use with
+                    <code class="font-mono font-bold text-black">`tailwind.config.js`</code> and
+                    <code class="font-mono font-bold text-black">`global.css`</code>.
+                  </li>
+                  <li
+                    class="relative pl-5 before:absolute before:left-0 before:top-2 before:h-2.5 before:w-2.5 before:rounded-full before:bg-zinc-900"
+                  >
+                    <strong class="font-semibold">eslint-config-custom</strong><br />
+                    <code class="font-mono font-bold text-black">`eslint`</code>
+                    configurations.<br />
+                    (w/
+                    <ul class="inline">
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://github.com/sveltejs/prettier-plugin-svelte"
+                          class="font-semibold text-blue-500"
+                          >prettier-plugin-svelte</a
+                        >
+                      </li>
+                      <li class="inline [&:not(:first-child):before]:content-['_+_']">
+                        eslint-config-[<a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://github.com/prettier/eslint-config-prettier"
+                          class="font-semibold text-blue-500"
+                          >prettier</a
+                        >|<a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.npmjs.com/package/eslint-config-turbo"
+                          class="font-semibold text-blue-500"
+                          >turbo</a
+                        >]
+                      </li>
+                    </ul>
+                    )
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Commands -->
+        <div>
+          <h2 class="mb-4 text-2xl font-bold md:text-3xl">Commands</h2>
+
+          <pre
+            class="overflow-auto rounded-2xl bg-slate-800 p-6"
+          ><code class="text-white font-mono font-bold"><span class="text-sky-300">pnpm</span> i  <span class="text-slate-500"># Resolve dependency packages and prepare .env files</span>
+<span class="text-slate-500"># Then set up /.env</span>
+
+<span class="text-sky-300">pnpm</span> build   <span class="text-slate-500"># Build all apps and packages</span>
+<span class="text-sky-300">pnpm</span> dev     <span class="text-slate-500"># Set up file monitoring builds and local servers for development</span>
+<span class="text-sky-300">pnpm</span> lint    <span class="text-slate-500"># eslint + markuplint | prettier --check</span>
+<span class="text-sky-300">pnpm</span> test    <span class="text-slate-500"># Testing</span>
+<span class="text-sky-300">pnpm</span> format  <span class="text-slate-500"># eslint --fix + prettier --write + format project-words.txt</span></code></pre>
+
+          <!-- Buttons -->
+          <div class="mt-9 flex items-center justify-center">
+            <a
+              href="https://github.com/usagizmo/webapp-template"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex rounded-md bg-zinc-900 px-5 py-2 text-sm text-white hover:bg-opacity-80"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-4 px-4">
+      <div class="mx-auto max-w-[1120px] border-t border-zinc-200 py-3 pb-4 text-center">
+        <a
+          href="https://usagizmo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 text-sm text-zinc-500 hover:opacity-80"
+        >
+          @usagizmo
+        </a>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

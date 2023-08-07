@@ -1,0 +1,52 @@
+{
+  "name": "web",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "generate:svelte": "svelte-kit sync",
+    "generate:pull-schema": "houdini pull-schema",
+    "generate": "concurrently pnpm:generate:*",
+    "dev": "vite dev --open",
+    "build": "pnpm generate && vite build",
+    "preview": "vite preview",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+    "lint:check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "lint:markup": "markuplint --config ../../.markuplintrc \"**\"",
+    "lint:js": "eslint .",
+    "lint:cspell": "cspell \"**\"",
+    "lint:prettier": "prettier --check --ignore-path=../../.prettierignore .",
+    "lint": "concurrently pnpm:lint:*",
+    "test:watch": "vitest",
+    "test": "vitest run",
+    "format:js": "eslint --fix .",
+    "format:prettier": "prettier --write --ignore-path=../../.prettierignore .",
+    "format": "concurrently pnpm:format:*"
+  },
+  "dependencies": {
+    "@nhost/nhost-js": "^2.2.4",
+    "graphql": "^16.6.0",
+    "graphql-ws": "^5.13.1",
+    "js-cookie": "^3.0.5",
+    "luxon": "^3.3.0",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.1.0",
+    "@sveltejs/kit": "^1.18.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.41.0",
+    "eslint-config-custom": "workspace:*",
+    "graphqurl": "^1.0.1",
+    "houdini": "^1.2.3",
+    "houdini-svelte": "^1.2.3",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.0",
+    "svelte": "^3.59.1",
+    "svelte-check": "^3.3.2",
+    "tailwind-preset-base": "workspace:*",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.8",
+    "vitest": "^0.31.1"
+  }
+}
