@@ -18,12 +18,13 @@
         { name: 'PersonIcon', component: PersonIcon},
         { name: 'VerifiedIcon', component: VerifiedIcon },
     ];
+    
 </script>
 
 <div class="grid md:grid-cols-6 gap-4">
     {#each iconImports as { name, component }}
         <div class="flex flex-col items-center">
-            <svelte:component this={component} {...$$props } />
+            <svelte:component this={component} className="w-8 h-8" />
             <span class="text-sm text-gray-500">{name}</span>
         </div>
     {/each}

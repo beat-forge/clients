@@ -1,3 +1,4 @@
+// ICONS
 export { default as CalendarIcon } from './components/icons/Calendar.svelte';
 export { default as CategoryIcon } from './components/icons/Category.svelte';
 export { default as CheckmarkIcon } from './components/icons/Checkmark.svelte';
@@ -13,3 +14,6 @@ export { default as NotVerifiedIcon } from './components/icons/NotVerified.svelt
 export { default as PersonIcon } from './components/icons/Person.svelte';
 export { default as SearchIcon } from './components/icons/Search.svelte';
 export { default as VerifiedIcon } from './components/icons/Verified.svelte';
+
+// BUTTON
+export { default as Button } from './components/button/Button.svelte'
