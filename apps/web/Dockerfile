@@ -12,4 +12,4 @@ RUN pnpm install --filter="web"
 RUN pnpm run build --filter="web"
 
 EXPOSE 4173
-CMD ["pnpm", "run", "--filter=web", "preview", "--", "--host"]  
+CMD ["pnpm", "run", "--filter=web", "preview", "--host"]  
