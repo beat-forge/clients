@@ -8,7 +8,7 @@ RUN pnpm install
 
 COPY . .
 
-RUN pnpm run install --filter="web"
+RUN pnpm install --filter="web"
 RUN pnpm run build --filter="web"
 
 EXPOSE 4173
