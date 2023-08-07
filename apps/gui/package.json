@@ -3,9 +3,10 @@
 	"version": "0.0.0",
 	"scripts": {
 		"dev": "tauri dev",
-		"vitedev": "vite dev --host",
-		"build": "vite build",
-		"preview": "vite preview",
+		"build": "tauri build",
+		"vite:dev": "vite dev --host",
+		"vite:build": "vite build",
+		"vite:preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
