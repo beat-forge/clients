@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          token: ${{ secrets.ACTIONS_TOKEN }}
+          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
           package-name: "@beat-forge/gui"
           monorepo-tags: true
           release-type: node
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          token: ${{ secrets.ACTIONS_TOKEN }}
+          token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
           package-name: "@beat-forge/web"
           monorepo-tags: true
           release-type: node
