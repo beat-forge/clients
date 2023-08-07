@@ -8,7 +8,8 @@ RUN pnpm install
 
 COPY . .
 
+RUN pnpm run install --filter="web"
 RUN pnpm run build --filter="web"
-EXPOSE 4173
 
+EXPOSE 4173
 CMD ["pnpm", "run", "--filter=web", "preview"]
