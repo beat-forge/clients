@@ -32,6 +32,8 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "@melt-ui/svelte": "^0.34.0"
+    "@melt-ui/svelte": "^0.34.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "lucide-svelte": "^0.264.0"
   }
 }
