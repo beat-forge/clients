@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -106,8 +102,8 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2
       svelte-check:
-        specifier: ^3.4.3
-        version: 3.4.3(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2)
+        specifier: ^3.4.6
+        version: 3.4.6(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2)
       svelte-sequential-preprocessor:
         specifier: ^2.0.1
         version: 2.0.1
@@ -209,8 +205,8 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2
       svelte-check:
-        specifier: ^3.4.3
-        version: 3.4.3(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2)
+        specifier: ^3.4.6
+        version: 3.4.6(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2)
       tailwindcss:
         specifier: ^3.3.2
         version: 3.3.2(ts-node@10.9.1)
@@ -10619,8 +10615,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check@3.4.3(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2):
-    resolution: {integrity: sha512-O07soQFY3X0VDt+bcGc6D5naz0cLtjwnmNP9JsEBPVyMemFEqUhL2OdLqvkl5H/u8Jwm50EiAU4BPRn5iin/kg==}
+  /svelte-check@3.4.6(postcss-load-config@4.0.1)(postcss@8.4.24)(svelte@4.1.2):
+    resolution: {integrity: sha512-OBlY8866Zh1zHQTkBMPS6psPi7o2umTUyj6JWm4SacnIHXpWFm658pG32m3dKvKFL49V4ntAkfFHKo4ztH07og==}
     hasBin: true
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0
@@ -11712,3 +11708,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
