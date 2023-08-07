@@ -11,17 +11,17 @@ updates:
       interval: "daily"
 
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/apps/web/" # Location of package manifests
+    directory: "/"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/apps/gui" # Location of package manifests
+    directory: "/apps/*/"
     schedule:
       interval: "daily"
 
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/" # Location of package manifests
+    directory: "/packages/*/"
     schedule:
       interval: "daily"
 
