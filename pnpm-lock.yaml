@@ -899,9 +899,14 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
+<<<<<<< HEAD
       '@babel/core': 7.22.10
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/template': 7.22.5
+=======
+      '@sveltejs/kit': 1.22.4(svelte@3.58.0)(vite@4.2.1)
+      import-meta-resolve: 3.0.0
+>>>>>>> b6f92c04a2fcecd6f2beb0e22d27b4b17584c328
     dev: true
 
   /@babel/plugin-transform-destructuring@7.22.10(@babel/core@7.22.10):
@@ -8031,9 +8036,18 @@ packages:
   /pumpify@1.5.1:
     resolution: {integrity: sha512-oClZI37HvuUJJxSKKrC17bZ9Cu0ZYhEAGPsPUy9KlMUmv9dKX2o77RUmq7f3XjIxbwyGwYzbzQ1L2Ks8sIradQ==}
     dependencies:
+<<<<<<< HEAD
       duplexify: 3.7.1
       inherits: 2.0.4
       pump: 2.0.1
+=======
+      deep-is: 0.1.4
+      fast-levenshtein: 2.0.6
+      levn: 0.4.1
+      prelude-ls: 1.2.1
+      type-check: 0.4.0
+      word-wrap: 1.2.5
+>>>>>>> b6f92c04a2fcecd6f2beb0e22d27b4b17584c328
     dev: true
 
   /punycode@2.3.0:
@@ -9746,8 +9760,8 @@ packages:
     dependencies:
       isexe: 2.0.0
 
-  /word-wrap@1.2.3:
-    resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
+  /word-wrap@1.2.5:
+    resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
