@@ -53,6 +53,28 @@ jobs:
           toolchain: stable
           override: true
 
+      - name: set up cargo cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            apps/gui/src-tauri/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: delete existing bundles on linux and macos
+        if: matrix.platform == 'macos-latest' || matrix.platform == 'ubuntu-20.04'
+        run: |
+          rm -rf apps/gui/src-tauri/target/release/bundle
+
+      - name: delete existing bundles on windows
+        if: matrix.platform == 'windows-latest'
+        run: |
+          Remove-Item -Recurse -Force apps/gui/src-tauri/target/release/bundle
+
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-20.04'
         run: |
