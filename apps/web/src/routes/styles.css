@@ -1,0 +1,210 @@
+:root {
+	--bg-color: rgb(20, 20, 20);
+	--card-color: rgb(23, 23, 23);
+}
+
+.beatforge-landing-terminal-window-wrapper:hover
+	.beatforge-landing-terminal-window-bullets
+	span:first-child {
+	background: #ee6a5f;
+	border: 0.5px solid #ce5347;
+}
+
+.beatforge-landing-terminal-window-wrapper:hover
+	.beatforge-landing-terminal-window-bullets
+	span:nth-child(2) {
+	background: #f5bd4f;
+	border: 0.5px solid #d6a243;
+}
+
+.beatforge-landing-terminal-window-wrapper:hover
+	.beatforge-landing-terminal-window-bullets
+	span:nth-child(3) {
+	background: #61c454;
+	border: 0.5px solid #58a942;
+}
+
+.beatforge-landing-terminal-window-bullets span {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin: 4px;
+
+	transition: 0.5s ease;
+}
+
+.beatforge-landing-terminal-window-wrapper .beatforge-landing-terminal-window-bullets span {
+	background: #ffffff55;
+	border-color: #ffffff55;
+}
+
+.beatforge-landing-terminal-window-wrapper:hover {
+	transform: scale(1.02);
+}
+
+.beatforge-landing-terminal-window-wrapper {
+	transition: 0.35s ease;
+}
+
+@keyframes hue-rotate {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+
+	50% {
+		filter: hue-rotate(360deg);
+	}
+
+	100% {
+		filter: hue-rotate(0deg);
+	}
+}
+
+.hue-rotate-animation {
+	animation: hue-rotate 9s linear infinite forwards;
+}
+
+.landing-gradient-eyebrow {
+	background: linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+		linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+	background-blend-mode: normal, screen;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	isolation: isolate;
+	overflow: hidden;
+	align-items: center;
+	border-radius: 32px;
+	box-shadow: inset 0 -7px 11px #a48fff1f;
+	display: flex;
+	padding: 6px 14px 6px 15px;
+	position: relative;
+	width: -moz-max-content;
+	width: max-content;
+}
+
+.landing-gradient-eyebrow:after {
+	background: linear-gradient(
+		90.01deg,
+		rgba(229, 156, 255, 0.24) 0.01%,
+		rgba(186, 156, 255, 0.24) 50.01%,
+		rgba(156, 178, 255, 0.24) 100%
+	);
+	border-radius: inherit;
+	content: '';
+	inset: 0;
+	mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	mask-composite: xor;
+	mask-composite: exclude;
+	padding: 2px;
+	pointer-events: none;
+	position: absolute;
+}
+
+@keyframes bentobox-transform {
+	from {
+		transform: translateY(16px);
+		filter: blur(4px) brightness(200%) saturate(0.5);
+		opacity: 0.3;
+	}
+
+	to {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.beatforge-landing-bentobox-animated
+	.beatforge-landing-bentobox-row-first
+	> .beatforge-landing-bentobox-item:nth-child(1) {
+	animation: bentobox-transform 0.4s linear both;
+	animation-delay: 0.34s;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.beatforge-landing-bentobox-animated
+	.beatforge-landing-bentobox-row-first
+	> .beatforge-landing-bentobox-item:nth-child(2) {
+	animation: bentobox-transform 0.3s linear both;
+	animation-delay: 0.37s;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.beatforge-landing-bentobox-animated
+	.beatforge-landing-bentobox-row-second
+	> .beatforge-landing-bentobox-item:nth-child(1) {
+	animation: bentobox-transform 0.3s linear both;
+	animation-delay: 0.4s;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.beatforge-landing-bentobox-animated
+	.beatforge-landing-bentobox-row-third
+	> .beatforge-landing-bentobox-item:nth-child(1) {
+	animation: bentobox-transform 0.3s linear both;
+	animation-delay: 0.43s;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.beatforge-landing-bentobox-animated
+	.beatforge-landing-bentobox-row-third
+	> .beatforge-landing-bentobox-item:nth-child(2) {
+	animation: bentobox-transform 0.3s linear both;
+	animation-delay: 0.46s;
+	animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#cards:hover > .beatforge-landing-bentobox-item::after {
+	opacity: 1;
+}
+
+.beatforge-landing-bentobox-item:hover::before {
+	opacity: 1;
+}
+
+.beatforge-landing-bentobox-item::before,
+.beatforge-landing-bentobox-item::after {
+	border-radius: inherit;
+	content: '';
+	height: 100%;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	transition: opacity 500ms;
+	width: 100%;
+	pointer-events: none;
+}
+
+.beatforge-landing-bentobox-item::before {
+	background: radial-gradient(
+		1600px circle at var(--mouse-x) var(--mouse-y),
+		rgba(255, 255, 255, 0.06),
+		transparent 40%
+	);
+	z-index: 3;
+}
+
+.beatforge-landing-bentobox-item::after {
+	background: radial-gradient(
+		1200px circle at var(--mouse-x) var(--mouse-y),
+		rgba(255, 255, 255, 0.4),
+		transparent 40%
+	);
+	z-index: 1;
+}
+
+.beatforge-landing-bentobox-item > .beatforge-landing-bentobox-item-content {
+	background-color: var(--card-color);
+	border-radius: inherit;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	inset: 2px;
+	padding: 10px;
+	position: absolute;
+	z-index: 2;
+}
