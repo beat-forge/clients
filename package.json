@@ -1,6 +1,6 @@
 {
-  "name": "webapp-template",
-  "version": "1.6.2",
+  "name": "clients",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
