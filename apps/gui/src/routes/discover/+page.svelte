@@ -3,7 +3,7 @@
 	import SearchBar from '$lib/components/SearchBar.svelte';
 	import FilterPill from '$lib/components/FilterPill.svelte';
 
-	import type { PageData } from '../$types';
+	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
 
@@ -28,7 +28,6 @@
 				description={mod.description}
 				author={mod.author.username}
 				icon={mod.icon}
-				versions={mod.versions}
 				category={mod.category.name}
 				verified={mod.verified}
 			/>

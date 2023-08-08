@@ -30,4 +30,4 @@
 	</div>
 </div>
 
-<div class="beatforge-titlebar-blur-area left-4 right-4" />
+<div class="beatforge-titlebar-blur-area right-4" />

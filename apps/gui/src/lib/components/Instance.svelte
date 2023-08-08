@@ -31,8 +31,8 @@
 			transition:slide={{ delay: 0, duration: 300, easing: quintOut, axis: 'y' }}
 		>
 			<a
-				class:linkActive={activeUrl === `/discover/${version}`}
-				href={`/discover/${version}`}
+				class:linkActive={activeUrl === '/discover'}
+				href="/discover"
 				class="flex flex-row items-center gap-4 px-3 py-2 pt-4 opacity-50 transition-all"
 			>
 				<div class="h-[4px] w-[4px] rounded-full bg-white" />

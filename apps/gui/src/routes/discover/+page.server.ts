@@ -1,11 +1,11 @@
 import { request, gql } from 'graphql-request'
-import type { PageServerLoad } from '../$types';
+import type { PageServerLoad } from './$types';
 
 
-export const load = (async ({params}: any) => {
+export const load = (async () => {
   let query = gql`
     {
-        mods(version: "${params.slug}") {
+        mods(version: "1.31.0") {
           name
           description
           author {
@@ -26,9 +26,10 @@ export const load = (async ({params}: any) => {
       } 
     `
   let mods = await request({
-    url: 'https://staging-api.beatforge.net/graphql',
-    document: query
+    url: 'https://api.beatforge.net/graphql',
+    document: query // ?
   })
+
 
   return mods as any
 }) satisfies PageServerLoad;

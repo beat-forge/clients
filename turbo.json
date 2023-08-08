@@ -10,6 +10,12 @@
     "story#build": {
       "outputs": ["storybook-static/**"]
     },
+    "gui#build": {
+      "outputs": [".svelte-kit/**", "src-tauri/**"]
+    },
+    "gui#preview": {
+      "outputs": [".svelte-kit/**", "src-tauri/**"]
+    },
     "web#build": {
       "dependsOn": ["web#generate"],
       "outputs": [".svelte-kit/**", ".vercel/**", "$houdini/**", "schema.graphql"]

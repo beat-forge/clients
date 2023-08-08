@@ -18,7 +18,7 @@
 				Instances
 			</div>
 
-			<div class="flex text-[#ffffff66]">
+			<div class="flex h-5 w-5 text-[#ffffff66]">
 				<!-- <PlusSmall /> -->
 				<img src="/icons/plus.svg" alt="plus" />
 			</div>
@@ -27,7 +27,13 @@
 		{#each instances as instance}
 			<Instance name={instance.name} version={instance.version} active={false} />
 		{:else}
-			<p class="text-[#ffffff66]">No instances found</p>
+			<!-- No instances were found, ask the user if they would like to autodetect -->
+			<p class="text-[#ffffff66]">No instances were found, would you like to autodetect?</p>
+			<button
+				class="mt-2 bg-[#ffffff22] rounded-lg px-3 py-1 text-sm font-semibold uppercase tracking-[.125rem] text-[#ffffff66]"
+			>
+				Autodetect
+			</button>
 		{/each}
 	</div>
 </div>
