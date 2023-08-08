@@ -28,3 +28,6 @@ yarn-error.log*
 
 # custom
 .env
+
+# rust
+target/

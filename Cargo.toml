@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "apps/gui/src-tauri",
+  "apps/gui/src-tauri/migration",
+  "apps/gui/src-tauri/entity",
+]
