@@ -11,7 +11,7 @@
     "format": "concurrently pnpm:format:*"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-turbo": "^1.10.12",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^46.4.6",
