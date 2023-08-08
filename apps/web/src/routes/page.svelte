@@ -6,10 +6,10 @@
   // other imports and code
 </script>
 
-<!-- move the markup from apps/web/src/lib/components/landing/FeatureSection.svelte here -->
-<!-- ... -->
+<!-- markup from apps/web/src/lib/components/landing/FeatureSection.svelte -->
+<slot />
 
 <style>
-  /* move the styles from apps/web/src/lib/components/landing/FeatureSection.svelte here */
+  /* styles from apps/web/src/lib/components/landing/FeatureSection.svelte */
   /* ... */
 </style>
