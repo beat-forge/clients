@@ -15,7 +15,10 @@ export { default as PersonIcon } from './components/icons/Person.svelte';
 export { default as SearchIcon } from './components/icons/Search.svelte';
 export { default as VerifiedIcon } from './components/icons/Verified.svelte';
 
+// PILL
+export { default as Pill } from './components/pill/Pill.svelte';
+
 // BUTTON
-export { default as Button } from './components/button/Button.svelte'
+export { default as Button } from './components/button/Button.svelte';
 // TEXT
-export { default as Text } from './components/text/Text.svelte'
+export { default as Text } from './components/text/Text.svelte';

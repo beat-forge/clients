@@ -1,8 +1,8 @@
 <script>
-  import { Text } from 'ui/index.ts';
+  import { Text } from 'ui';
 </script>
 
-<div class="bg-primary-950 rounded-md p-8 flex flex-col gap-2">
+<div class="bg-primary-950 rounded-md p-8 flex flex-col gap-2 text-white">
   <!-- <Text {...$$props}>This is a dummy text</Text> -->
   <Text variant="headline">This is a headline (responsive)</Text>
   <Text variant="h1">This is an h1 text</Text>

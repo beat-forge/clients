@@ -5,16 +5,16 @@
   export let customClasses;
 
   const variantClasses = {
-    headline: 'text-[max(32px,min(5vw,56px))] font-black text-fore-base',
-    h1: 'text-5xl font-black text-fore-base',
-    h2: 'text-4xl font-black text-fore-base',
-    h3: 'text-3xl font-extrabold text-fore-base',
-    h4: 'text-2xl font-bold text-fore-base',
-    h5: 'text-xl font-bold text-fore-base',
-    h6: 'text-lg font-bold text-fore-base',
-    subtitle: 'text-lg font-bold text-fore-muted',
-    eyebrow: 'uppercase text-xs font-black text-fore-muted tracking-wider',
-    body: 'font-medium text-fore-muted',
+    headline: 'text-[max(32px,min(5vw,56px))] font-black',
+    h1: 'text-5xl font-black',
+    h2: 'text-4xl font-black',
+    h3: 'text-3xl font-extrabold',
+    h4: 'text-2xl font-bold',
+    h5: 'text-xl font-bold',
+    h6: 'text-lg font-bold',
+    subtitle: 'text-lg font-bold',
+    eyebrow: 'uppercase text-xs font-black tracking-wider',
+    body: 'font-medium',
   };
 
   let textClasses = `font-sans ${variantClasses[variant]} ${customClasses ?? ''}`;
