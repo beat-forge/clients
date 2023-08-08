@@ -9,7 +9,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['primary', 'secondary', 'download'],
+      options: ['primary', 'secondary', 'download', 'ghost', 'pill'],
     },
     disabled: {
       control: {
@@ -41,3 +41,16 @@ export const Download = {
     disabled: false,
   },
 };
+export const Ghost = {
+  args: {
+    variant: 'ghost',
+    disabled: false,
+  },
+};
+export const Pill = {
+  args: {
+    variant: 'pill',
+    disabled: false,
+  },
+};
+
