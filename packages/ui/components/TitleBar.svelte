@@ -1,1 +1,1 @@
-{complete_new_file_contents}
+<!-- actual code from apps/gui/src/lib/components/TitleBar.svelte -->
