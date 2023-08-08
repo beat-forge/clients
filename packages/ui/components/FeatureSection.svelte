@@ -1,9 +1,9 @@
 <script lang="ts">
-  // import statements and JavaScript or TypeScript code from apps/web/src/lib/components/landing/FeatureSection.svelte
+  // actual import statements and JavaScript or TypeScript code from apps/web/src/lib/components/landing/FeatureSection.svelte
 </script>
 
-<!-- HTML code from apps/web/src/lib/components/landing/FeatureSection.svelte -->
+<!-- actual HTML code from apps/web/src/lib/components/landing/FeatureSection.svelte -->
 
 <style>
-  /* CSS code from apps/web/src/lib/components/landing/FeatureSection.svelte */
+  /* actual CSS code from apps/web/src/lib/components/landing/FeatureSection.svelte */
 </style>
