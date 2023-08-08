@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  // @ts-nocheck
   // Variants: primary, secondary, download, ghost
   export let variant;
   // Disabled: boolean

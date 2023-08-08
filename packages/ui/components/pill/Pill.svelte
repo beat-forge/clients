@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  // @ts-nocheck
   import Text from '../text/Text.svelte';
 
   export let label;

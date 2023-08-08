@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   // @ts-nocheck
   // Variants, h1 - h6, subtitle, eyebrow, body
   export let variant;
