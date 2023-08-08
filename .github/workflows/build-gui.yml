@@ -1,8 +1,12 @@
 on:
   push:
+    branches:
+      - main
     paths:
       - 'apps/gui/**'
   pull_request:
+    branches:
+      - main
     paths:
       - 'apps/gui/**'
 
