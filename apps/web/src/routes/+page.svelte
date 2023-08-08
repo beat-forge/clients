@@ -229,7 +229,6 @@
 				</LandingDescription>
 
 				<a
-					href="/download"
 					class="flex items-center justify-center bg-[#2C2B30] px-4 py-2 rounded-full gap-2"
 				>
 					<svg
