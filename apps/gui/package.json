@@ -4,7 +4,7 @@
 	"scripts": {
 		"dev": "tauri dev",
 		"build": "tauri build",
-		"vite:dev": "vite dev --host",
+		"vite:dev": "vite dev --host --port 6173",
 		"vite:build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
