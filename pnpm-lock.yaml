@@ -123,8 +123,8 @@ importers:
         specifier: ^7.2.1
         version: 7.2.1(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: ^7.0.12
-        version: 7.0.12(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^7.2.1
+        version: 7.2.1(react-dom@18.2.0)(react@18.2.0)
       '@storybook/blocks':
         specifier: ^7.2.1
         version: 7.2.1(react-dom@18.2.0)(react@18.2.0)
@@ -265,8 +265,8 @@ importers:
   packages/ui:
     dependencies:
       '@melt-ui/svelte':
-        specifier: ^0.34.0
-        version: 0.34.0(svelte@4.1.2)
+        specifier: ^0.34.1
+        version: 0.34.1(svelte@4.1.2)
       typescript:
         specifier: ^5.0.0
         version: 5.0.4
@@ -2627,8 +2627,8 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@melt-ui/svelte@0.34.0(svelte@4.1.2):
-    resolution: {integrity: sha512-qtdyBYiofbvQe/BaPFD2r3tiYY/f+KZZz3xtMIIQCQSRDCkQB7eUDgbzym+YFBEYiyxVkOCP+T0VdC3y/pt70w==}
+  /@melt-ui/svelte@0.34.1(svelte@4.1.2):
+    resolution: {integrity: sha512-snsvshJFF6iumZ9TaqerhaCYyekWnHSLknRR62ybp5ttCLhTFLhsYcZB7GucDyF7hzv99yLHqEo6U0feg0yXFA==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
@@ -3273,8 +3273,8 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/addon-links@7.0.12(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-6kGClsIpX9dRKc5bUAPNcp/4wlgPIxMrieUV+6k1dTsRQqbaEfxih/Fq259D5+yVBDNi3YAnvRjMiIibl8fa5A==}
+  /@storybook/addon-links@7.2.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3UQfOZ1+wGlPsHWWjXjPskq6nsDXuB+8QvOcpqy51mK+5Zv/EQe386hWj9VUpjLNMxXarWETa5CXGfoQdFzJTA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3284,14 +3284,14 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@storybook/client-logger': 7.0.12
-      '@storybook/core-events': 7.0.12
+      '@storybook/client-logger': 7.2.1
+      '@storybook/core-events': 7.2.1
       '@storybook/csf': 0.1.0
       '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.0.12(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.0.12
-      '@storybook/router': 7.0.12(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.0.12
+      '@storybook/manager-api': 7.2.1(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.2.1
+      '@storybook/router': 7.2.1(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.2.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -4467,7 +4467,7 @@ packages:
   /@types/babel__core@7.20.0:
     resolution: {integrity: sha512-+n8dL/9GWblDO0iU6eZAwEIJVr5DWigtle+Q6HLOrh/pdbXOhOtqzq8VPPE2zvNJzSKY4vH/z3iT3tn0A3ypiQ==}
     dependencies:
-      '@babel/parser': 7.21.8
+      '@babel/parser': 7.22.10
       '@babel/types': 7.22.10
       '@types/babel__generator': 7.6.4
       '@types/babel__template': 7.4.1
