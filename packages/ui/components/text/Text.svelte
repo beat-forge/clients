@@ -16,7 +16,7 @@
     body: 'font-medium text-fore-muted',
   };
 
-  let textClasses = `${variantClasses[variant]} ${customClasses}`;
+  let textClasses = `font-sans ${variantClasses[variant]} ${customClasses ?? ''}`;
 </script>
 
 {#if variant === 'h1'}

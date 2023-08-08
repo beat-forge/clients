@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src:
+    local('./fonts/Satoshi-Variable.woff2') format('woff2'),
+    local('./fonts/Satoshi-Variable.woff') format('woff'),
+    local('./fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src:
+    local('./fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+    local('./fonts/Satoshi-VariableItalic.woff') format('woff'),
+    local('./fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi-Light';
+  src:
+    local('./fonts/Satoshi-Light.woff2') format('woff2'),
+    local('./fonts/Satoshi-Light.woff') format('woff'),
+    local('./fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-LightItalic';
+  src:
+    local('./fonts/Satoshi-LightItalic.woff2') format('woff2'),
+    local('./fonts/Satoshi-LightItalic.woff') format('woff'),
+    local('./fonts/Satoshi-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src:
+    local('./fonts/Satoshi-Regular.woff2') format('woff2'),
+    local('./fonts/Satoshi-Regular.woff') format('woff'),
+    local('./fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src:
+    local('./fonts/Satoshi-Italic.woff2') format('woff2'),
+    local('./fonts/Satoshi-Italic.woff') format('woff'),
+    local('./fonts/Satoshi-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src:
+    local('./fonts/Satoshi-Medium.woff2') format('woff2'),
+    local('./fonts/Satoshi-Medium.woff') format('woff'),
+    local('./fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-MediumItalic';
+  src:
+    local('./fonts/Satoshi-MediumItalic.woff2') format('woff2'),
+    local('./fonts/Satoshi-MediumItalic.woff') format('woff'),
+    local('./fonts/Satoshi-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src:
+    local('./fonts/Satoshi-Bold.woff2') format('woff2'),
+    local('./fonts/Satoshi-Bold.woff') format('woff'),
+    local('./fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src:
+    local('./fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+    local('./fonts/Satoshi-BoldItalic.woff') format('woff'),
+    local('./fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi-Black';
+  src:
+    local('./fonts/Satoshi-Black.woff2') format('woff2'),
+    local('./fonts/Satoshi-Black.woff') format('woff'),
+    local('./fonts/Satoshi-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi-BlackItalic';
+  src:
+    local('./fonts/Satoshi-BlackItalic.woff2') format('woff2'),
+    local('./fonts/Satoshi-BlackItalic.woff') format('woff'),
+    local('./fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}

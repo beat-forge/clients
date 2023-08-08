@@ -3,6 +3,9 @@ export default {
   content: [],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Satoshi', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#FFFFFF',
