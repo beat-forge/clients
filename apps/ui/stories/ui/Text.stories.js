@@ -9,7 +9,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'body', 'subtitle', 'eyebrow'],
+      options: ['headline', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'subtitle', 'eyebrow'],
     },
     customClasses: {
       control: {
@@ -24,43 +24,43 @@ export const Default = {
     variant: 'body',
   },
 };
-export const Heading_1 = {
-  args: {
-    variant: 'h1',
-  },
-};
-export const Heading_2 = {
-  args: {
-    variant: 'h2',
-  },
-};
-export const Heading_3 = {
-  args: {
-    variant: 'h3',
-  },
-};
-export const Heading_4 = {
-  args: {
-    variant: 'h4',
-  },
-};
-export const Heading_5 = {
-  args: {
-    variant: 'h5',
-  },
-};
-export const Heading_6 = {
-  args: {
-    variant: 'h6',
-  },
-};
-export const Subtitle = {
-  args: {
-    variant: 'subtitle',
-  },
-};
-export const Eyebrow = {
-  args: {
-    variant: 'eyebrow',
-  },
-};
+// export const Heading_1 = {
+//   args: {
+//     variant: 'h1',
+//   },
+// };
+// export const Heading_2 = {
+//   args: {
+//     variant: 'h2',
+//   },
+// };
+// export const Heading_3 = {
+//   args: {
+//     variant: 'h3',
+//   },
+// };
+// export const Heading_4 = {
+//   args: {
+//     variant: 'h4',
+//   },
+// };
+// export const Heading_5 = {
+//   args: {
+//     variant: 'h5',
+//   },
+// };
+// export const Heading_6 = {
+//   args: {
+//     variant: 'h6',
+//   },
+// };
+// export const Subtitle = {
+//   args: {
+//     variant: 'subtitle',
+//   },
+// };
+// export const Eyebrow = {
+//   args: {
+//     variant: 'eyebrow',
+//   },
+// };

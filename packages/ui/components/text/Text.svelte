@@ -5,14 +5,15 @@
   export let customClasses;
 
   const variantClasses = {
-    h1: 'text-4xl font-black text-fore-base',
-    h2: 'text-3xl font-black text-fore-base',
-    h3: 'text-2xl font-extrabold text-fore-base',
-    h4: 'text-xl font-bold text-fore-base',
-    h5: 'text-lg font-bold text-fore-base',
-    h6: 'text-base font-bold text-fore-base',
-    subtitle: 'font-bold text-fore-muted',
-    eyebrow: 'uppercase text-xs font-bold text-fore-muted tracking-wide',
+    headline: 'text-[max(32px,min(5vw,56px))] font-black text-fore-base',
+    h1: 'text-5xl font-black text-fore-base',
+    h2: 'text-4xl font-black text-fore-base',
+    h3: 'text-3xl font-extrabold text-fore-base',
+    h4: 'text-2xl font-bold text-fore-base',
+    h5: 'text-xl font-bold text-fore-base',
+    h6: 'text-lg font-bold text-fore-base',
+    subtitle: 'text-lg font-bold text-fore-muted',
+    eyebrow: 'uppercase text-xs font-black text-fore-muted tracking-wider',
     body: 'font-medium text-fore-muted',
   };
 
@@ -55,6 +56,10 @@
   <p class={textClasses}>
     <slot />
   </p>
+{:else if variant === 'headline'}
+  <h1 class={textClasses}>
+    <slot />
+  </h1>
 {:else}
   <p class={textClasses}>
     <slot />
