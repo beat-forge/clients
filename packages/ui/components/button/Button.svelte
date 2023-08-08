@@ -25,9 +25,10 @@
   {#if $$slots.content}
     <slot name="content" />
   {/if}
+
+  <slot />
+
   {#if $$slots.trailing}
     <slot name="trailing" />
   {/if}
-
-  <slot />
 </button>
