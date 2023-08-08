@@ -19,7 +19,15 @@
 </script>
 
 <button {disabled} class={buttonClasses}>
-  <slot name="leading" />
-  <slot name="content" />
-  <slot name="trailing" />
+  {#if $$slots.leading}
+    <slot name="leading" />
+  {/if}
+  {#if $$slots.content}
+    <slot name="content" />
+  {/if}
+  {#if $$slots.trailing}
+    <slot name="trailing" />
+  {/if}
+
+  <slot />
 </button>
