@@ -1,5 +1,5 @@
 <script>
-	import { DownloadIcon } from 'ui';
+	import { DownloadIcon } from 'ui/icons';
 </script>
 
 <div

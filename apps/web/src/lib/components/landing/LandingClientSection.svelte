@@ -5,7 +5,7 @@
 
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 
-	import { DownloadIcon } from 'ui';
+	import { DownloadIcon } from 'ui/icons';
 
 	let textTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
 	let headerTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
