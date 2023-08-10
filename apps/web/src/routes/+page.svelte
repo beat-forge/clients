@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>BeatForge</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="The most seamless modding platform for Beat Saber." />
 </svelte:head>
 
 <main class="beatforge-landing-wrapper relative w-full h-full">
