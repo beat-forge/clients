@@ -1,5 +1,6 @@
 <script>
-  import { Button, LogoIcon, CopyIcon } from 'ui';
+  import { Button } from 'ui/button';
+  import { LogoIcon, CopyIcon } from 'ui/icons'
 
   function handleClick() {
     console.log('clicked');

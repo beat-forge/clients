@@ -1,5 +1,5 @@
 <script>
-  import { Text } from 'ui';
+  import { Text } from 'ui/text';
 </script>
 
 <div class="bg-primary-950 rounded-md p-8 flex flex-col gap-2 text-white">

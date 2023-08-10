@@ -9,7 +9,7 @@ export default {
       control: {
         type: 'select',
       },
-      options: ['primary', 'secondary', 'download', 'ghost', 'pill'],
+      options: ['primary', 'secondary', 'gradient', 'ghost', 'pill'],
     },
     disabled: {
       control: {
@@ -35,9 +35,9 @@ export const Secondary = {
     disabled: false,
   },
 };
-export const Download = {
+export const Gradient = {
   args: {
-    variant: 'download',
+    variant: 'gradient',
     disabled: false,
   },
 };

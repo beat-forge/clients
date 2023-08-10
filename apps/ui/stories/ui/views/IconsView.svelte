@@ -15,7 +15,7 @@
     PersonIcon,
     SearchIcon,
     VerifiedIcon,
-  } from 'ui';
+  } from 'ui/icons';
 
   const iconImports = [
     { name: 'CalendarIcon', component: CalendarIcon },
