@@ -3,6 +3,10 @@
 	--card-color: rgb(23, 23, 23);
 }
 
+.beatforge-landing-header-responsive {
+	font-size: max(32px,min(5vw,56px))
+}
+
 .beatforge-landing-terminal-window-wrapper:hover
 	.beatforge-landing-terminal-window-bullets
 	span:first-child {
