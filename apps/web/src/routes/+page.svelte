@@ -2,8 +2,8 @@
 	import LandingHeroVideo from '$lib/components/landing/LandingVideo.svelte';
 	import LandingCTASection from '$lib/components/landing/LandingCTASection.svelte';
 	import LandingBentoSection from '$lib/components/landing/LandingBentoSection.svelte';
-	import LandingClientSection from '../lib/components/landing/LandingClientSection.svelte';
-	import LandingCLISection from '../lib/components/landing/LandingCLISection.svelte';
+	import LandingClientSection from '$lib/components/landing/LandingClientSection.svelte';
+	import LandingCLISection from '$lib/components/landing/LandingCLISection.svelte';
 </script>
 
 <svelte:head>
