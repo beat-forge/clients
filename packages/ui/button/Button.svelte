@@ -16,7 +16,7 @@
     pill: 'text-xs bg-primary-700 w-fit px-2 p-1 text-fore-base whitespace-nowrap',
   };
 
-  let buttonClasses = `disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm ${variantClasses[variant]} ${customClasses}`;
+  let buttonClasses = `outline-none focus:shadow-none focus-visible:ring-4 focus-visible:ring-[#00a8fc] disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm ${variantClasses[variant]} ${customClasses}`;
 </script>
 
 <button {disabled} class={buttonClasses}>
