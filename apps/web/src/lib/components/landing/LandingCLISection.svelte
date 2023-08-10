@@ -6,6 +6,7 @@
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 
 	import { DownloadIcon } from 'ui/icons';
+	import { Link } from 'ui/link'
 
 	let textTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
 	let headerTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
@@ -78,14 +79,10 @@
 							</p>
 						</div>
 					</div>
-					<a
-						href="https://github.com/beat-forge/cli"
-						class="relative flex items-center justify-center bg-[#2C2B30] px-4 py-2 rounded-full gap-2 mt-2"
-					>
-						<DownloadIcon className="w-5 h-5" />
-
-						<p class="p-1 text-sm font-bold text-white">Get the CLI</p>
-					</a>
+					<Link variant="secondary">
+						<DownloadIcon className="w-4 h-4 " />
+						<p class="p-1 text-sm font-bold">Get the CLI</p>
+					</Link>
 				</div>
 			</div>
 		</IntersectionObserver>

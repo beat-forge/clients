@@ -4,8 +4,8 @@
   export let variant;
   export let customClasses = '';
   // Boolean
-  export let external;
-  export let href;
+  export let external = false;
+  export let href = '';
 
   const variantClasses = {
     underlined: 'underline',

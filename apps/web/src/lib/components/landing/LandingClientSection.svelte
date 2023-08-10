@@ -6,6 +6,7 @@
 	import IntersectionObserver from '$lib/components/IntersectionObserver.svelte';
 
 	import { DownloadIcon } from 'ui/icons';
+	import { Link } from 'ui/link';
 
 	let textTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
 	let headerTransition = 'translate-y-[32px] opacity-30 duration-[400ms]';
@@ -35,10 +36,10 @@
 				</p>
 			</LandingDescription>
 
-			<div class="flex items-center justify-center bg-[#2C2B30] px-4 py-2 rounded-full gap-2">
-				<DownloadIcon className="w-4 h-4" />
-				<p class="p-1 text-sm font-bold text-white">Download Now</p>
-			</div>
+            <Link variant="primary">
+                <DownloadIcon className="w-4 h-4 " />
+                <p class="p-1 text-sm font-bold">Download Now</p>
+            </Link>
 
 			<div class="relative transform-gpu">
 				<div class="absolute inset-0 app_ss_shadow" />

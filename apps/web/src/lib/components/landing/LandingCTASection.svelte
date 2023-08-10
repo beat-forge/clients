@@ -1,5 +1,6 @@
 <script>
 	import { DownloadIcon } from 'ui/icons';
+	import { Link } from 'ui/link'
 </script>
 
 <div
@@ -20,20 +21,14 @@
 		</div>
 
 		<div class="flex flex-row gap-4">
-			<div
-				class="flex items-center justify-center bg-white text-black-950 px-4 py-2 rounded-full gap-2 opacity-50 pointer-events-none select-none"
-			>
+			<Link variant="primary">
 				<DownloadIcon className="w-4 h-4 text-black" />
 				<p class="p-1 text-sm font-bold text-black">Download Client</p>
-			</div>
-			<a
-				href="https://github.com/beat-forge"
-				class="flex items-center justify-center bg-[#2C2B3077] px-4 py-2 rounded-full gap-2"
-				target="_blank"
-				rel="noopener"
-			>
-				<p class="p-1 text-sm font-bold text-white">Source Code</p>
-			</a>
+			</Link>
+
+			<Link variant="secondary" href="https://github.com/beat-forge/clients" external>
+				Source Code
+			</Link>
 		</div>
 		<div class="opacity-50 mt-auto mb-8">
 			<svg
