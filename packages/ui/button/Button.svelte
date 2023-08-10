@@ -5,7 +5,7 @@
   // Disabled: boolean
   export let disabled;
 
-  export let customClasses;
+  export let customClasses = '';
 
   const variantClasses = {
     primary: 'px-4 py-2 bg-primary-50 hover:bg-primary-100 text-black-950',
