@@ -22,3 +22,5 @@ export { default as Pill } from './components/pill/Pill.svelte';
 export { default as Button } from './components/button/Button.svelte';
 // TEXT
 export { default as Text } from './components/text/Text.svelte';
+// LINK
+export { default as Link } from './components/link/Link.svelte';
