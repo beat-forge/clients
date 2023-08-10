@@ -2,7 +2,7 @@
   // @ts-nocheck
   // Variants: underlined, text, primarybutton, secondarybutton
   export let variant;
-  export let customClasses;
+  export let customClasses = '';
   // Boolean
   export let external;
   export let href;
