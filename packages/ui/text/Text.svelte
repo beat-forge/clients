@@ -2,7 +2,7 @@
   // @ts-nocheck
   // Variants, h1 - h6, subtitle, eyebrow, body
   export let variant;
-  export let customClasses;
+  export let customClasses = '';
 
   const variantClasses = {
     headline: 'text-[max(32px,min(5vw,56px))] font-black',

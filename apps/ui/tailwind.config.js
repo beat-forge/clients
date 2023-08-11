@@ -6,6 +6,6 @@ export default {
   content: [
     './stories/**/*.svelte',
     '../../apps/web/src/lib/**/*.svelte', // for using 'apps/web'
-    '../../packages/ui/components/**/*.svelte', // for using 'packages/ui'
+    '../../packages/ui/**/*.svelte', // for using 'packages/ui'
   ],
 };

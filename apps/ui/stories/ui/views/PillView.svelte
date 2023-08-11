@@ -1,22 +1,6 @@
 <script>
-  import { Pill } from 'ui';
-  import {
-    CalendarIcon,
-    CategoryIcon,
-    CheckmarkIcon,
-    ChevronDownIcon,
-    ChevronLeftIcon,
-    CopyIcon,
-    DotsIcon,
-    DownloadIcon,
-    ExclamationIcon,
-    GithubIcon,
-    LogoIcon,
-    NotVerifiedIcon,
-    PersonIcon,
-    SearchIcon,
-    VerifiedIcon,
-  } from 'ui';
+  import { Pill } from 'ui/pill';
+  import { CalendarIcon } from 'ui/icons';
 </script>
 
 <div class="bg-black p-8 rounded-md flex flex-col gap-2">

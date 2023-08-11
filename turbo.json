@@ -20,6 +20,10 @@
       "dependsOn": ["web#generate"],
       "outputs": [".svelte-kit/**", ".vercel/**", "$houdini/**", "schema.graphql"]
     },
+    "web#dev": {
+      "outputs": [".svelte-kit/**", ".vercel/**", "$houdini/**", "schema.graphql"],
+      "env": ["PUBLIC_GITHUB_CALL_URL", "PUBLIC_API_URL"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
