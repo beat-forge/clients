@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"sugar": "^2.0.6",
 		"tailwind-preset-base": "workspace:^",
 		"ui": "workspace:^"
 	}

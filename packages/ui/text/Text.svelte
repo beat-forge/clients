@@ -5,6 +5,7 @@
   export let customClasses = '';
 
   const variantClasses = {
+    ghost: '',
     headline: 'text-[max(32px,min(5vw,56px))] font-black',
     h1: 'text-5xl font-black',
     h2: 'text-4xl font-black',

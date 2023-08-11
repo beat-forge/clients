@@ -1,6 +1,7 @@
 import { env } from '$env/dynamic/public';
+import type { PageLoad } from './$types';
 
-export async function load({ url: { searchParams } }) {
+export const load = (async ({ url: { searchParams }, fetch }) => {
     const code = searchParams.get('code');
     if (!code) {
         return {
@@ -35,4 +36,4 @@ export async function load({ url: { searchParams } }) {
             };
         }
     }
-}
+}) satisfies PageLoad;
