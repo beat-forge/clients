@@ -1,11 +1,11 @@
 <script lang="ts">
   // @ts-nocheck
-  export let className;
+  export let customClasses = '';
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  class={className}
+  class={customClasses}
   width="24"
   height="24"
   viewBox="0 0 24 24"

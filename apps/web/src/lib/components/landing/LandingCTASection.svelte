@@ -22,7 +22,7 @@
 
 		<div class="flex flex-row gap-4">
 			<Link variant="primary">
-				<DownloadIcon className="w-4 h-4 text-black" />
+				<DownloadIcon customClasses="w-4 h-4 text-black" />
 				<p class="p-1 text-sm font-bold text-black">Download Client</p>
 			</Link>
 

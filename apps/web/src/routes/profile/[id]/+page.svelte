@@ -41,10 +41,10 @@
 					</p>
 					<div class="flex mt-5 gap-4 overflow-x-auto flex-wrap">
                         <Pill label={`${userData.username}`}>
-                            <AtSymbolIcon className="w-5 h-5" />
+                            <AtSymbolIcon customClasses="w-5 h-5" />
                         </Pill>
                         <Pill label={`Joined ${Sugar.Date.relative(new Date(userData.createdAt))}`}>
-                            <CalendarIcon className="w-5 h-5" />
+                            <CalendarIcon customClasses="w-5 h-5" />
                         </Pill>
 					</div>
 				</div>

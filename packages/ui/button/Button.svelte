@@ -1,13 +1,14 @@
 <script lang="ts">
   // @ts-nocheck
   // Variants: primary, secondary, download, ghost
-  export let variant;
+  export let variant = 'unset';
   // Disabled: boolean
   export let disabled = false;
 
   export let customClasses = '';
 
   const variantClasses = {
+    unset: '',
     primary: 'px-4 py-2 bg-primary-50 hover:bg-primary-100 text-black-950',
     secondary: 'px-4 py-2 bg-primary-800 hover:bg-primary-900 text-white',
     gradient:
@@ -16,7 +17,11 @@
     pill: 'text-xs bg-primary-700 w-fit px-2 p-1 text-fore-base whitespace-nowrap',
   };
 
-  let buttonClasses = `outline-none focus:shadow-none focus-visible:ring-4 focus-visible:ring-[#00a8fc] disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm ${variantClasses[variant]} ${customClasses}`;
+  let buttonClasses = `
+    ${variant === "unset" ? '' : 'outline-none focus:shadow-none focus-visible:ring-4 focus-visible:ring-[#00a8fc] disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm'} 
+    ${variantClasses[variant]} 
+    ${customClasses}
+  `;
 </script>
 
 <button {disabled} class={buttonClasses} on:click>

@@ -1,9 +1,9 @@
 <script lang="ts">
   // @ts-nocheck
-  export let className;
+  export let customClasses = '';
 </script>
 
-<svg class={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+<svg class={customClasses} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
   ><rect width="256" height="256" fill="none" /><circle cx="128" cy="60" r="10" /><circle
     cx="128"
     cy="128"

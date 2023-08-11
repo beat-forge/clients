@@ -80,7 +80,7 @@
 						</div>
 					</div>
 					<Link variant="secondary">
-						<DownloadIcon className="w-4 h-4 " />
+						<DownloadIcon customClasses="w-4 h-4 " />
 						<p class="p-1 text-sm font-bold">Get the CLI</p>
 					</Link>
 				</div>

@@ -37,7 +37,7 @@
 			</LandingDescription>
 
             <Link variant="primary">
-                <DownloadIcon className="w-4 h-4 " />
+                <DownloadIcon customClasses="w-4 h-4 " />
                 <p class="p-1 text-sm font-bold">Download Now</p>
             </Link>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   // @ts-nocheck
-  export let className;
+  export let customClasses = '';
 </script>
 
 <svg
@@ -9,7 +9,7 @@
   viewBox="0 0 24 24"
   stroke-width="1.5"
   stroke="currentColor"
-  class={className}
+  class={customClasses}
 >
   <path
     stroke-linecap="round"

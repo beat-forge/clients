@@ -11,7 +11,7 @@
   <Button on:click={handleClick} {...$$props}>This is a button</Button>
 
   <Button on:click={handleClick} {...$$props}>
-    <LogoIcon slot="leading" className="w-5 h-5" />
+    <LogoIcon slot="leading" customClasses="w-5 h-5" />
     This is a logo button
   </Button>
 
@@ -21,7 +21,7 @@
   </Button>
 
   <Button on:click={handleClick} {...$$props}>
-    <CopyIcon slot="leading" className="w-5 h-5" />
+    <CopyIcon slot="leading" customClasses="w-5 h-5" />
     Icon Button
   </Button>
 </div>

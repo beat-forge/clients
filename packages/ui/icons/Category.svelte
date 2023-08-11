@@ -1,12 +1,12 @@
 <script lang="ts">
   // @ts-nocheck
-  export let className;
+  export let customClasses = '';
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
   fill="none"
-  class={className}
+  class={customClasses}
   viewBox="0 0 24 24"
   stroke-width="1.5"
   stroke="currentColor"

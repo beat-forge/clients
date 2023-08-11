@@ -54,14 +54,14 @@
 					<div class="flex mt-5 gap-4 overflow-x-auto flex-wrap">
 						<a href={`/profile/${modData.author.id}`} class="whitespace-nowrap">
                             <Pill label={`by ${modData.author.username}`}>
-                                <PersonIcon className="w-5 h-5" />
+                                <PersonIcon customClasses="w-5 h-5" />
                             </Pill>
 						</a>
                         <Pill label={`${Sugar.Number.abbr(modData.stats.downloads)} Downloads`}>
-                            <DownloadIcon className="w-5 h-5" />
+                            <DownloadIcon customClasses="w-5 h-5" />
                         </Pill>
                         <Pill label={`Updated ${Sugar.Date.relative(new Date(modData.updatedAt))}`}>
-                            <CalendarIcon className="w-5 h-5" />
+                            <CalendarIcon customClasses="w-5 h-5" />
                         </Pill>
 					</div>
 				</div>
@@ -78,28 +78,28 @@
 					<div class="flex flex-col gap-2 py-3">
                         <a href={modData.github} target="_blank">
                             <Pill label="View GitHub">
-                                <GithubIcon className="w-5 h-5 fill-primary-50" />
+                                <GithubIcon customClasses="w-5 h-5 fill-primary-50" />
                             </Pill>
                         </a>
                         <Button variant="pill" customClasses={`copy-button grid cursor-pointer`} on:click={handleCopy}>
                             {#if $copiedState}
                                 <div class:copy-button-active={$copiedState} class="flex items-center gap-2" transition:fade={{ duration: 75 }}>
-                                    <CheckmarkIcon className="w-5 h-5" />
+                                    <CheckmarkIcon customClasses="w-5 h-5" />
                                     Copied!
                                 </div>
                                 
                             {:else}
                                 <div class:copy-button-active={$copiedState} class="flex items-center gap-2" transition:fade={{ duration: 75 }}>
-                                    <CopyIcon className="w-5 h-5" />
+                                    <CopyIcon customClasses="w-5 h-5" />
                                     Copy ID
                                 </div>
                             {/if}
                         </Button>
                         <Pill label={`Created ${Sugar.Date.relative(new Date(modData.createdAt))}`}>
-                            <CalendarIcon className="w-5 h-5" />
+                            <CalendarIcon customClasses="w-5 h-5" />
                         </Pill>
                         <Pill label={modData.category.name} customClasses="capitalize" >
-                            <CategoryIcon className="w-5 h-5" />
+                            <CategoryIcon customClasses="w-5 h-5" />
                         </Pill>
 					</div>
 				</div>

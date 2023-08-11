@@ -1,6 +1,6 @@
 <script lang="ts">
   // @ts-nocheck
-  export let className;
+  export let customClasses = '';
 </script>
 
 <svg
@@ -9,7 +9,7 @@
   viewBox="0 0 12 12"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
-  class={className}
+  class={customClasses}
 >
   <g clip-path="url(#clip0_228_77)">
     <path

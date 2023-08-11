@@ -1,7 +1,7 @@
 <script lang="ts">
   // @ts-nocheck
   // Variants: underlined, text, primarybutton, secondarybutton
-  export let variant;
+  export let variant = 'unset';
   export let customClasses = '';
   // Boolean
   export let external = false;
@@ -9,6 +9,7 @@
   export let href = '';
 
   const variantClasses = {
+    unset: '',
     ghost: 'outline-none',
     underlined: 'underline',
     text: 'hover:underline focus-visible:underline',
