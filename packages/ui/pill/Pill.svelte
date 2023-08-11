@@ -3,6 +3,7 @@
   import Text from '../text/Text.svelte';
 
   export let label;
+  export let customClasses = '';
 </script>
 
 <div
@@ -13,5 +14,5 @@
   {/if}
 
   <slot />
-  <Text variant="body" customClasses="text-xs font-bold text-fore-base">{label}</Text>
+  <Text variant="ghost" customClasses={`text-xs font-bold text-fore-base ${customClasses ?? ''}`}>{label}</Text>
 </div>

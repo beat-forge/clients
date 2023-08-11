@@ -212,3 +212,12 @@
 	position: absolute;
 	z-index: 2;
 }
+
+.copy-button > * {
+	grid-area: 1/1/2/2;
+}
+
+.copy-button:has(.copy-button-active) {
+	background: #123017;
+	color: #4FD264;
+}

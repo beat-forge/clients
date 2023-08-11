@@ -18,20 +18,16 @@
 			Discover Mods
 		</Link>
 		{#if $isAuthenticated}
-			<Link variant="text" href="/dashboard">
-				<Button variant="secondary" disabled={false}>
-					{user.username}
-					<img slot="trailing" alt="user icon" src={user.avatar} draggable="false" class="w-10 h-10 rounded-full">
-				</Button>
+			<Link variant="secondary" href="/dashboard">
+				{user.username}
+				<img slot="trailing" alt="user icon" src={user.avatar} draggable="false" class="w-10 h-10 rounded-full">
 			</Link>
 		{:else}
 			<Link variant="text" href="https://discord.gg/HTVrjFENaZ" external>
 				Discord
 			</Link>
-			<Link variant="text" href={env.PUBLIC_GITHUB_CALL_URL}>
-				<Button variant="secondary" disabled={false}>
-					Login
-				</Button>
+			<Link variant="secondary" href={env.PUBLIC_GITHUB_CALL_URL}>
+				Login
 			</Link>
 		{/if}
 	</div>
