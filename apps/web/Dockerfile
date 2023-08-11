@@ -1,15 +1,21 @@
-FROM node:lts-alpine
+FROM alpine:latest
 
+# Install nodejs
+RUN apk add nodejs
+
+# Create the beatforge user
+RUN addgroup -S beatforge && adduser -S beatforge -G beatforge
+
+# Switch to the beatforge user
+USER beatforge
+
+# Create the app directory
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
-RUN npm install -g pnpm
-RUN pnpm install
+# Copy the app
+COPY package*.json ./
+COPY build ./build
 
-COPY . .
-
-RUN pnpm install --filter="web"
-RUN pnpm run build --filter="web"
-
+# Expose the port
 EXPOSE 4173
-CMD ["pnpm", "run", "--filter=web", "preview", "--host"]
+CMD ["node", "build"]
