@@ -129,8 +129,8 @@ importers:
         specifier: ^7.2.1
         version: 7.2.1(react-dom@18.2.0)(react@18.2.0)
       '@storybook/blocks':
-        specifier: ^7.2.1
-        version: 7.2.1(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^7.2.3
+        version: 7.2.3(react-dom@18.2.0)(react@18.2.0)
       '@storybook/svelte':
         specifier: ^7.2.1
         version: 7.2.1(svelte@4.1.2)
@@ -3079,44 +3079,6 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - '@types/react-dom'
-    dev: true
-
-  /@storybook/blocks@7.2.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1fPsFC6n9R267KwxGHiL80OuIdMDRC9QuIW4sRF0tF/G/yvucbofySYRQl/Y8LjsMJq8D4NpG5xLsneSxMP5cg==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      '@storybook/channels': 7.2.1
-      '@storybook/client-logger': 7.2.1
-      '@storybook/components': 7.2.1(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/core-events': 7.2.1
-      '@storybook/csf': 0.1.0
-      '@storybook/docs-tools': 7.2.1
-      '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.2.1(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.2.1
-      '@storybook/theming': 7.2.1(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.2.1
-      '@types/lodash': 4.14.194
-      color-convert: 2.0.1
-      dequal: 2.0.3
-      lodash: 4.17.21
-      markdown-to-jsx: 7.2.0(react@18.2.0)
-      memoizerific: 1.11.3
-      polished: 4.2.2
-      react: 18.2.0
-      react-colorful: 5.6.1(react-dom@18.2.0)(react@18.2.0)
-      react-dom: 18.2.0(react@18.2.0)
-      telejson: 7.1.0
-      tocbot: 4.21.1
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - '@types/react-dom'
-      - encoding
-      - supports-color
     dev: true
 
   /@storybook/blocks@7.2.3(react-dom@18.2.0)(react@18.2.0):
