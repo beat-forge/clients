@@ -20,7 +20,7 @@ COPY package*.json ./
 RUN pnpm install --prod
 
 # Bundle app build
-COPY build ./build
+COPY apps/web/build ./build
 
 # Expose the port
 EXPOSE 3000
