@@ -1,3 +1,5 @@
+name: Build GUI
+
 on:
   push:
     branches:
@@ -15,7 +17,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  release-gui:
+  build-gui:
     strategy:
       fail-fast: false
       matrix:
@@ -73,13 +75,13 @@ jobs:
         continue-on-error: true
         if: matrix.platform == 'macos-latest' || matrix.platform == 'ubuntu-20.04'
         run: |
-          rm -rf apps/gui/src-tauri/target/release/bundle
+          rm -rf apps/gui/src-tauri/target/debug/bundle
 
       - name: delete existing bundles on windows
         continue-on-error: true
         if: matrix.platform == 'windows-latest'
         run: |
-          Remove-Item -Recurse -Force apps/gui/src-tauri/target/release/bundle
+          Remove-Item -Recurse -Force apps/gui/src-tauri/target/debug/bundle
 
       - name: Install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-20.04'
@@ -88,6 +90,4 @@ jobs:
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
 
       - name: Build
-        uses: tauri-apps/tauri-action@v0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm run build --filter=gui -- --debug
