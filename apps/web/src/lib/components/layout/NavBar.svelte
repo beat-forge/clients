@@ -9,7 +9,7 @@
 </script>
 
 <div class="beatforge-page-navbar flex w-full items-center py-8 px-4 mx-auto max-w-7xl z-[100] text-sm font-bold">
-	<Link variant="ghost" focusRing={false}>
+	<Link variant="ghost" focusRing={false} href="/">
 		<img src="/images/logo.svg" draggable="false" alt="logo" class="h-12 p-3" />
 	</Link>
 
