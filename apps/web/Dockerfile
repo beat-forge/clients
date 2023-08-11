@@ -17,5 +17,5 @@ COPY package*.json ./
 COPY build ./build
 
 # Expose the port
-EXPOSE 4173
+EXPOSE 3000
 CMD ["node", "build"]
