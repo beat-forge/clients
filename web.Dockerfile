@@ -15,12 +15,11 @@ USER beatforge
 # Create the app directory
 WORKDIR /app
 
-# Install client dependencies
-COPY package*.json ./
-RUN pnpm install --prod
+COPY . .
+RUN pnpm install --filter web --prod
 
-# Bundle app build
-COPY apps/web/build ./build
+# Switch to the web directory
+WORKDIR /app/web/
 
 # Expose the port
 EXPOSE 3000
