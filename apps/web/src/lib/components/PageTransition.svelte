@@ -5,7 +5,7 @@
 </script>
 
 {#key pathname}
-	<div class="beatforge-layout__animation-root w-screen h-fit relative" in:fly={{ x: -16, duration: 250, delay: 500 }} out:fly={{ x: 8, duration: 250 }}>
+	<div class="beatforge-layout__animation-root w-screen h-fit flex flex-grow relative" in:fly={{ x: -16, duration: 250, delay: 500 }} out:fly={{ x: 8, duration: 250 }}>
 		<slot />
 	</div>
 {/key}

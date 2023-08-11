@@ -25,7 +25,7 @@
 			Discover Mods
 		</Link>
 		{#if $isAuthenticated}
-			<Link variant="secondary" href="/dashboard">
+			<Link variant="secondary" href={`/profile/${$user.user.id}`}>
 				{$user.user.username}
 				<img alt="user icon" src={$user.user.avatar} draggable="false" class="w-10 h-10 rounded-full">
 			</Link>

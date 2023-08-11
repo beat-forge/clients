@@ -13,8 +13,6 @@
     import { CalendarIcon, PersonIcon, DownloadIcon, CopyIcon, GithubIcon, CheckmarkIcon, VerifiedIcon, CategoryIcon, NotVerifiedIcon } from 'ui/icons';
     import Button from 'ui/button/Button.svelte';
 
-	console.log(modData);
-
 	const handleCopy = () => {
 		navigator.clipboard.writeText(modData.id)
 		copiedState.set(true)
