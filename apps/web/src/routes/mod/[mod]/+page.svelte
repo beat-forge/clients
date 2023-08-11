@@ -25,7 +25,7 @@
 	}
 </script>
 
-<div class="h-screen w-screen">
+<div class="h-full w-full">
 	<div class="flex justify-center">
 		<div class="flex flex-col gap-2 w-full max-w-7xl px-4">
 			<div
