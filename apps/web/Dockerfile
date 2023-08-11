@@ -1,7 +1,10 @@
 FROM alpine:latest
 
 # Install nodejs
-RUN apk add nodejs
+RUN apk add --update npm
+
+# Install pnpm
+RUN npm install -g pnpm
 
 # Create the beatforge user
 RUN addgroup -S beatforge && adduser -S beatforge -G beatforge
@@ -12,8 +15,11 @@ USER beatforge
 # Create the app directory
 WORKDIR /app
 
-# Copy the app
+# Install client dependencies
 COPY package*.json ./
+RUN pnpm install --prod
+
+# Bundle app build
 COPY build ./build
 
 # Expose the port
