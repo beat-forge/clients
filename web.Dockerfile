@@ -19,7 +19,7 @@ COPY . .
 RUN pnpm install --filter web --prod
 
 # Switch to the web directory
-WORKDIR /apps/web/
+WORKDIR /app/apps/web/
 
 # Expose the port
 EXPOSE 3000
