@@ -3,12 +3,11 @@
 	import { Button } from 'ui/button';
 	import { Dropdown } from 'ui/dropdown';
 	import { BarsThree } from 'ui/icons';
-	
+
 	import { env } from '$env/dynamic/public';
 	import { isAuthenticated, user } from '$lib/stores/user';
 	import { onMount } from 'svelte';
 	import jwt_decode from 'jwt-decode';
-
 
 	onMount(() => {
 		const cookie = document.cookie.split(';').find((cookie) => cookie.startsWith('auth='))?.split('=')[1]
@@ -23,7 +22,7 @@
 	<Link customClasses="flex-shrink-0" variant="ghost" focusRing={false} href="/">
 		<img src="/images/logo.svg" draggable="false" alt="logo" class="h-12 p-3 flex" />
 	</Link>
-	
+
 	<div class="ml-auto mr-4 flex flex-row gap-8 items-center">
 		<div class="flex md:hidden">
 			<Dropdown >
@@ -51,11 +50,14 @@
 				<img alt="user icon" src={$user.user.avatar} draggable="false" class="flex flex-shrink-0 w-8 h-8 min-w-[32px] min-h-[32px] md:w-10 md:h-10 rounded-full">
 			</Link>
 		{:else}
-			<Link variant="secondary" href={env.PUBLIC_GITHUB_CALL_URL}>
+			<!-- <Link variant="secondary" href={apiURL}>
 				Login
-			</Link>
+			</Link> -->
+			<a href={env.PUBLIC_GITHUB_CALL_URL} class="flex items-center gap-2">
+				Login
+			</a>
 		{/if}
 	</div>
 
-	
+
 </div>
