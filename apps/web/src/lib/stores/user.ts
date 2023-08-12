@@ -1,5 +1,2 @@
-import { writable } from "svelte/store";
-
-export const isAuthenticated = writable(false);
-export const user = writable(null);
-export const jwtKey = writable(null);
+import { persisted } from 'svelte-local-storage-store';
+export const user = persisted('user', null);

@@ -5,32 +5,32 @@
 
 version: 2
 updates:
-  - package-ecosystem: "github-actions" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: 'github-actions' # See documentation for possible values
+    directory: '/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/"
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/apps/*/"
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/apps/*/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/packages/*/"
+  - package-ecosystem: 'npm' # See documentation for possible values
+    directory: '/packages/*/'
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "docker" # See documentation for possible values
-    directory: "/apps/web/" # Location of package manifests
+  - package-ecosystem: 'docker' # See documentation for possible values
+    directory: '/apps/web/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'
 
-  - package-ecosystem: "cargo" # See documentation for possible values
-    directory: "/apps/gui/" # Location of package manifests
+  - package-ecosystem: 'cargo' # See documentation for possible values
+    directory: '/apps/gui/' # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: 'daily'

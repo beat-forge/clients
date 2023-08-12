@@ -13,5 +13,5 @@ export { default as NotVerifiedIcon } from './NotVerified.svelte';
 export { default as PersonIcon } from './Person.svelte';
 export { default as SearchIcon } from './Search.svelte';
 export { default as VerifiedIcon } from './Verified.svelte';
-export { default as AtSymbolIcon } from './AtSymbol.svelte'
-export { default as BarsThree } from './BarsThree.svelte'
+export { default as AtSymbolIcon } from './AtSymbol.svelte';
+export { default as BarsThree } from './BarsThree.svelte';

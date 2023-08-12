@@ -2,15 +2,15 @@ import type { PageLoad } from './$types';
 import { env } from '$env/dynamic/public';
 
 export const load = (async ({ params, fetch }) => {
-    const id = params.id;
-    try {
-        const response = await fetch(`${env.PUBLIC_API_URL}/graphql`, {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                query: `
+	const id = params.id;
+	try {
+		const response = await fetch(`${env.PUBLIC_API_URL}/graphql`, {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify({
+				query: `
                     query($user: Uuid!, $auth: String) {
                         userById(id: $user, auth: $auth) {
                             username
@@ -45,25 +45,25 @@ export const load = (async ({ params, fetch }) => {
                         }
                     }
                 `,
-                variables: {
-                    user: id,
-                    auth: null
-                }
-            })
-        });
-        let data = await response.json()
-        return {
-            status: 200,
-            body: {
-                data: data.data.userById
-            }
-        };
-    } catch (error) {
-        return {
-            status: 500,
-            body: {
-                error: error.message
-            }
-        };
-    }
+				variables: {
+					user: id,
+					auth: null
+				}
+			})
+		});
+		let data = await response.json();
+		return {
+			status: 200,
+			body: {
+				data: data.data.userById
+			}
+		};
+	} catch (error) {
+		return {
+			status: 500,
+			body: {
+				error: error.message
+			}
+		};
+	}
 }) satisfies PageLoad;

@@ -4,7 +4,7 @@
 }
 
 .beatforge-landing-header-responsive {
-	font-size: max(32px,min(5vw,56px))
+	font-size: max(32px, min(5vw, 56px));
 }
 
 .beatforge-landing-terminal-window-wrapper:hover
@@ -219,5 +219,5 @@
 
 .copy-button:has(.copy-button-active) {
 	background: #123017;
-	color: #4FD264;
+	color: #4fd264;
 }

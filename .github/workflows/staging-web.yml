@@ -54,7 +54,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --filter=web
-  
+
       - name: Build Svelte
         run: pnpm run build --filter=web
 

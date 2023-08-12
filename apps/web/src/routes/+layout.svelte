@@ -13,8 +13,8 @@
 </script>
 
 <NavBarDisclaimer />
-<main class="beatforge-page-layout relative w-full h-full">
-	<div class="beatforge-page-content-wrapper relative flex flex-col items-center w-full h-full">
+<main class="relative w-full h-full beatforge-page-layout">
+	<div class="relative flex flex-col items-center w-full h-full beatforge-page-content-wrapper">
 		<NavBar />
 		<PageTransition pathname={data.pathname}>
 			<slot />
