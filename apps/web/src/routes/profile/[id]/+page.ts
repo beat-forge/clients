@@ -1,10 +1,10 @@
 import type { PageLoad } from './$types';
-import { env } from '$env/dynamic/public';
+import { PUBLIC_API_URL } from '$env/static/public';
 
 export const load = (async ({ params }) => {
     const id = params.id;
     try {
-        const response = await fetch(`${env.PUBLIC_API_URL}/graphql`, {
+        const response = await fetch(`${PUBLIC_API_URL}/graphql`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
