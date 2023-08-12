@@ -8,8 +8,8 @@
 	import NavBarDisclaimer from '$lib/components/layout/NavBarDisclaimer.svelte';
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
-	import type { LayoutServerData } from './$types';
-	export let data: LayoutServerData;
+	import type { LayoutData } from './$types';
+	export let data: LayoutData;
 </script>
 
 <NavBarDisclaimer />
