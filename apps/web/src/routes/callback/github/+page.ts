@@ -1,4 +1,4 @@
-import { PUBLIC_API_URL } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 import type { PageLoad } from './$types';
 import { redirect } from '@sveltejs/kit';
 import { jwtKey } from '$lib/stores/user';
@@ -9,7 +9,7 @@ export const load = (async ({ url: { searchParams }, fetch }) => {
         throw redirect(302, '/');
     } else {
         try {
-            const response = await fetch(`${PUBLIC_API_URL}/auth/github?code=${code}`, {
+            const response = await fetch(`${env.PUBLIC_API_URL}/auth/github?code=${code}`, {
                 method: 'POST',
                 headers: {
                     "Access-Control-Allow-Origin": "*",

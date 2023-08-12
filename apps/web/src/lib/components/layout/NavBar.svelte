@@ -3,8 +3,8 @@
 	import { Button } from 'ui/button';
 	import { Dropdown } from 'ui/dropdown';
 	import { BarsThree } from 'ui/icons';
-	
-	import { PUBLIC_GITHUB_CALL_URL } from '$env/static/public';
+
+	import { env } from '$env/dynamic/public';
 	import { isAuthenticated, user } from '$lib/stores/user';
 	import { onMount } from 'svelte';
 	import jwt_decode from 'jwt-decode';
@@ -50,7 +50,10 @@
 				<img alt="user icon" src={$user.user.avatar} draggable="false" class="flex flex-shrink-0 w-8 h-8 min-w-[32px] min-h-[32px] md:w-10 md:h-10 rounded-full">
 			</Link>
 		{:else}
-			<Link variant="secondary" href={env.PUBLIC_GITHUB_CALL_URL}>
+			<!-- <Link variant="secondary" href={apiURL}>
+				Login
+			</Link> -->
+			<a href={env.PUBLIC_GITHUB_CALL_URL} class="flex items-center gap-2">
 				Login
 			</a>
 		{/if}
