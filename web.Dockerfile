@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN apk add --update npm
 
 # Install pnpm
-RUN npm install -g pnpm
+RUN npm install -g pnpm dotenv
 
 # Create the beatforge user
 RUN addgroup -S beatforge && adduser -S beatforge -G beatforge
@@ -23,4 +23,4 @@ WORKDIR /app/apps/web/
 
 # Expose the port
 EXPOSE 3000
-CMD ["node", "build"]
+CMD ["node", "-r", "dotenv/config", "build"]
