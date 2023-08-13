@@ -55,9 +55,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --filter=web
 
-      - name: Build Svelte
-        run: pnpm run build --filter=web
-
       - name: Upload to GitHub Container Registry
         uses: docker/build-push-action@v4
         with:
