@@ -1,4 +1,4 @@
-import { env } from '$env/dynamic/public';
+// import { env } from '$env/dynamic/public';
 import type { PageLoad } from './$types';
 import { redirect } from '@sveltejs/kit';
 
@@ -9,8 +9,8 @@ export const load = (async ({ url: { searchParams }, fetch }) => {
 		throw redirect(302, '/');
 	} else {
 		try {
-			console.log(`${env.PUBLIC_API_URL}/auth/github?code=${code}`);
-			const response = await fetch(`${env.PUBLIC_API_URL}/auth/github?code=${code}`, {
+			console.log(`${import.meta.env.API_URL}/auth/github?code=${code}`);
+			const response = await fetch(`${import.meta.env.API_URL}/auth/github?code=${code}`, {
 				method: 'POST',
 				headers: {
 					'Access-Control-Allow-Origin': '*',

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { get } from 'svelte/store';
-	import { env } from '$env/dynamic/public';
+	// import { env } from '$env/dynamic/public';
 	import { Link } from 'ui/link';
 	import { Button } from 'ui/button';
 	import { Dropdown } from 'ui/dropdown';
@@ -44,7 +44,7 @@
 			<!-- <Link variant="secondary" href={apiURL}>
 				Login
 			</Link> -->
-			<a href={env.PUBLIC_GITHUB_CALL_URL} class="flex items-center gap-2"> Login </a>
+			<a href={import.meta.env.GITHUB_CALLBACK_URL} class="flex items-center gap-2"> Login </a>
 		{/if}
 	</div>
 </div>
