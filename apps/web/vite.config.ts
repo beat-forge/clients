@@ -1,5 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, loadEnv } from 'vite';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig(({ mode }) => {
 	// let env = loadEnv(mode, process.cwd(), '');
@@ -17,7 +18,10 @@ export default defineConfig(({ mode }) => {
 	// if (!env.GITHUB_CALLBACK_URL) throw new Error('BEATFORGE_GITHUB_CALLBACK_URL is not defined');
 
 	return {
-		plugins: [sveltekit()],
+		plugins: [
+			ViteImageOptimizer(),
+			sveltekit()
+		],
 		define: {
 			'import.meta.env.API_URL': JSON.stringify(env.API_URL),
 			'import.meta.env.GITHUB_CALLBACK_URL': JSON.stringify(env.GITHUB_CALLBACK_URL)
