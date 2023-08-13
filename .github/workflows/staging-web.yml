@@ -4,11 +4,13 @@ on:
       - main
     paths:
       - 'apps/web/**'
+      - 'packages/**'
   pull_request:
     branches:
       - main
     paths:
       - 'apps/web/**'
+      - 'packages/**'
 
 permissions:
   contents: write
