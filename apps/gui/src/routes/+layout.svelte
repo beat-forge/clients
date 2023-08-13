@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
+	import '../fonts.css';
 	import TitleBar from '$lib/components/TitleBar.svelte';
 	import SideBar from '$lib/components/SideBar.svelte';
 </script>
