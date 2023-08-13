@@ -23,4 +23,4 @@ WORKDIR /app/apps/web/
 
 # Expose the port
 EXPOSE 3000
-CMD ["npm", "run", "docker", "web"]
+CMD ["npm", "run", "run"]
