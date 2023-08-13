@@ -20,7 +20,7 @@
     "@markuplint/svelte-parser": "^3.9.0",
     "concurrently": "^8.2.0",
     "dotenv-cli": "^7.2.1",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-config-custom": "workspace:*",
     "lint-staged": "^13.2.3",
     "markuplint": "^3.12.0",
