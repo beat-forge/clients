@@ -24,7 +24,7 @@
 
 		<div class="hidden md:flex md:gap-8">
 			<Link variant="text" href="/discover">Discover Mods</Link>
-			<Link variant="text" href="/">Client</Link>
+			<Link variant="text" href="/client">Client</Link>
 			<Link variant="text" href="https://discord.gg/HTVrjFENaZ" external>Discord</Link>
 		</div>
 

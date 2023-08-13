@@ -12,7 +12,7 @@
 	export let data: LayoutServerData;
 </script>
 
-<NavBarDisclaimer />
+<!-- <NavBarDisclaimer /> -->
 <main class="relative w-full h-full beatforge-page-layout">
 	<div class="relative flex flex-col items-center w-full h-full beatforge-page-content-wrapper">
 		<NavBar />
