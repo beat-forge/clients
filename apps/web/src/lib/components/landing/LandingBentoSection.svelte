@@ -12,7 +12,7 @@
 	onMount(() => {
 		// @ts-ignore
 		document.getElementById('cards').onmousemove = (e) => {
-			for (const card of document.getElementsBycustomClasses('beatforge-landing-bentobox-item')) {
+			for (const card of document.getElementsByClassName('beatforge-landing-bentobox-item')) {
 				const rect = card.getBoundingClientRect(),
 					x = e.clientX - rect.left,
 					y = e.clientY - rect.top;
@@ -31,13 +31,13 @@
 >
 	<FeatureSection>
 		<h2
-			class="beatforge-landing-std-eyebrow landing-gradient-eyebrow font-bold text-sm uppercase tracking-wider -mb-12"
+			class="-mb-12 text-sm font-bold tracking-wider uppercase beatforge-landing-std-eyebrow landing-gradient-eyebrow"
 		>
 			Why BeatForge
 		</h2>
 		<IntersectionObserver
 			once={true}
-			class="flex flex-col justify-center items-center text-center gap-8"
+			class="flex flex-col items-center justify-center gap-8 text-center"
 			let:intersecting
 			top={-250}
 		>
@@ -58,10 +58,10 @@
 		<IntersectionObserver once={true} let:intersecting top={0}>
 			<div
 				class:beatforge-landing-bentobox-animated={intersecting}
-				class="beatforge-landing-bentobox flex flex-col w-full gap-2 max-w-7xl"
+				class="flex flex-col w-full gap-2 beatforge-landing-bentobox max-w-7xl"
 				id="cards"
 			>
-				<div class="beatforge-landing-bentobox-row-first flex flex-row gap-2">
+				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-first">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 
-				<div class="beatforge-landing-bentobox-row-second flex flex-row gap-2">
+				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-second">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full p-4 sm:p-16 rounded-md relative"
 					>
@@ -93,7 +93,7 @@
 								We stay out of your way. Mod in less time, and play in no time.
 							</p>
 						</div>
-						<div class="pointer-events-none w-full h-full absolute inset-0">
+						<div class="absolute inset-0 w-full h-full pointer-events-none">
 							<img
 								class="pointer-events-none select-none z-[-1] w-full h-full object-cover rounded-md"
 								src="/images/blurglow.png"
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 
-				<div class="beatforge-landing-bentobox-row-third flex flex-row gap-2">
+				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-third">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>

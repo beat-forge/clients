@@ -16,17 +16,17 @@
 	style="background: radial-gradient(ellipse 100% 60% at 50% 60%,rgb(164 99 246 / 7%),var(--transparent)); margin-top: 128px;"
 >
 	<FeatureSection>
-		<h2 class="landing-gradient-eyebrow font-bold text-sm uppercase tracking-wider -mb-12">CLI</h2>
+		<h2 class="-mb-12 text-sm font-bold tracking-wider uppercase landing-gradient-eyebrow">CLI</h2>
 		<IntersectionObserver
 			once={true}
-			class="flex flex-col justify-center items-center text-center gap-8"
+			class="flex flex-col items-center justify-center gap-8 text-center"
 			let:intersecting
 			top={-250}
 		>
 			<LandingHeading>
-				<div class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
+				<h1 class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
 					Tools that empower developers to build better, faster.
-				</div>
+				</h1>
 			</LandingHeading>
 
 			<LandingDescription>
@@ -44,7 +44,7 @@
 			>
 				<div class="relative h-[54px] bg-[#19181b]">
 					<div
-						class="beatforge-landing-terminal-window-bullets flex h-full items-center ml-5"
+						class="flex items-center h-full ml-5 beatforge-landing-terminal-window-bullets"
 						aria-hidden="true"
 					>
 						<span />

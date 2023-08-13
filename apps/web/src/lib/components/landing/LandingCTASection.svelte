@@ -17,10 +17,10 @@
 		>
 			The most seamless modding platform for Beat Saber
 		</h1>
-		<div class="max-w-[600px] text-[#8B888C] font-medium text-xl leading-[1.5]">
+		<h2 class="max-w-[600px] text-[#8B888C] font-medium text-xl leading-[1.5]">
 			Discover, create, and share mods with BeatForge, the transparent, open-source modding
 			platform.
-		</div>
+		</h2>
 
 		<div class="flex flex-row gap-4">
 			<GradientCtaButton />
@@ -29,7 +29,7 @@
 				Source Code
 			</Link>
 		</div>
-		<div class="opacity-50 mt-auto mb-8">
+		<div class="mt-auto mb-8 opacity-50">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

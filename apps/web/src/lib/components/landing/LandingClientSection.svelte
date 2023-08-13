@@ -18,15 +18,15 @@
 	<FeatureSection>
 		<IntersectionObserver
 			once={true}
-			class="flex flex-col justify-center items-center text-center gap-8"
+			class="flex flex-col items-center justify-center gap-8 text-center"
 			let:intersecting
 			top={0}
 		>
-			<h2 class="landing-gradient-eyebrow font-bold text-sm uppercase tracking-wider">Client</h2>
+			<h2 class="text-sm font-bold tracking-wider uppercase landing-gradient-eyebrow">Client</h2>
 			<LandingHeading>
-				<div class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
+				<h1 class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
 					BeatForge Client is your ultimate modding companion.
-				</div>
+				</h1>
 			</LandingHeading>
 
 			<LandingDescription>
