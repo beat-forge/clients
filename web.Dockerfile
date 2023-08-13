@@ -10,7 +10,7 @@ RUN npm install -g pnpm
 RUN addgroup -S beatforge && adduser -S beatforge -G beatforge
 
 # Switch to the beatforge user
-USER beatforge
+# USER beatforge
 
 # Create the app directory
 WORKDIR /app
