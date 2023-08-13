@@ -21,6 +21,7 @@
 					aria-label="github"
 					target="_blank"
 					rel="noopener"
+					data-umami-event="Generic - Footer GitHub Link"
 					><svg
 						class="w-4 h-4 fill-current"
 						role="img"
@@ -38,6 +39,7 @@
 					aria-label="github"
 					target="_blank"
 					rel="noopener"
+					data-umami-event="Generic - Footer Discord Link"
 					><svg
 						class="w-4 h-4 fill-current"
 						role="img"
