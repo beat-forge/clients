@@ -115,8 +115,8 @@
 @keyframes bentobox-transform {
 	from {
 		transform: translateY(16px);
-		filter: blur(4px) brightness(200%) saturate(0.5);
-		opacity: 0.3;
+		filter: brightness(200%) saturate(0.5);
+		opacity: 0.1;
 	}
 
 	to {
@@ -363,4 +363,8 @@
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+.beatforge-landing-bentobox-item {
+	backdrop-filter: blur(2px);
 }
