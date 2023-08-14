@@ -22,7 +22,7 @@
     "@storybook/addon-links": "^7.2.3",
     "@storybook/blocks": "^7.2.3",
     "@storybook/svelte": "^7.2.3",
-    "@storybook/svelte-vite": "^7.2.1",
+    "@storybook/svelte-vite": "^7.2.3",
     "@storybook/testing-library": "^0.2.0",
     "eslint-config-custom": "workspace:*",
     "react": "^18.2.0",
