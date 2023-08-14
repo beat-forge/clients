@@ -5,10 +5,21 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 
+	function refresh() {
+		location.reload();
+	}
+
 	onMount(() => {
 		page.subscribe((value) => {
-			user.set(jwt_decode(value.data.jwt));
-			goto('/');
+			// TODO!: when the page subscribes to this value, it happens twice, breaking client-side navigation
+			// I "fixed" this with a try/catch and reloading the page on login
+			// - fero
+			try {
+				user.set(jwt_decode(value.data.jwt));
+			} catch (e) {
+				console.error('An error occurred setting the JWT', e)
+			}
+			goto('/').then(refresh)
 		});
 	});
 </script>
