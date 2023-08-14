@@ -60,7 +60,7 @@
 				class="flex flex-col w-full gap-2 beatforge-landing-bentobox max-w-7xl"
 				id="cards"
 			>
-				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-first">
+				<div class="flex flex-col sm:flex-row gap-2 beatforge-landing-bentobox-row-first">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 
-				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-second">
+				<div class="flex flex-col sm:flex-row gap-2 beatforge-landing-bentobox-row-second">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full p-4 sm:p-16 rounded-md relative"
 					>
@@ -102,7 +102,7 @@
 					</div>
 				</div>
 
-				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-third">
+				<div class="flex flex-col sm:flex-row gap-2 beatforge-landing-bentobox-row-third">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>

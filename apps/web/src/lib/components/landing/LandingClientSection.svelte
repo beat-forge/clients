@@ -30,7 +30,7 @@
 			</LandingHeading>
 
 			<LandingDescription>
-				<p class="-mt-8 transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
+				<p class="transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
 					Built with a steadfast focus on performance and usability, BeatForge Client is the best way to install and manage your mods. Made with Rust, not Electron.
 				</p>
 			</LandingDescription>

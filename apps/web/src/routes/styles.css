@@ -7,6 +7,10 @@
 	font-size: max(30px, min(5vw, 48px));
 }
 
+.beatforge-landing-description-responsive {
+	font-size: max(15px, min(2vw, 18px));
+}
+
 .beatforge-landing-terminal-window-wrapper:hover
 	.beatforge-landing-terminal-window-bullets
 	span:first-child {
