@@ -40,7 +40,7 @@
 		<div class="beatforge-btn-wrapper flex flex-col rounded-lg overflow-hidden min-w-[199px] will-change-transform -mb-[4px]">
 			<Button variant="gradient" customClasses="!rounded-[0px] will-change-transform">
 				<LogoIcon customClasses="w-4 h-4" />
-				<div class="text-sm font-bold will-change-transform">Install</div>
+				<div class="text-sm font-bold will-change-transform">Download</div>
 			</Button>
             {#if isHovered}
                 <div class="flex flex-row gap-[2px] mt-[2px] opacity-0 group-hover:opacity-100 overflow-hidden rounded-b-lg will-change-transform" transition:slide={{ delay: 0, duration: 350, easing: quintOut, axis: 'y' }}>

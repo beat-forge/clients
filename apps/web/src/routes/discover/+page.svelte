@@ -8,10 +8,10 @@
 	import { onMount } from 'svelte';
 
 	enum Sort {
-		Newest,
-		Oldest,
-		MostPopular,
-		LeastPopular
+		Newest = "created_at:desc",
+		Oldest = "created_at:asc",
+		MostPopular = "stats.downloads:desc",
+		LeastPopular = "stats.downloads:asc"
 	}
 
 	let listHeight;
@@ -30,11 +30,12 @@
 				},
 				body: JSON.stringify({
 					q: q,
-					sort: sort
+					sort: [sort.toString()]
 				})
 			})
 		).json();
 		data = res.hits;
+		data = data;
 	};
 
 	const searchOnInput = async (e: any) => {
@@ -86,9 +87,9 @@
 					slug={mod.slug}
 					author={mod.author.username}
 					description={mod.description}
-					category={mod.category.name}
+					category={mod.category}
 					downloads={mod.stats.downloads}
-					updatedAt={mod.updatedAt}
+					updatedAt={mod.updated_at}
 					icon={mod.icon}
 				/>
 			{/each}

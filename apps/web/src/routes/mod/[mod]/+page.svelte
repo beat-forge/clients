@@ -31,7 +31,7 @@
 			<div class="flex p-4 bg-primary-850 h-20 justify-between -mt-4">
 				<div class="sm:ml-12 -mt-20">
 					<img
-						src={modData.icon ? modData.icon : '/icons/default.png'}
+						src={modData.icon ? modData.icon : '/images/unknown.svg'}
 						alt="icon"
 						class="w-32 border-primary-850 border-4 rounded-md"
 					/>
@@ -84,7 +84,7 @@
                                     <CheckmarkIcon customClasses="w-5 h-5" />
                                     Copied!
                                 </div>
-                                
+
                             {:else}
                                 <div class:copy-button-active={$copiedState} class="flex items-center gap-2" transition:fade={{ duration: 75 }}>
                                     <CopyIcon customClasses="w-5 h-5" />
