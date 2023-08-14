@@ -15,3 +15,5 @@ export { default as SearchIcon } from './Search.svelte';
 export { default as VerifiedIcon } from './Verified.svelte';
 export { default as AtSymbolIcon } from './AtSymbol.svelte';
 export { default as BarsThree } from './BarsThree.svelte';
+export { default as CubeIcon } from './Cube.svelte';
+export { default as CogIcon } from './Cog.svelte'

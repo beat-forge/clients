@@ -14,6 +14,7 @@ export const load = (async ({ params, fetch }) => {
                         modBySlug(slug: $slug) {
                             id
                             name
+                            slug
                             description
                             icon
                             cover

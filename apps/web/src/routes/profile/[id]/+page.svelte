@@ -2,16 +2,11 @@
 	import { Pill } from 'ui/pill';
 	// @ts-nocheck
 	import type { PageData } from './$types';
-	import { copiedState } from '$lib/stores/mod';
 	export let data: PageData;
-
     export let userData = data.body.data;
-    
 	import Sugar from 'sugar';
-
-    import { CalendarIcon, PersonIcon, DownloadIcon, CopyIcon, GithubIcon, CheckmarkIcon, VerifiedIcon, CategoryIcon, NotVerifiedIcon, AtSymbolIcon } from 'ui/icons';
-    import Button from 'ui/button/Button.svelte';
-
+    import { CalendarIcon, AtSymbolIcon } from 'ui/icons';
+	import ModListItem from '$lib/components/ModListItem.svelte';
 </script>
 
 <div class="h-full w-full">
@@ -34,7 +29,7 @@
 			<div class="flex -mt-4 p-4 pb-8 bg-primary-850 rounded-b-md">
 				<div class="sm:ml-12 overflow-hidden">
 					<div class="flex">
-						<h1 class="text-white-100 text-3xl font-bold mt-3">{userData.displayName ? userData.displayName : userData.username}</h1>
+						<h1 class="text-4xl mt-2 font-black leading-[1.25] tracking-wide">{userData.displayName ? userData.displayName : userData.username}</h1>
 					</div>
                     <p class="text-white-100 text-sm font-semibold py-3 opacity-70 max-w-[68ch]">
 						{userData.bio}
@@ -51,14 +46,13 @@
 			</div>
 				
 			<div class="sm:p-8 bg-primary-850 rounded-md sm:pl-16 px-3 py-4 w-full">
-				<h2 class="text-white-100 text-lg font-bold">Mods by {userData.displayName ? userData.displayName : userData.username}</h2>
+				<h2 class="text-white-100 text-lg font-bold mb-4">Mods by {userData.displayName ? userData.displayName : userData.username}</h2>
+				<div class="overflow-hidden rounded-lg">
+					{#each userData.mods as mod}
+						<ModListItem name={mod.name} slug={mod.slug} author={mod.author.username} description={mod.description} category={mod.category.name} downloads={mod.stats.downloads} updatedAt={mod.updatedAt} icon={mod.icon} />
+					{/each}
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme('colors.zinc.900');
-	}
-</style>

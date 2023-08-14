@@ -4,15 +4,12 @@
 	import type { PageData } from './$types';
 	import { copiedState } from '$lib/stores/mod';
 	export let data: PageData;
-
     export let modData = data.body.data;
-    
 	import Sugar from 'sugar';
-
     import { fade } from 'svelte/transition';
-    import { CalendarIcon, PersonIcon, DownloadIcon, CopyIcon, GithubIcon, CheckmarkIcon, VerifiedIcon, CategoryIcon, NotVerifiedIcon } from 'ui/icons';
-    import Button from 'ui/button/Button.svelte';
-
+    import { CalendarIcon, PersonIcon, DownloadIcon, CopyIcon, GithubIcon, CheckmarkIcon, CategoryIcon } from 'ui/icons';
+    import { Button } from 'ui/button';
+	import ModVersionItem from '$lib/components/ModVersionItem.svelte';
 	const handleCopy = () => {
 		navigator.clipboard.writeText(modData.id)
 		copiedState.set(true)
@@ -49,7 +46,7 @@
 			<div class="flex -mt-4 p-4 pb-8 bg-primary-850 rounded-b-md">
 				<div class="sm:ml-12 overflow-hidden">
 					<div class="flex">
-						<h1 class="text-white-100 text-3xl font-bold mt-3">{modData.name}</h1>
+						<h1 class="text-4xl mt-2 font-black leading-[1.25] tracking-wide">{modData.name}</h1>
 					</div>
 					<div class="flex mt-5 gap-4 overflow-x-auto flex-wrap">
 						<a href={`/profile/${modData.author.id}`} class="whitespace-nowrap">
@@ -105,14 +102,11 @@
 				</div>
 			</div>
 			<div class="sm:p-8 bg-primary-850 rounded-md sm:pl-16 px-3 py-4 w-full">
-				<h2 class="text-white-100 text-lg font-bold">Versions</h2>
+				<h2 class="text-white-100 text-lg font-bold mb-4">Versions</h2>
+				{#each modData.versions as version}
+					<ModVersionItem versionName={version.version} downloads={version.stats.downloads} createdAt={version.createdAt} approved={version.approved} downloadUrl={version.downloadUrl} />
+				{/each}
 			</div>
 		</div>
 	</div>
 </div>
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme('colors.zinc.900');
-	}
-</style>

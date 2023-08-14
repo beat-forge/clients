@@ -27,19 +27,22 @@ export const load = (async ({ params, fetch }) => {
                                 description
                                 icon
                                 cover
-                            category {
-                            name
-                            }
-                            stats {
-                            downloads
-                            }
-                            updatedAt
-                            createdAt
-                            versions {
-                                version
-                                approved
-                                supportedGameVersions
-                            }
+                                category {
+                                    name
+                                }
+                                stats {
+                                    downloads
+                                }
+                                updatedAt
+                                createdAt
+                                versions {
+                                    version
+                                    approved
+                                    supportedGameVersions
+                                }
+                                author {
+                                    username
+                                }
                         }
                         }
                     }
