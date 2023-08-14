@@ -11,7 +11,7 @@
 <div
 	class="beatforge-page-navbar relative flex w-full items-center py-4 px-4 mx-auto max-w-7xl z-[100] text-sm font-bold justify-between"
 >
-	<div class="flex md:hidden w-16 items-center justify-center">
+	<div class="flex md:hidden w-16 h-12 items-center justify-center">
 		<Dropdown>
 			<BarsThree slot="trigger" customClasses="h-5 w-5" />
 		</Dropdown>
@@ -23,7 +23,7 @@
 
 	<div
 		style="background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);"
-		class="hidden md:flex md:gap-8 py-3 px-5 rounded-full"
+		class="absolute left-0 right-0 w-fit mx-auto hidden md:flex md:gap-8 py-3 px-5 rounded-full"
 	>
 		<div data-umami-event="Generic - Navbar Discover Link">
 			<Link variant="text" href="/discover">Discover Mods</Link>
