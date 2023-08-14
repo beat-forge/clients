@@ -4,7 +4,7 @@
 }
 
 .beatforge-landing-header-responsive {
-	font-size: max(32px, min(5vw, 56px));
+	font-size: max(30px, min(5vw, 48px));
 }
 
 .beatforge-landing-terminal-window-wrapper:hover
@@ -43,7 +43,7 @@
 }
 
 .beatforge-landing-terminal-window-wrapper:hover {
-	transform: scale(1.02);
+
 }
 
 .beatforge-landing-terminal-window-wrapper {
@@ -271,4 +271,82 @@
     width: 100%;
     z-index: 3;
 	animation: hue-rotate 9s linear infinite forwards;
+}
+
+.beatforge-landing-std-landing-section {
+	background-image: radial-gradient(circle, #ffffff14 1px, transparent 1px);
+	background-size: 20px 20px;
+}
+
+/* @keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+.blinking-cursor {
+	animation: blink 1s step-end infinite;
+} */
+
+.terminal-row {
+	position: relative
+}
+
+.blinking-cursor-animated:before {
+	position: absolute;
+	top: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	transition: transform 1s;
+	transform-origin: 0% 50%;
+	background: white;
+}
+
+.blinking-cursor-first.blinking-cursor-animated:before {
+	animation: effect-block 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.blinking-cursor-second.blinking-cursor-animated:before {
+	animation: effect-block 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+	animation-delay: 1s;
+}
+
+@keyframes effect-block {
+	0% {
+		left: 0;
+		width: 0%;
+	}
+	50% {
+		left: 0;
+		width: 100%;
+	}
+	100% {
+		left: 100%;
+		width: 12px;
+	}
+}
+
+@keyframes term-reveal {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.beatforge-terminal-line-animated {
+	opacity: 0;
+	animation: term-reveal 0s linear both;
+	animation-delay: 0.5s;
+}
+
+.beatforge-terminal-line-animated.beatforge-terminal-line-second {
+	animation-delay: 1.5s
 }

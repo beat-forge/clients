@@ -18,21 +18,20 @@
 	<FeatureSection>
 		<IntersectionObserver
 			once={true}
-			class="flex flex-col items-center justify-center gap-8 text-center"
+			class="flex flex-col justify-center gap-12"
 			let:intersecting
 			top={0}
 		>
 			<h2 class="text-sm font-bold tracking-wider uppercase landing-gradient-eyebrow">Client</h2>
 			<LandingHeading>
 				<h1 class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
-					BeatForge Client is your ultimate modding companion.
+					Your ultimate modding companion for Beat Saber.
 				</h1>
 			</LandingHeading>
 
 			<LandingDescription>
-				<p class="transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
-					BeatForge Client is the best way to discover, install, and manage your mods. Free,
-					open-source, and incredibly fast.
+				<p class="-mt-8 transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
+					Built with a steadfast focus on performance and usability, BeatForge Client is the best way to install and manage your mods. Made with Rust, not Electron.
 				</p>
 			</LandingDescription>
 
@@ -41,9 +40,9 @@
                 <p class="p-1 text-sm font-bold">Download Now</p>
             </Link>
 
-			<div class="relative transform-gpu">
+			<div class="relative transform-gpu h-96">
 				<div class="absolute inset-0 app_ss_shadow" />
-				<img src="/images/app_screenshot.png" class="w-full object-fit" alt="app screenshot" />
+				<img style="-webkit-mask-image: linear-gradient(black, transparent 70%);" src="/images/app_screenshot.png" class="w-full object-fit" alt="app screenshot" />
 			</div>
 		</IntersectionObserver>
 	</FeatureSection>

@@ -27,17 +27,17 @@
 </script>
 
 <div
-	style="background: radial-gradient(ellipse 100% 40% at 50% 60%,rgb(164 99 246 / 7%),var(--transparent)); margin-top: 128px;"
+	style="background: radial-gradient(ellipse 100% 50% at 80% 50%,rgb(164 99 246 / 12%),var(--transparent)), radial-gradient(ellipse 100% 40% at 20% 50%,rgb(210 99 246 / 8%),var(--transparent)); margin-top: 128px;"
 >
 	<FeatureSection>
 		<h2
-			class="-mb-12 text-sm font-bold tracking-wider uppercase beatforge-landing-std-eyebrow landing-gradient-eyebrow"
+			class="-mb-8 text-sm font-bold tracking-wider uppercase beatforge-landing-std-eyebrow landing-gradient-eyebrow"
 		>
 			Why BeatForge
 		</h2>
 		<IntersectionObserver
 			once={true}
-			class="flex flex-col items-center justify-center gap-8 text-center"
+			class="flex flex-col justify-center gap-12"
 			let:intersecting
 			top={-250}
 		>
@@ -49,8 +49,7 @@
 
 			<LandingDescription>
 				<p class="transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
-					From beginning to end, discovery to installation, BeatForge streamlines your modding
-					experience with impeccable seamlessness.
+					Welcome to the first mod manager you'll actually want to use. BeatForge's powerful yet simple interface makes discovering and installing mods a breeze. Every click, every interaction, and every click is designed with unforgiving precision.
 				</p>
 			</LandingDescription>
 		</IntersectionObserver>
@@ -63,19 +62,19 @@
 			>
 				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-first">
 					<div
-						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
+						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
 						<h3 class="mb-1 font-bold text-white">Open-source transparency.</h3>
-						<p class="text-[#8B888C]">
+						<p class="text-[#8B888C] font-medium">
 							BeatForge won’t lock you in to our platform. Distribute where you want, when you want,
 							and leave any time. Development is public, and always will be.
 						</p>
 					</div>
 					<div
-						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
+						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
 						<h3 class="mb-1 font-bold text-white">Crafted to perfection.</h3>
-						<p class="text-[#8B888C]">
+						<p class="text-[#8B888C] font-medium">
 							Built with the bleeding edge of technology, BeatForge is a polished product built with
 							unforgiving precision.
 						</p>
@@ -84,12 +83,12 @@
 
 				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-second">
 					<div
-						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full p-4 sm:p-16 rounded-md relative"
+						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full p-4 sm:p-16 rounded-md relative"
 					>
 						<img src="/images/app.png" class="absolute top-0 right-0" alt="application" />
 						<div class="max-w-[330px] mt-[196px]">
 							<h3 class="mb-1 font-bold text-white">Minimally designed with tasteful touches.</h3>
-							<p class="text-[#8B888C]">
+							<p class="text-[#8B888C] font-medium">
 								We stay out of your way. Mod in less time, and play in no time.
 							</p>
 						</div>
@@ -105,20 +104,20 @@
 
 				<div class="flex flex-row gap-2 beatforge-landing-bentobox-row-third">
 					<div
-						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
+						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
 						<h3 class="mb-1 font-bold text-white">Safe and secure.</h3>
-						<p class="text-[#8B888C]">
+						<p class="text-[#8B888C] font-medium">
 							Manual human review and additional protections and verifications at the code level
 							ensures that every mod featured is safe for your use.
 						</p>
 					</div>
 					<div
-						class="beatforge-landing-bentobox-item text-left bg-[#19181B] w-full basis-1/2 p-4 sm:p-16 rounded-md"
+						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
 					>
 						<h3 class="mb-1 font-bold text-white">Made for the future.</h3>
-						<p class="text-[#8B888C]">
-							Stagnation kills modding communities. We’re is in it for the long run. We’re building
+						<p class="text-[#8B888C] font-medium">
+							Stagnation kills modding communities. We’re in it for the long run. We’re building
 							a solid foundation and a team that believes in open platforms.
 						</p>
 					</div>
