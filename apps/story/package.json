@@ -28,7 +28,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.2.3",
-    "svelte": "^4.1.2",
+    "svelte": "^4.2.0",
     "tailwind-preset-base": "workspace:*",
     "tailwindcss": "^3.3.3"
   }
