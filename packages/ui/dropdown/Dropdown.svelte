@@ -8,7 +8,7 @@
     } = createDropdownMenu()
   </script>
 
-<button use:melt={$trigger}>
+<button class="p-4" use:melt={$trigger}>
     <slot name="trigger"></slot>
 </button>
 {#if $open}

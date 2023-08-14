@@ -11,7 +11,7 @@
 <div
 	class="beatforge-page-navbar relative flex w-full items-center py-4 px-4 mx-auto max-w-7xl z-[100] text-sm font-bold justify-between"
 >
-	<div class="flex md:hidden w-16">
+	<div class="flex md:hidden w-16 items-center justify-center">
 		<Dropdown>
 			<BarsThree slot="trigger" customClasses="h-5 w-5" />
 		</Dropdown>
