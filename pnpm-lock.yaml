@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -36,8 +32,8 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3(prettier@3.0.1)(svelte@4.1.2)
       prettier-plugin-tailwindcss:
-        specifier: ^0.4.1
-        version: 0.4.1(prettier-plugin-svelte@3.0.3)(prettier@3.0.1)
+        specifier: ^0.5.2
+        version: 0.5.2(prettier-plugin-svelte@3.0.3)(prettier@3.0.1)
       sharp:
         specifier: ^0.32.4
         version: 0.32.4
@@ -105,8 +101,8 @@ importers:
         specifier: ^3.0.3
         version: 3.0.3(prettier@3.0.1)(svelte@4.1.2)
       prettier-plugin-tailwindcss:
-        specifier: ^0.4.1
-        version: 0.4.1(prettier-plugin-svelte@3.0.3)(prettier@3.0.1)
+        specifier: ^0.5.2
+        version: 0.5.2(prettier-plugin-svelte@3.0.3)(prettier@3.0.1)
       svelte:
         specifier: ^4.1.2
         version: 4.1.2
@@ -9117,16 +9113,16 @@ packages:
       svelte: 4.1.2
     dev: true
 
-  /prettier-plugin-tailwindcss@0.4.1(prettier-plugin-svelte@3.0.3)(prettier@3.0.1):
-    resolution: {integrity: sha512-hwn2EiJmv8M+AW4YDkbjJ6HlZCTzLyz1QlySn9sMuKV/Px0fjwldlB7tol8GzdgqtkdPtzT3iJ4UzdnYXP25Ag==}
-    engines: {node: '>=12.17.0'}
+  /prettier-plugin-tailwindcss@0.5.2(prettier-plugin-svelte@3.0.3)(prettier@3.0.1):
+    resolution: {integrity: sha512-i4swJk4f8YWK99BRPX3DdDNwMr6U1X8y9rvxGeX5zf090+SsHpPSVjgOb041Hh6/nZJWPi/JYno9UgBDm+/RxA==}
+    engines: {node: '>=14.21.3'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: ^2.2 || ^3.0
+      prettier: ^3.0
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
       prettier-plugin-import-sort: '*'
@@ -11290,3 +11286,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
