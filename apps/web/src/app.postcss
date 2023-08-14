@@ -7,6 +7,10 @@
 	--transparent: transparent;
 }
 
+html {
+	overflow: hidden;
+}
+
 html,
 body,
 .app {
@@ -16,15 +20,11 @@ body,
 	font-synthesis: style;
 	text-rendering: optimizeLegibility;
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: visible;
 
 	height: 100%;
 	width: 100%;
-}
-
-.beatforge-page-layout {
-	overflow-x: hidden;
-	overflow-y: scroll;
+	color-scheme: dark;
 }
 
 input,
@@ -46,28 +46,4 @@ img {
 	-moz-user-drag: none;
 	-o-user-drag: none;
 	user-drag: none;
-}
-
-::-webkit-scrollbar {
-	width: 17px;
-	height: 0px;
-	background: transparent;
-	padding-right: 8px;
-}
-
-::-webkit-scrollbar-corner {
-	background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-	border-radius: 9999px;
-	background: #333234;
-	background-clip: padding-box;
-	border: 7px solid rgba(0, 0, 0, 0);
-	border-width: 7px;
-}
-
-::-webkit-scrollbar-track {
-	border-radius: 9999px;
-	background: transparent;
 }
