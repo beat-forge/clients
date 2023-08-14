@@ -3,12 +3,12 @@
 </script>
 
 <div class="beatforge-page-std-footer-container relative w-full overflow-hidden z-[100] flex-shrink-0">
-	<div class="beatforge-footer-rainbow-glow absolute top-[70px] opacity-50">
+	<!-- <div class="beatforge-footer-rainbow-glow absolute top-[70px] opacity-50">
 		<div
 			class="beatforge-footer-rainbow-glow-item absolute w-screen rounded-[100%] blur-3xl h-[220px] opacity-[0.15]"
 			style="background: linear-gradient(180deg,#58a5ff,#a67af4)"
 		/>
-	</div>
+	</div> -->
 	<footer class="beatforge-page-std-footer relative mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:px-12">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-center justify-between py-8 relative">
 			<p class="opacity-40 text-xs mb-2 sm:mb-0">

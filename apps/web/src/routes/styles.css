@@ -239,15 +239,15 @@
 
 @keyframes hue-rotate-gradient {
 	0% {
-		filter: hue-rotate(0deg) blur(36px);
+		filter: hue-rotate(0deg) blur(12px);
 	}
 
 	50% {
-		filter: hue-rotate(360deg) blur(36px);
+		filter: hue-rotate(360deg) blur(12px);
 	}
 
 	100% {
-		filter: hue-rotate(0deg) blur(36px);
+		filter: hue-rotate(0deg) blur(12px);
 	}
 }
 
@@ -255,7 +255,7 @@
     border: 12px solid transparent;
     background-clip: padding-box;
     content: "";
-    filter: blur(36px);
+	filter: blur(12px);
     height: 100%;
     opacity: .9;
     position: absolute;
@@ -353,4 +353,14 @@
 
 .beatforge-terminal-line-animated.beatforge-terminal-line-second {
 	animation-delay: 1.5s
+}
+
+.beatforge-page-navbar:before {
+	background: radial-gradient(62.87% 100% at 50% 100%,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 100%);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
