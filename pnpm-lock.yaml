@@ -1,9 +1,5 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
@@ -299,8 +295,8 @@ importers:
   packages/ui:
     dependencies:
       '@melt-ui/svelte':
-        specifier: ^0.34.3
-        version: 0.34.3(svelte@4.1.2)
+        specifier: ^0.34.6
+        version: 0.34.6(svelte@4.1.2)
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
@@ -2310,8 +2306,8 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@melt-ui/svelte@0.34.3(svelte@4.1.2):
-    resolution: {integrity: sha512-qJE0+7+8Q8h1UhdqpAWWSJx3vXSjlgAKkfjLC5wn6dtVY70Jkb6Hiu726isZ2yNbPilBmbaLrOzfoMTRurjKXw==}
+  /@melt-ui/svelte@0.34.6(svelte@4.1.2):
+    resolution: {integrity: sha512-uH+s8QL5vxvb9//tULFupGSBhWTh+TvRMbIVVEae8BVlIyQrvYD5G61hoq0CiJ+Oieqgti3wnckLkaz20aYDIg==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
@@ -11290,3 +11286,7 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
