@@ -41,7 +41,9 @@
 	const searchOnInput = async (e: any) => {
 		await search(<String>(<HTMLInputElement>e.target).value);
 	};
-
+	const onSortChange = async () => {
+		await search('');
+	}
 	onMount(async () => {
 		await search('');
 	});
@@ -70,11 +72,11 @@
 			<ChevronDownIcon
 				customClasses="w-4 h-4 absolute right-4 z-10 select-none pointer-events-none"
 			/>
-			<select class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-12">
-				<option value="1">Newest</option>
-				<option value="2">Oldest</option>
-				<option value="3">Most popular</option>
-				<option value="4">Least popular</option>
+			<select class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-12" bind:value={sort} on:change={onSortChange}>
+				<option value={Sort.Newest}>Newest</option>
+				<option value={Sort.Oldest}>Oldest</option>
+				<option value={Sort.MostPopular}>Most popular</option>
+				<option value={Sort.LeastPopular}>Least popular</option>
 			</select>
 		</div>
 	</div>
