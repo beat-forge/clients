@@ -16,9 +16,14 @@
 	export let description: string;
 	export let category: string;
 	export let downloads: any;
-	export let updatedAt: number;
+	export let updatedAt: string | number;
 	export let icon: string;
 
+    try {
+        updatedAt = Sugar.Date.relative(new Date(updatedAt as number * 1000))
+    } catch (e) {
+        updatedAt = Sugar.Date.relative(new Date(Date.parse(updatedAt as string)))
+    }
 </script>
 
 <a href={`/mod/${slug}`}>
@@ -50,7 +55,7 @@
                 <Pill label={`${downloads} Downloads`}>
                     <DownloadIcon customClasses="w-4 h-4" />
                 </Pill>
-                <Pill label={`Updated ${Sugar.Date.relative(new Date(updatedAt))}`}>
+                <Pill label={`Updated ${updatedAt}`}>
                     <CalendarIcon customClasses="w-4 h-4" />
                 </Pill>
             </div>
