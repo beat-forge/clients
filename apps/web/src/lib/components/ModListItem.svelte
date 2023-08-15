@@ -50,7 +50,7 @@
                 <Pill label={`${downloads} Downloads`}>
                     <DownloadIcon customClasses="w-4 h-4" />
                 </Pill>
-                <Pill label={`Updated ${Sugar.Date.relative(new Date(updatedAt * 1000))}`}>
+                <Pill label={`Updated ${Sugar.Date.relative(new Date(updatedAt))}`}>
                     <CalendarIcon customClasses="w-4 h-4" />
                 </Pill>
             </div>
