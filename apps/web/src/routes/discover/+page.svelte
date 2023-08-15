@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import Search from '$lib/components/icons/search.svelte';
-	import { SearchIcon, ChevronDownIcon } from 'ui/icons';
+	import { SearchIcon, ChevronDownIcon, ArrowSmallLeftIcon, ArrowSmallRightIcon, FilterIcon } from 'ui/icons';
 	import { Button } from 'ui/button';
 
 	import VirtualList from 'svelte-tiny-virtual-list';
@@ -14,9 +14,28 @@
 		LeastPopular = "stats.downloads:asc"
 	}
 
+	function getSortLabel(sortValue: string): string {
+		switch (sortValue) {
+			case Sort.Newest:
+				return "Newest";
+			case Sort.Oldest:
+				return "Oldest";
+			case Sort.MostPopular:
+				return "Most Popular";
+			case Sort.LeastPopular:
+				return "Least Popular";
+			default:
+				return sortValue;
+		}
+	}
+
 	let listHeight;
 	let data: any[] = [];
 	let sort = Sort.Newest;
+	let totalPages = 1;
+	let totalHits = 0;
+	let currentPage = 1;
+	let searchValue: string = ""
 
 	const search = async (q: String) => {
 		const res = await (
@@ -30,19 +49,27 @@
 				},
 				body: JSON.stringify({
 					q: q,
-					sort: [sort.toString()]
+					sort: [sort.toString()],
+					page: currentPage,
+					hitsPerPage: 5,
 				})
 			})
 		).json();
 		data = res.hits;
 		data = data;
+		totalHits = res.totalHits;
+		totalPages = res.totalPages;
 	};
 
 	const searchOnInput = async (e: any) => {
 		await search(<String>(<HTMLInputElement>e.target).value);
+		searchValue = e.target.value;
+		currentPage = 1;
+
 	};
 	const onSortChange = async () => {
 		await search('');
+		currentPage = 1;
 	}
 	onMount(async () => {
 		await search('');
@@ -67,11 +94,18 @@
 		</div>
 
 		<div
-			class="relative flex w-2/5 flex-row items-center overflow-hidden rounded-md bg-primary-800"
+			class="relative flex w-14 md:w-2/5 flex-row items-center overflow-hidden rounded-md bg-primary-800"
 		>
-			<ChevronDownIcon
-				customClasses="w-4 h-4 absolute right-4 z-10 select-none pointer-events-none"
-			/>
+			<div class="absolute right-4 top-1/2 -translate-y-1/2 hidden md:block select-none pointer-events-none">
+				<ChevronDownIcon
+					customClasses="w-4 h-4 z-10 select-none pointer-events-none"
+				/>
+			</div>
+			<div class="absolute right-4 top-1/2 -translate-y-1/2 block md:hidden select-none pointer-events-none">
+				<FilterIcon
+					customClasses="w-4 h-4 z-10 select-none pointer-events-none"
+				/>
+			</div>
 			<select class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-12" bind:value={sort} on:change={onSortChange}>
 				<option value={Sort.Newest}>Newest</option>
 				<option value={Sort.Oldest}>Oldest</option>
@@ -81,6 +115,176 @@
 		</div>
 	</div>
 
+	<div class="pagination bg-primary-800 mt-4 rounded-md flex justify-center p-2">
+		<div class="flex overflow-hidden rounded-full">
+			<Button
+			  variant="unset"
+			  on:click={() => {
+				currentPage--;
+				search(searchValue);
+			  }}
+			  disabled={currentPage === 1}
+			  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+			>
+			  <ArrowSmallLeftIcon customClasses="w-4 h-4" />
+			</Button>
+		  
+			{#if totalPages <= 5}
+			  {#each Array(totalPages) as _, i}
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = i + 1;
+					search(searchValue);
+				  }}
+				  disabled={currentPage === i + 1}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  {i + 1}
+				</Button>
+			  {/each}
+			{:else}
+			  {#if currentPage <= 2}
+				{#each Array(4) as _, i}
+				  <Button
+					variant="unset"
+					on:click={() => {
+					  currentPage = i + 1;
+					  search(searchValue);
+					}}
+					disabled={currentPage === i + 1}
+					customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				  >
+					{i + 1}
+				  </Button>
+				{/each}
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = currentPage - 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  ...
+				</Button>
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = totalPages;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  {totalPages}
+				</Button>
+			  {:else if currentPage >= totalPages - 2}
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  1
+				</Button>
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = currentPage - 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  ...
+				</Button>
+				{#each Array(4) as _, i}
+				  <Button
+					variant="unset"
+					on:click={() => {
+					  currentPage = totalPages - 3 + i;
+					  search(searchValue);
+					}}
+					disabled={currentPage === totalPages - 3 + i}
+					customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				  >
+					{totalPages - 3 + i}
+				  </Button>
+				{/each}
+			  {:else}
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  1
+				</Button>
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = currentPage - 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  ...
+				</Button>
+				{#each Array(2) as _, i}
+				  <Button
+					variant="unset"
+					on:click={() => {
+					  currentPage = currentPage - 1 + i;
+					  search(searchValue);
+					}}
+					disabled={currentPage === currentPage - 1 + i}
+					customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				  >
+					{currentPage - 1 + i}
+				  </Button>
+				{/each}
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = currentPage - 1;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  ...
+				</Button>
+				<Button
+				  variant="unset"
+				  on:click={() => {
+					currentPage = totalPages;
+					search(searchValue);
+				  }}
+				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+				>
+				  {totalPages}
+				</Button>
+			  {/if}
+			{/if}
+		  
+			<Button
+			  variant="unset"
+			  on:click={() => {
+				currentPage++;
+				search(searchValue);
+			  }}
+			  disabled={currentPage === totalPages}
+			  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
+			>
+			  <ArrowSmallRightIcon customClasses="w-4 h-4" />
+			</Button>
+		  </div>
+	</div>
+	<!-- end pagination -->
+
+	<div class="flex md:hidden mt-4 text-xs font-bold">Sorting by<span class="text-[#875CEF] ml-1">{getSortLabel(sort)}</span></div>
 	<div class="beatforge-discover-list-items-wrapper mt-4 overflow-hidden rounded-md">
 		{#if data && data.length}
 			{#each data as mod}
@@ -98,20 +302,8 @@
 		{:else}
 			<p class="text-center text-primary-300">No mods found</p>
 		{/if}
-		<!-- <VirtualList width="100%" itemCount={data.length} itemSize={129} height="100%">
-            <div slot="item" let:index let:style {style}>
-				<p>{data[index].name}</p>
-                <DiscoverListItem
-                    name={data.mods[index].name}
-                    slug={data.mods[index].slug}
-                    author={data.mods[index].author.username}
-                    description={data.mods[index].description}
-                    category={data.mods[index].category.name}
-                    downloads={data.mods[index].stats.downloads}
-                    updatedAt={data.mods[index].updatedAt}
-                    icon={data.mods[index].icon}
-                />
-            </div>
-        </VirtualList> -->
+	</div>
+	<div class="mt-4 font-black text-xs text-primary-300">
+		<p>Total Mods: {totalHits}</p>
 	</div>
 </div>

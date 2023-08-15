@@ -23,7 +23,7 @@
 
 <a href={`/mod/${slug}`}>
     <div
-	    class="beatforge-discover-list-item flex flex-row gap-2 md:gap-4 w-full bg-primary-850 hover:bg-primary-900 border-b-[1px] border-primary-850 items-center p-2 md:p-4 min-w-0 transition hover:duration-[0ms] duration-[120ms] my-2 md:my-0">
+	    class="beatforge-discover-list-item flex flex-row gap-2 md:gap-4 w-full bg-primary-800 hover:bg-primary-850 border-b-[1px] border-primary-850 items-center p-2 md:p-4 min-w-0 transition hover:duration-[0ms] duration-[120ms] my-2 md:my-0 rounded-lg md:rounded-none">
         <div
             class="beatforge-discover-list-item-image h-12 w-12 md:h-24 md:w-24 bg-primary-600 flex flex-shrink-0 overflow-hidden rounded-md mr-2"
         >
