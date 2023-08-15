@@ -19,10 +19,11 @@
 	export let updatedAt: number
 	export let icon: string;
 
+    let updatedAtProper: string;
     try {
-        updatedAt = Sugar.Date.relative(new Date(updatedAt * 1000))
+        updatedAtProper = Sugar.Date.relative(new Date(updatedAt * 1000))
     } catch (e) {
-        updatedAt = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000)))
+        updatedAtProper = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000)))
     }
 </script>
 
@@ -55,7 +56,7 @@
                 <Pill label={`${downloads} Downloads`}>
                     <DownloadIcon customClasses="w-4 h-4" />
                 </Pill>
-                <Pill label={`Updated ${updatedAt}`}>
+                <Pill label={`Updated ${updatedAtProper}`}>
                     <CalendarIcon customClasses="w-4 h-4" />
                 </Pill>
             </div>
