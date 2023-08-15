@@ -9,12 +9,12 @@
 </script>
 
 <div
-	class="z-[9999] m-2 flex w-72 min-w-0 flex-shrink-0 flex-col overflow-visible rounded-md bg-gradient-to-b from-[#5c18ae] to-[#8b5d69]"
+	class="z-[9999] m-2 flex w-60 min-w-0 flex-shrink-0 flex-col overflow-visible rounded-md bg-gradient-to-b from-[#5c18ae] to-[#8b5d69]"
 >
 	<div class="flex h-full flex-col overflow-y-auto p-5 text-sm">
 		<!-- instances -->
 		<div class="mb-4 flex items-center justify-between">
-			<div class="brand-font text-xs font-bold uppercase tracking-widest text-[#ffffff66]">
+			<div class="text-sm font-bold text-white">
 				Instances
 			</div>
 
@@ -28,12 +28,7 @@
 			<Instance name={instance.name} version={instance.version} active={false} />
 		{:else}
 			<!-- No instances were found, ask the user if they would like to autodetect -->
-			<p class="text-[#ffffff66]">No instances were found, would you like to autodetect?</p>
-			<button
-				class="mt-2 bg-[#ffffff22] rounded-lg px-3 py-1 text-sm font-semibold uppercase tracking-[.125rem] text-[#ffffff66]"
-			>
-				Autodetect
-			</button>
+			<p class="text-[#ffffff66]">No instances were found</p>
 		{/each}
 	</div>
 </div>

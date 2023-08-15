@@ -10,7 +10,7 @@
 	$: activeUrl = $page.url.pathname;
 </script>
 
-<div class="brand-font mb-2 flex flex-col">
+<div class="mb-2 flex flex-col">
 	<!-- navigation -->
 	<button
 		on:click={() => (active = !active)}

@@ -22,4 +22,4 @@
 	<LandingCLISection />
 </main>
 
-<div class="hidden xl:block fixed max-w-[calc(80rem)] w-full h-full mx-auto left-0 right-0 top-0 bottom-0 border-x-2 border-dashed border-[#ffffff11] pointer-events-none select-none" aria-hidden="true"></div>
+<div class="hidden xl:block absolute max-w-[calc(80rem)] w-full h-full mx-auto left-0 right-0 top-[100vh] bottom-0 border-x-2 border-dashed border-[#ffffff11] pointer-events-none select-none" aria-hidden="true"></div>

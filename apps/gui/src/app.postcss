@@ -22,6 +22,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	font-family: 'Satoshi-Variable', sans-serif;
+	/* font-family: "Comic Sans MS", cursive; */
 	/* font-family: Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', Segoe UI Symbol, 'Noto Color Emoji'; */
 	overflow-x: hidden;
@@ -80,12 +81,8 @@ input {
 }
 
 .sidebar-glow {
-	animation: sidebar-glow-hue-rotate 9s linear infinite forwards;
+	animation: sidebar-glow-hue-rotate 17s linear infinite forwards;
 	animation-timing-function: ease;
-}
-
-.brand-font {
-	font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .beatforge-titlebar-blur-area {
@@ -96,6 +93,7 @@ input {
 	width: calc(100% - 8px);
 	right: 4px;
 	left: 4px;
+	top: 2px;
 	height: 96px;
 	z-index: 1;
 	-webkit-backdrop-filter: blur(20px);
@@ -112,4 +110,12 @@ input {
 .linkActive {
 	opacity: 1;
 	font-weight: bold;
+}
+
+input, select, form {
+	background: inherit;
+	color: inherit;
+	border: inherit;
+	outline: none;
+	appearance: none;
 }

@@ -9,14 +9,14 @@
 	<div class="absolute top-0 right-0 select-none flex">
 		<button
 			on:click={appWindow.minimize}
-			class="cursor-default px-4 py-2 font-bold text-white hover:bg-black-800 select-none"
+			class="cursor-default px-4 py-2 font-bold text-white hover:bg-primary-800 select-none"
 		>
 			<img src="/icons/minimize.svg" alt="minimize" />
 		</button>
 
 		<button
 			on:click={appWindow.maximize}
-			class="cursor-default px-4 py-2 font-bold text-white hover:bg-black-800 select-none"
+			class="cursor-default px-4 py-2 font-bold text-white hover:bg-primary-800 select-none"
 		>
 			<img src="/icons/maximize.svg" alt="maximize" />
 		</button>

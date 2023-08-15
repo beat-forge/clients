@@ -10,7 +10,7 @@
   }
 </script>
 
-<div class="flex gap-2 rounded-md bg-black p-8">
+<div class="flex gap-2 rounded-md bg-primary p-8">
   <Button on:click={handleClick} {...$$props}>This is a button</Button>
 
   <Button on:click={handleClick} {...$$props}>

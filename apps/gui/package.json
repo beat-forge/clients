@@ -33,10 +33,15 @@
 		"prettier-plugin-tailwindcss": "^0.5.2",
 		"svelte": "^4.2.0",
 		"svelte-check": "^3.5.0",
+		"tailwind-preset-base": "workspace:^",
 		"tailwindcss": "^3.3.3",
 		"tslib": "^2.6.1",
 		"typescript": "^5.1.6",
 		"vite": "^4.4.9"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"sugar": "^2.0.6",
+		"ui": "workspace:^"
+	}
 }

@@ -13,7 +13,7 @@
 </script>
 
 
-	<div class="flex w-full flex-row items-center gap-1 rounded-xl min-w-0 hover:bg-black-600 transition hover:duration-[0ms] duration-[120ms]">
+	<div class="flex w-full flex-row items-center gap-1 rounded-xl min-w-0 hover:bg-primary-600 transition hover:duration-[0ms] duration-[120ms]">
 	<img
 		src={icon ? `/icons/${icon}.svg` : `/icons/unknown.svg`}
 		class="m-2 flex aspect-square min-w-[80px] min-h-[80px] h-20 w-20 rounded-lg"

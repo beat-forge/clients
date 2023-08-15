@@ -14,8 +14,8 @@ use migration::MigratorTrait;
 
 lazy_static::lazy_static! {
     static ref DATABASE: AsyncOnce<sea_orm::DatabaseConnection> = AsyncOnce::new(async {
-        let app_data = directories::BaseDirs::new().unwrap();
-        let db_path = app_data.data_dir().join("beat-forge-client").join("db.sqlite");
+        let project = directories::ProjectDirs::from("net", "BeatForge", "gui").unwrap();
+        let db_path = project.data_dir().join("db.sqlite");
 
         let _ = std::fs::create_dir_all(db_path.parent().unwrap());
         if !db_path.exists() {

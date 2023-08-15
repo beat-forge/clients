@@ -6,13 +6,13 @@
 </script>
 
 <div
-	class="beatforge-client-app-wrapper h-full w-full overflow-hidden rounded-lg border-2 border-[#121212] bg-gradient-to-r from-black-800 to-black-950"
+	class="beatforge-client-app-wrapper h-full w-full overflow-hidden rounded-lg border-2 border-[#121212] bg-primary-950"
 >
-	<div class="beatforge-client-layout flex h-full w-full flex-row min-w-0">
+	<div class="flex flex-row w-full h-full min-w-0 beatforge-client-layout">
 		<SideBar />
-		<div class="beatforge-client-content flex h-full w-full flex-col min-w-0">
+		<div class="flex flex-col w-full h-full min-w-0 beatforge-client-content">
 			<TitleBar />
-			<div class="flex flex-col h-full w-full overflow-y-auto pl-6 pr-4 pb-6 min-w-0">
+			<div class="flex flex-col w-full h-full min-w-0 pb-6 pl-6 pr-4 overflow-y-auto">
 				<slot />
 			</div>
 		</div>

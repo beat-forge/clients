@@ -7,6 +7,8 @@ export default {
 		'./stories/**/*.svelte',
 		'../../apps/web/src/routes/**/*.svelte', // for using 'apps/web'
 		'../../apps/web/src/lib/**/*.svelte', // for using 'apps/web'
+		'../../apps/gui/src/routes/**/*.svelte', // for using 'apps/web'
+		'../../apps/gui/src/lib/**/*.svelte', // for using 'apps/web'
 		'../../packages/ui/**/*.svelte' // for using 'packages/ui'
 	]
 };

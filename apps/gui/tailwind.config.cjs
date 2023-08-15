@@ -1,30 +1,14 @@
-/** @type {import('tailwindcss').Config}*/
-const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+import base from 'tailwind-preset-base';
 
-	theme: {
-		extend: {
-			colors: {
-				black: {
-					100: '#d2d2d2',
-					200: '#a5a5a5',
-					300: '#797979',
-					400: '#4c4c4c',
-					500: '#1f1f1f',
-					600: '#191919',
-					700: '#131313',
-					800: '#0c0c0c',
-					900: '#060606',
-					950: '#000000'
-				}
-			},
-			backgroundImage: {
-				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))'
-			}
-		}
-	},
-
-	plugins: []
+/** @type {import('tailwindcss').Config} */
+export default {
+	presets: [base],
+	content: [
+		'./stories/**/*.svelte',
+		'../../apps/web/src/routes/**/*.svelte', // for using 'apps/web'
+		'../../apps/web/src/lib/**/*.svelte', // for using 'apps/web'
+		'../../apps/gui/src/routes/**/*.svelte', // for using 'apps/web'
+		'../../apps/gui/src/lib/**/*.svelte', // for using 'apps/web'
+		'../../packages/ui/**/*.svelte' // for using 'packages/ui'
+	]
 };
-
-module.exports = config;

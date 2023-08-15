@@ -5,6 +5,8 @@ use directories::{BaseDirs, UserDirs};
 use entity::prelude::*;
 use sea_orm::{ColumnTrait, EntityTrait, QueryFilter, Set, ActiveModelTrait, ModelTrait};
 use serde::{Deserialize, Serialize};
+use minreq::post;
+use forge_lib::structs::v1::{unpack_v1_forgemod, ForgeModTypes};
 
 static STEAM_PATH: &str = r"C:\Program Files (x86)\Steam\steamapps\common\Beat Saber";
 static OCULUS_PATH: &str =
@@ -143,4 +145,50 @@ pub async fn remove_instance(name: String) -> Result<bool, Box<dyn std::error::E
         return Ok(true);
     }
     Ok(false)
+}
+
+#[tauri::command]
+pub async fn install_mod(instance_id: i32, mod_id: String, mod_version: String, api_url: String) -> anyhow::Result<()> {
+    let db = DATABASE.get().await.clone();
+    let instance = Instances::find_by_id(instance_id).one(&db).await?.unwrap();
+
+    let fm_res = post("https://staging-api.beatforge.net/graphql")
+        .with_body(format!("{{
+            mods {{
+                mod(id: \"{}\") {{
+                    versions {{
+                        downloadUrl
+                    }}
+                }}
+            }}
+        }}", mod_id)).send()?.json::<serde_json::Value>()?.as_object().unwrap().get("data").unwrap().as_array().unwrap();
+    
+    let mut fm_bin = Vec::new();
+    let forgemod = unpack_v1_forgemod(fm_bin.as_slice()).map_err(|e| anyhow::anyhow!("Failed to unpack forge mod: {}", e))?;
+
+    match forgemod {
+        ForgeModTypes::Mod(m) => {
+            let artifact_data = m.data.artifact_data;
+            let artifact_name = m.manifest.inner.artifact.unwrap();
+            let artifact_name = artifact_name.file_name().unwrap().to_str().unwrap();
+            let includes = m.data.includes_data;
+            
+            for i in &includes {
+                if (i.dest.starts_with("..") || i.dest.starts_with("/")) && !i.dest.starts_with("../") {
+                    return Err(anyhow::anyhow!("Invalid include path: {}", i.dest));
+                }
+            }
+
+            std::fs::write(format!("{}\\Plugins\\{}", instance.path, artifact_name), artifact_data)?;
+
+            includes.iter().for_each(|i| {
+                std::fs::write(format!("{}\\{}", instance.path, i.dest), &*i.data).unwrap();
+            })
+        },
+        _ => {
+            return Err(anyhow::anyhow!("TODO: other types of mods are not supported yet."));
+        }
+    }
+
+    Ok(())
 }
