@@ -160,10 +160,6 @@
 				{/each}
 				<Button
 				  variant="unset"
-				  on:click={() => {
-					currentPage = currentPage - 1;
-					search(searchValue);
-				  }}
 				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
 				>
 				  ...
@@ -191,10 +187,6 @@
 				</Button>
 				<Button
 				  variant="unset"
-				  on:click={() => {
-					currentPage = currentPage - 1;
-					search(searchValue);
-				  }}
 				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
 				>
 				  ...
@@ -225,10 +217,6 @@
 				</Button>
 				<Button
 				  variant="unset"
-				  on:click={() => {
-					currentPage = currentPage - 1;
-					search(searchValue);
-				  }}
 				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
 				>
 				  ...
@@ -248,10 +236,6 @@
 				{/each}
 				<Button
 				  variant="unset"
-				  on:click={() => {
-					currentPage = currentPage - 1;
-					search(searchValue);
-				  }}
 				  customClasses="px-3 py-1 rounded-none bg-primary-850 hover:bg-primary-900 text-md font-bold"
 				>
 				  ...

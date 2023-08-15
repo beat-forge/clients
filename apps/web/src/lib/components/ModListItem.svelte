@@ -16,13 +16,13 @@
 	export let description: string;
 	export let category: string;
 	export let downloads: any;
-	export let updatedAt: string | number;
+	export let updatedAt: number
 	export let icon: string;
 
     try {
-        updatedAt = Sugar.Date.relative(new Date(updatedAt as number * 1000))
+        updatedAt = Sugar.Date.relative(new Date(updatedAt * 1000))
     } catch (e) {
-        updatedAt = Sugar.Date.relative(new Date(Date.parse(updatedAt as string)))
+        updatedAt = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000)))
     }
 </script>
 
