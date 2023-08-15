@@ -13,7 +13,7 @@
     ghost: 'outline-none',
     underlined: 'underline',
     text: 'hover:underline focus-visible:underline',
-    primary: 'flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm px-4 py-2 bg-primary-50 hover:bg-primary-100 text-primary-950',
+    primary: 'flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm px-4 py-2 bg-primary-50 hover:bg-primary-200 text-primary-950',
     secondary: 'flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm px-4 py-2 bg-primary-800 hover:bg-primary-700 text-white'
   };
 

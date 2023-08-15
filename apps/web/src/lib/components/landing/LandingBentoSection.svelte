@@ -49,7 +49,9 @@
 
 			<LandingDescription>
 				<p class="transition duration-[500ms] delay-300 {intersecting ? '' : textTransition}">
-					Welcome to the first mod manager you'll actually want to use. BeatForge's powerful yet simple interface makes discovering and installing mods a breeze. Every click, every interaction, and every click is designed with unforgiving precision.
+					Welcome to the first mod manager you'll actually want to use. BeatForge's powerful yet
+					simple interface makes discovering and installing mods a breeze. Every click, every
+					interaction, and every click is designed with unforgiving precision.
 				</p>
 			</LandingDescription>
 		</IntersectionObserver>
@@ -57,9 +59,42 @@
 		<IntersectionObserver once={true} let:intersecting top={0}>
 			<div
 				class:beatforge-landing-bentobox-animated={intersecting}
-				class="flex flex-col w-full gap-2 beatforge-landing-bentobox max-w-7xl"
+				class="relative flex flex-col w-full gap-2 beatforge-landing-bentobox max-w-7xl"
 				id="cards"
 			>
+				<div class="absolute w-full h-full">
+					<svg
+						class="w-full h-full"
+						width="1661"
+						height="1222"
+						viewBox="0 0 1661 1222"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						id="svg-227373486_786"
+					>
+						<path
+							opacity="0.1"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M0 0H1V1222H0V0ZM166 0H167V1222H166V0ZM333 0H332V1222H333V0ZM498 0H499V1222H498V0ZM665 0H664V1222H665V0ZM830 0H831V1222H830V0ZM997 0H996V1222H997V0ZM1162 0H1163V1222H1162V0ZM1329 0H1328V1222H1329V0ZM1494 0H1495V1222H1494V0ZM1661 0H1660V1222H1661V0Z"
+							fill="url(#svg-227373486_786_paint0_linear_198_4354)"
+						></path>
+						<defs>
+							<linearGradient
+								id="svg-227373486_786_paint0_linear_198_4354"
+								x1="830.5"
+								y1="1.53129e-08"
+								x2="831"
+								y2="1222"
+								gradientUnits="userSpaceOnUse"
+							>
+								<stop stop-color="white" stop-opacity="0"></stop>
+								<stop offset="0.207857" stop-color="white" stop-opacity="0.792143"></stop>
+								<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
 				<div class="flex flex-col sm:flex-row gap-2 beatforge-landing-bentobox-row-first">
 					<div
 						class="beatforge-landing-bentobox-item text-left bg-[#ffffff11] w-full basis-1/2 p-4 sm:p-16 rounded-md"
@@ -117,8 +152,8 @@
 					>
 						<h3 class="mb-1 font-bold text-white">Made for the future.</h3>
 						<p class="text-[#8B888C] font-medium">
-							Stagnation kills modding communities. We’re in it for the long run. We’re building
-							a solid foundation and a team that believes in open platforms.
+							Stagnation kills modding communities. We’re in it for the long run. We’re building a
+							solid foundation and a team that believes in open platforms.
 						</p>
 					</div>
 				</div>

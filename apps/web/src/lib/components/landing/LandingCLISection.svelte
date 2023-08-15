@@ -13,7 +13,7 @@
 </script>
 
 <div
-	style="background: radial-gradient(ellipse 100% 60% at 50% 60%,rgb(246 99 115 / 9%),var(--transparent)); margin-top: 128px;"
+	style="background: radial-gradient(ellipse 100% 40% at 50% 60%,rgb(246 99 115 / 9%),var(--transparent)); margin-top: 128px;"
 >
 	<FeatureSection>
 		<h2 class="-mb-8 text-sm font-bold tracking-wider uppercase landing-gradient-eyebrow">CLI</h2>
@@ -25,7 +25,7 @@
 		>
 			<LandingHeading>
 				<h1 class="transition duration-[500ms] delay-300 {intersecting ? '' : headerTransition}">
-					Empowering developers to build, test, and publish, faster.
+					Tools that empower developers to build better, faster.
 				</h1>
 			</LandingHeading>
 
@@ -37,7 +37,7 @@
 			</LandingDescription>
 		</IntersectionObserver>
 
-		<Link variant="secondary">
+		<Link variant="primary">
 			<DownloadIcon customClasses="w-4 h-4 " />
 			<p class="p-1 text-sm font-bold">Get the CLI</p>
 		</Link>

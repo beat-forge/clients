@@ -9,7 +9,7 @@
 
   const variantClasses = {
     unset: '',
-    primary: 'px-4 py-2 bg-primary-50 hover:bg-primary-100 text-primary-950',
+    primary: 'px-4 py-2 bg-primary-50 hover:bg-primary-200 text-primary-950',
     secondary: 'px-4 py-2 bg-primary-800 hover:bg-primary-900 text-white',
     gradient:
       'will-change-transform px-4 py-2 bg-gradient-to-r from-[#47334f] to-[#2d2c4f] text-white duration-[200ms] ease-[cubic-bezier(0.22,0.61,0.36,1)]',
@@ -18,8 +18,8 @@
   };
 
   let buttonClasses = `
-    ${variant === "unset" ? '' : 'select-none outline-none focus:shadow-none focus-visible:ring-4 focus-visible:ring-[#00a8fc] disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm'} 
-    ${variantClasses[variant]} 
+    ${variant === "unset" ? '' : 'select-none outline-none focus:shadow-none focus-visible:ring-4 focus-visible:ring-[#00a8fc] disabled:opacity-50 flex flex-row items-center justify-center transition-all duration-[80ms] rounded-full gap-2 font-bold text-sm'}
+    ${variantClasses[variant]}
     ${customClasses}
   `;
 </script>

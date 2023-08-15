@@ -23,7 +23,7 @@
 
 	<div
 		style="background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);"
-		class="absolute left-0 right-0 w-fit mx-auto hidden md:flex md:gap-8 py-3 px-5 rounded-full"
+		class="absolute left-0 right-0 w-fit mx-auto hidden md:flex md:gap-8 py-3 px-5 rounded-full backdrop-blur-md"
 	>
 		<div data-umami-event="Generic - Navbar Discover Link">
 			<Link variant="text" href="/discover">Discover Mods</Link>
