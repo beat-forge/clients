@@ -39,7 +39,7 @@
 
 	const search = async (q: String) => {
 		const res = await (
-			await fetch(`https://search.beatforge.net/indexes/staging_mods/search`, {
+			await fetch(`https://search.beatforge.net/indexes/${import.meta.env.MEILI_PREFIX}_mods/search`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
