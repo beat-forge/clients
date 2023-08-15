@@ -28,7 +28,7 @@
 					modData.cover ? `bg-[url(${modData.cover})]` : 'bg-[url("/images/glowheader.svg")]'
 				} bg-center`}
 			/>
-			<div class="flex p-4 bg-primary-850 h-20 justify-between -mt-4">
+			<div class="flex flex-row p-4 bg-primary-850 h-20 justify-between -mt-4">
 				<div class="sm:ml-12 -mt-20">
 					<img
 						src={modData.icon ? modData.icon : '/images/unknown.svg'}
@@ -36,8 +36,8 @@
 						class="w-32 border-primary-850 border-4 rounded-md"
 					/>
 				</div>
-				<div>
-                    <Button variant="gradient">
+				<div class="">
+                    <Button variant="gradient" customClasses="text-xs sm:text-md">
                         Download in Client
                         <p slot="trailing" class="rounded-3xl ml-2 px-2 py-1 bg-[#ffffff44]">v0</p>
                     </Button>

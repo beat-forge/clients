@@ -52,6 +52,9 @@
 						<ModListItem name={mod.name} slug={mod.slug} author={mod.author.username} description={mod.description} category={mod.category.name} downloads={mod.stats.downloads} updatedAt={mod.updatedAt} icon={mod.icon} />
 					{/each}
 				</div>
+				<div class="mt-4 font-black text-xs text-primary-300">
+					<p>Total Mods: {userData.mods.length}</p>
+				</div>
 			</div>
 		</div>
 	</div>
