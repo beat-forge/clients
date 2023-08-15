@@ -16,7 +16,7 @@
 	export let description: string;
 	export let category: string;
 	export let downloads: any;
-	export let updatedAt: string;
+	export let updatedAt: number;
 	export let icon: string;
 
 </script>
@@ -50,7 +50,7 @@
                 <Pill label={`${downloads} Downloads`}>
                     <DownloadIcon customClasses="w-4 h-4" />
                 </Pill>
-                <Pill label={`Updated ${Sugar.Date.relative(new Date(updatedAt))}`}>
+                <Pill label={`Updated ${Sugar.Date.relative(new Date(updatedAt * 1000))}`}>
                     <CalendarIcon customClasses="w-4 h-4" />
                 </Pill>
             </div>
