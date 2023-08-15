@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/beat-forge/clients/compare/web-v1.0.0...web-v1.0.1) (2023-08-15)
+
+
+### Bug Fixes
+
+* add meilisearch prefix ([01c5a57](https://github.com/beat-forge/clients/commit/01c5a57006f65d589d6c8ff2e893aaec4dec6ce4))
+
 ## 1.0.0 (2023-08-15)
 
 
