@@ -15,7 +15,7 @@
 		<h1
 			class="beatforge-landing-header-responsive max-w-[700px] text-5xl font-black leading-[1.25] tracking-wide"
 		>
-			Mod better with BeatForge
+			The most seamless modding platform for Beat Saber
 		</h1>
 		<h2 class="max-w-[600px] text-[#8B888C] font-medium text-xl leading-[1.5]">
 			Discover, create, and share Beat Saber mods with BeatForge, the transparent, open-source modding
