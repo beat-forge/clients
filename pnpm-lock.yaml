@@ -151,8 +151,8 @@ importers:
         specifier: ^7.2.3
         version: 7.2.3(react-dom@18.2.0)(react@18.2.0)
       '@storybook/svelte':
-        specifier: ^7.2.3
-        version: 7.2.3(svelte@4.2.0)
+        specifier: ^7.3.1
+        version: 7.3.1(svelte@4.2.0)
       '@storybook/svelte-vite':
         specifier: ^7.2.3
         version: 7.2.3(svelte@4.2.0)(typescript@5.1.6)(vite@4.4.9)
@@ -3547,6 +3547,13 @@ packages:
       '@storybook/preview-api': 7.2.3
     dev: true
 
+  /@storybook/core-client@7.3.1:
+    resolution: {integrity: sha512-UzZ9H7i9w5K2OEtlen9nJsgCOGl1Yf8cTq5EykXRrJCb+4JRzPwMdd83cDZhZNWKgYpx9js6KmyfWwxts0GvJQ==}
+    dependencies:
+      '@storybook/client-logger': 7.3.1
+      '@storybook/preview-api': 7.3.1
+    dev: true
+
   /@storybook/core-common@7.2.3:
     resolution: {integrity: sha512-aBL4MGkn/PT57x00OWmVNwRCsJEb4xYvvYOYq5CGtIBCXAn0yo1p3GT9/Z0jAYT5c3A0nvCIM0ynmgML7fiFAg==}
     dependencies:
@@ -3708,6 +3715,20 @@ packages:
       '@storybook/core-common': 7.2.3
       '@storybook/preview-api': 7.2.3
       '@storybook/types': 7.2.3
+      '@types/doctrine': 0.0.3
+      doctrine: 3.0.0
+      lodash: 4.17.21
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@storybook/docs-tools@7.3.1:
+    resolution: {integrity: sha512-9N8CRarcejQoYhIKxbSrS9WJwdbrnj2I8tRWS91cgC2o4pDykqoXD7hXabVixQREzHOZEwakKAg8LsDLfCZCkw==}
+    dependencies:
+      '@storybook/core-common': 7.3.1
+      '@storybook/preview-api': 7.3.1
+      '@storybook/types': 7.3.1
       '@types/doctrine': 0.0.3
       doctrine: 3.0.0
       lodash: 4.17.21
@@ -3926,6 +3947,27 @@ packages:
       '@storybook/global': 5.0.0
       '@storybook/preview-api': 7.2.3
       '@storybook/types': 7.2.3
+      svelte: 4.2.0
+      sveltedoc-parser: 4.2.1
+      type-fest: 2.19.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@storybook/svelte@7.3.1(svelte@4.2.0):
+    resolution: {integrity: sha512-qdinElzdxs6tAKsaDdlmq6iU9w537ZA3Xwb400vM8AiZYZi1a0gxotKUZFZ0EERcnwH5ZRwoie8OzKWyOf0YIw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      svelte: ^3.1.0 || ^4.0.0
+    dependencies:
+      '@storybook/client-logger': 7.3.1
+      '@storybook/core-client': 7.3.1
+      '@storybook/core-events': 7.3.1
+      '@storybook/docs-tools': 7.3.1
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 7.3.1
+      '@storybook/types': 7.3.1
       svelte: 4.2.0
       sveltedoc-parser: 4.2.1
       type-fest: 2.19.0
