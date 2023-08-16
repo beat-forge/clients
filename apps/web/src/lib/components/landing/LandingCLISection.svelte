@@ -89,6 +89,20 @@
 								</p>
 								<div class:blinking-cursor-animated={intersecting} class="blinking-cursor-second" />
 							</div>
+
+							<div class="terminal-row terminal-row-third flex flex-row items-center gap-4 w-fit">
+								<div class="beatforge-terminal-line-third" class:beatforge-terminal-line-animated={intersecting}>
+									<LogoIcon customClasses="w-4 h-4" />
+								</div>
+								<div class="beatforge-terminal-line-third" class:beatforge-terminal-line-animated={intersecting}>~/</div>
+								<p
+									class:beatforge-terminal-line-animated={intersecting}
+									class="beatforge-terminal-line-third"
+								>
+									beatforge install<span class="ml-2 opacity-50 focus:opacity-100 select-all outline-none border-0" contenteditable="true">...</span>
+								</p>
+								<div class:blinking-cursor-animated={intersecting} class="blinking-cursor-third" />
+							</div>
 						</div>
 					</div>
 				</div>

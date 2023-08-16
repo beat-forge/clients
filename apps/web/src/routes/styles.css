@@ -324,6 +324,11 @@
 	animation-delay: 1s;
 }
 
+.blinking-cursor-third.blinking-cursor-animated:before {
+	animation: effect-block 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+	animation-delay: 2s;
+}
+
 @keyframes effect-block {
 	0% {
 		left: 0;
@@ -357,6 +362,10 @@
 
 .beatforge-terminal-line-animated.beatforge-terminal-line-second {
 	animation-delay: 1.5s;
+}
+
+.beatforge-terminal-line-animated.beatforge-terminal-line-third {
+	animation-delay: 2.5s;
 }
 
 .beatforge-page-navbar:before {
