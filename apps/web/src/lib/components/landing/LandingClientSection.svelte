@@ -40,12 +40,12 @@
                 <p class="p-1 text-sm font-bold">Download Now</p>
             </Link>
 
-			<div class="relative transform-gpu backdrop-blur-lg h-[40rem]">
+			<div class="relative transform-gpu backdrop-blur-lg h-[16rem] md:h-[40rem]">
 				<div class="absolute inset-0 app_ss_shadow" />
 				<img style="-webkit-mask-image: linear-gradient(black, transparent 70%);" src="/images/app_screenshot.png" class="w-full object-fit" alt="app screenshot" />
 			</div>
 
-			<div style="grid-template-columns: repeat(4, 1fr)" class="flex flex-col md:grid relative w-[calc(100%+48px)] -ml-6 h-full -mt-8">
+			<div style="grid-template-columns: repeat(4, 1fr)" class="flex flex-col md:grid relative md:w-[calc(100%+48px)] ml-0 md:-ml-8 h-full -mt-8">
 				<div class="features-gridlines">
 					<div></div>
 					<div></div>

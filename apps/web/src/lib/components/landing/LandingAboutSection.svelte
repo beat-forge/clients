@@ -42,7 +42,7 @@
 
 		<IntersectionObserver once={true} let:intersecting top={0}>
             <div class="relative bg-[#ffffff05] backdrop-blur-md rounded-full shadow-2xl">
-                <div class="team-section rising-stars" aria-hidden="true">
+                <div class="hidden md:block team-section rising-stars" aria-hidden="true">
                     <div style="height:2px; width:1px;"></div>
                     <div style="height:2px; width:1px;"></div>
                     <div style="height:2px; width:1px;"></div>
