@@ -20,7 +20,7 @@
 		"@types/cookie": "^0.5.1",
 		"autoprefixer": "^10.4.15",
 		"install": "^0.13.0",
-		"postcss": "^8.4.27",
+		"postcss": "^8.4.28",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^3.0.1",
 		"prettier-plugin-svelte": "^3.0.3",
