@@ -281,25 +281,6 @@
 	background-size: 24px 24px;
 }
 
-.beatforge-team-section {
-	/* background-image: radial-gradient(circle, #ffffff14 2px, transparent 2px);
-	background-size: 32px 36px; */
-}
-
-/* @keyframes blink {
-	0% {
-		opacity: 0;
-	}
-
-	50% {
-		opacity: 1;
-	}
-}
-
-.blinking-cursor {
-	animation: blink 1s step-end infinite;
-} */
-
 .terminal-row {
 	position: relative;
 }
@@ -470,59 +451,6 @@
 .beatforge-landing-client-featurecard:hover:after {
 	opacity: 1;
 }
-
-/* @keyframes logo-container-rotate {
-	0% {
-		opacity: 0;
-		transform: translateY(10%) rotate(40deg);
-		filter: contrast(400%) blur(32px);
-	}
-	100% {
-		opacity: 1;
-		filter: none;
-		transform: translateY(0px) rotate(0deg);
-	}
-}
-
-@keyframes hue-rotate-landing-end {
-	0% {
-		filter: hue-rotate(0deg) contrast(200%);
-	}
-
-	50% {
-		filter: hue-rotate(120deg);
-	}
-
-	100% {
-		filter: hue-rotate(0deg) contrast(400%);
-	}
-}
-
-.beatforge-landing-end-video-wrapper {
-	animation: 2.2s ease-out 0s 1 normal backwards running logo-container-rotate;
-}
-
-.beatforge-landing-end-video-container {
-	animation: hue-rotate-landing-end 19s linear infinite forwards;
-} */
-
-/* @keyframes end-video-source {
-	0%,  100% {
-		mask-position: 50% 35%;
-		transform: rotate(-20deg);
-		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-	}
-
-	50% {
-		mask-position: 50% 37%;
-		transform: none;
-		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-	}
-} */
-
-/* .beatforge-end-video-source {
-	animation: end-video-source 7s linear infinite both;
-} */
 
 .team-section.rising-stars {
 	height: 260px;
