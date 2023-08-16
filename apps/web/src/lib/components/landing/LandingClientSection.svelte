@@ -45,7 +45,7 @@
 				<img style="-webkit-mask-image: linear-gradient(black, transparent 70%);" src="/images/app_screenshot.png" class="w-full object-fit" alt="app screenshot" />
 			</div>
 
-			<div style="grid-template-columns: repeat(4, 1fr)" class="flex flex-col md:grid relative md:w-[calc(100%+48px)] ml-0 md:-ml-8 h-full -mt-8">
+			<div style="grid-template-columns: repeat(4, 1fr)" class="flex flex-col md:grid relative md:w-[calc(100%+48px)] ml-0 md:-ml-6 h-full -mt-8">
 				<div class="features-gridlines">
 					<div></div>
 					<div></div>

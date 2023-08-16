@@ -12,7 +12,7 @@
 	<footer class="beatforge-page-std-footer relative mx-auto max-w-7xl py-4 px-4 sm:px-6 lg:px-12">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-center justify-between py-8 relative">
 			<p class="opacity-40 text-xs mb-2 sm:mb-0">
-				Copyright © {year} BeatForge. GNU Affero General Public License v3.0.
+				© {year} BeatForge.
 			</p>
 			<div class="items-center opacity-40 sm:mt-0 text-xs flex gap-8">
 				<a
