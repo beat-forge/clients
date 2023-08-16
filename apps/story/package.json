@@ -17,7 +17,7 @@
     "ui": "workspace:*"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.2.3",
+    "@storybook/addon-essentials": "^7.3.1",
     "@storybook/addon-interactions": "^7.3.1",
     "@storybook/addon-links": "^7.2.3",
     "@storybook/blocks": "^7.2.3",
