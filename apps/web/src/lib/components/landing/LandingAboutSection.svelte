@@ -49,10 +49,10 @@
                 </div>
                 <div class="beatforge-team-section p-8">
                     <div class="flex flex-row items-center justify-center">
-                        <img src="https://avatars.githubusercontent.com/u/24845326?v=4" class="rounded-full h-16 w-16 border-4 border-black">
-                        <img src="https://avatars.githubusercontent.com/u/25761442?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black">
-                        <img src="https://avatars.githubusercontent.com/u/57552273?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black">
-                        <img src="https://avatars.githubusercontent.com/u/52982404?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black">
+                        <img src="https://avatars.githubusercontent.com/u/24845326?v=4" class="rounded-full h-16 w-16 border-4 border-black" alt="Avatar of Checksum - BeatForge Core Team">
+                        <img src="https://avatars.githubusercontent.com/u/25761442?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black" alt="Avatar of Wamy - BeatForge Core Team">
+                        <img src="https://avatars.githubusercontent.com/u/57552273?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black" alt="Avatar of Sargon - BeatForge Core Team">
+                        <img src="https://avatars.githubusercontent.com/u/52982404?v=4" class="rounded-full h-16 w-16 -ml-4 border-4 border-black bg-black" alt="Avatar of fero - BeatForge Core Team">
                     </div>
                 </div>
             </div>
