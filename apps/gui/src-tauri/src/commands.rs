@@ -74,7 +74,7 @@ pub async fn detect_instances(save: bool) -> Vec<structs::Instance> {
         let bsm_config_file = std::fs::File::open(bsm_config_path).unwrap();
         let bsm_config: serde_json::Value = serde_json::from_reader(bsm_config_file).unwrap();
 
-        if bsm_config["installation_folder"].as_str().is_none() {
+        if bsm_config["installation-folder"].as_str().is_none() {
             let bs_manager = documents_dir.join("BSManager").join("BSInstances");
 
             for entry in std::fs::read_dir(bs_manager).unwrap() {
@@ -92,9 +92,10 @@ pub async fn detect_instances(save: bool) -> Vec<structs::Instance> {
                 }
             }
         } else {
-            let base_path = bsm_config["installation_folder"].as_str().unwrap(); // this is the base path for bs manager, not including BSManager
+            let base_path = bsm_config["installation-folder"].as_str().unwrap(); // this is the base path for bs manager, not including BSManager
             let mut bs_manager = Path::new(base_path).join("BSManager");
             bs_manager.push("BSInstances");
+			dbg!(&bs_manager);
 
             for entry in std::fs::read_dir(bs_manager).unwrap() {
                 let entry = entry.unwrap();
