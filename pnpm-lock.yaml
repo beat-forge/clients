@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -242,8 +246,8 @@ importers:
         specifier: ^3.5.0
         version: 3.5.0(postcss-load-config@4.0.1)(postcss@8.4.28)(svelte@4.2.0)
       svelte-local-storage-store:
-        specifier: ^0.5.0
-        version: 0.5.0(svelte@4.2.0)
+        specifier: ^0.6.0
+        version: 0.6.0(svelte@4.2.0)
       tailwindcss:
         specifier: ^3.3.3
         version: 3.3.3(ts-node@10.9.1)
@@ -10399,8 +10403,8 @@ packages:
       svelte: 4.2.0
     dev: true
 
-  /svelte-local-storage-store@0.5.0(svelte@4.2.0):
-    resolution: {integrity: sha512-SEDrpapeia6fUqta+r1NvSLlJYPkZ4pBcl15EYIOSPNzy6vhpoXu8cnzUDmZxsWl7fZGAHxrVH9UyZCbyO4W+g==}
+  /svelte-local-storage-store@0.6.0(svelte@4.2.0):
+    resolution: {integrity: sha512-UbCY/yT/YUadU5IX/gZkoRQnA+ebFZHKKQjlJvfWHnBj3CPe9sNn8ndxYz/xy4LUzGjuBLq8+wH5RYK54ba3wA==}
     engines: {node: '>=0.14'}
     peerDependencies:
       svelte: ^3.48.0 || ^4.0.0
@@ -11403,7 +11407,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
