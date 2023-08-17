@@ -78,4 +78,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            docker run -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once
+            docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --cleanup
