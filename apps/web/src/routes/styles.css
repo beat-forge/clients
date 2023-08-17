@@ -363,6 +363,16 @@
 	width: 100%;
 }
 
+.beatforge-page-std-footer-container:before {
+	background: radial-gradient( 62.87% 100% at 50% 100%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 100% );
+	top: 0;
+	content: '';
+	height: 1px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
 .beatforge-landing-bentobox-item {
 	backdrop-filter: blur(2px);
 }
