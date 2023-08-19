@@ -96,9 +96,35 @@
 
 		observer.observe(scroll_end);
 	});
+
+	$: selectedMods = [] as any;
+
+	// Event handler to log selected mod items
+	const logSelectedMods = () => {
+		console.log(selectedMods);
+	};
+
+	// Listen for selection change events from ModListItem components
+	const handleSelectionChange = (event: any) => {
+    const { slug, selected } = event.detail;
+    const modIndex = existingData.findIndex((mod) => mod.slug === slug);
+
+    if (modIndex !== -1) {
+        if (selected) {
+            selectedMods.push(existingData[modIndex]);
+        } else {
+            selectedMods.splice(selectedMods.findIndex((mod) => mod.slug === slug), 1);
+        }
+
+        // Update the selected property in the mod object
+        existingData[modIndex].selected = selected;
+    }
+
+    console.log(selectedMods);
+};
 </script>
 
-<div class="mx-auto w-full max-w-7xl px-6">
+<div class="mx-auto w-full px-6">
 	<div class="beatforge-discover-header-wrapper">
 		<h1 class="relative z-[2] mt-4 max-w-[700px] text-4xl font-black leading-[1.25] tracking-wide">
 			Discover
@@ -175,9 +201,12 @@
 	<div class="mt-4 flex text-xs font-bold md:hidden">
 		Sorting by<span class="ml-1 text-[#875CEF]">{getSortLabel(sort)}</span>
 	</div>
-	<div class="beatforge-discover-list-items-wrapper relative mt-4 overflow-hidden rounded-b-md">
+
+	<button on:click={logSelectedMods}>Log Selected Mods</button>
+
+	<div class="beatforge-discover-list-items-wrapper relative mt-4">
 		{#if existingData.length > 0}
-			{#each existingData as mod}
+			{#each existingData as mod (mod.slug)}
 				{#key existingData.length}
 					<ModListItem
 						name={mod.name}
@@ -187,6 +216,8 @@
 						category={mod.category}
 						downloads={mod.stats.downloads}
 						icon={mod.icon}
+						selected={mod.selected}
+						on:selectionChange={handleSelectionChange}
 					/>
 				{/key}
 			{/each}

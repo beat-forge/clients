@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { ArrowSmallRightIcon, CalendarIcon, CategoryIcon, DotsIcon, Pill } from 'ui';
-	import type { PageData } from './$types';
-	export let data: PageData;
 	import { Button } from 'ui/button';
+
+    // get pathname from +page.ts
+    import type { PageData } from './$types';
+	export let data: PageData;
+    export let pathname: string = '';
 
 	/// TODO!
 	// get instance name from DB via slug
