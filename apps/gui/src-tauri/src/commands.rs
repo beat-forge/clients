@@ -196,7 +196,7 @@ pub async fn install_mod(
     let db = DATABASE.get().await.clone();
     let instance = Instances::find_by_id(instance_id).one(&db).await?.unwrap();
 
-    let fm_res = post("https://staging-api.beatforge.net/graphql")
+    let fm_res = post(format!("{}/graphql", api_url))
         .with_body(format!(
             "{{
             mods {{

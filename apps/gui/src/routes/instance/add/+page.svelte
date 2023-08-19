@@ -23,6 +23,7 @@
 		>
 			<input class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-8" placeholder="C:\ ..." />
 			<div class="mx-2 my-2">
+                <!-- invoke native file picker -->
 				<Button customClasses="ml-auto w-fit whitespace-nowrap" variant="primary"
 					>Browse Files</Button
 				>

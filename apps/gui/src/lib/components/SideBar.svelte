@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 
 	import Instance from '$lib/components/Instance.svelte';
-	import { PlusIcon, SquareStack } from 'ui/icons';
+	import { PlusIcon, SquareStack, PersonIcon } from 'ui/icons';
 
 	let instances: any[] = [];
 	$: invoke('detect_instances', { save: true }).then((res: any) => {
@@ -42,6 +42,18 @@
 				<p>Discover Mods</p>
 			</a>
 
+			<!-- If loggedout -->
+			<a
+				href="/account"
+				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
+				style={activeUrl === `/account`
+					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
+					: ''}
+			>
+				<PersonIcon customClasses="w-5 h-5" />
+				<p>Account & Sync</p>
+			</a>
+
 			<a
 				href="/instance/add"
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
@@ -50,7 +62,6 @@
 					: ''}
 			>
 				<PlusIcon customClasses="w-5 h-5" />
-
 				<p>Add Instance</p>
 			</a>
 		</div>

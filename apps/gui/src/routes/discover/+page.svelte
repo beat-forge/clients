@@ -200,10 +200,6 @@
 		</div>
 	</div>
 
-	<div class="mt-4 flex text-xs font-bold md:hidden">
-		Sorting by<span class="ml-1 text-[#875CEF]">{getSortLabel(sort)}</span>
-	</div>
-
 	{#if selectedMods.length > 0}
 		<div
 			class="absolute bottom-0 left-0 right-0 z-[4] grid place-content-center py-8"

@@ -40,6 +40,7 @@
 			</div>
 		</div>
 
+        <!-- pass instance version/name via query param(?) -->
 		<a href="/discover">
 			<div
 				class="bg-primary-800 mt-10 flex flex-row items-center justify-between gap-2 rounded-md p-4"
