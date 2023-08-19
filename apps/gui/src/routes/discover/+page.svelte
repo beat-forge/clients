@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { SearchIcon, ChevronDownIcon, FilterIcon } from 'ui/icons';
 	import ModListItem from '$lib/components/ModListItem.svelte';
-	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import { afterUpdate, onMount } from 'svelte';
 
 	enum Sort {
 		Newest = 'created_at:desc',
@@ -99,29 +101,29 @@
 
 	$: selectedMods = [] as any;
 
-	// Event handler to log selected mod items
 	const logSelectedMods = () => {
 		console.log(selectedMods);
 	};
 
-	// Listen for selection change events from ModListItem components
 	const handleSelectionChange = (event: any) => {
-    const { slug, selected } = event.detail;
-    const modIndex = existingData.findIndex((mod) => mod.slug === slug);
+		const { slug, selected } = event.detail;
+		const modIndex = existingData.findIndex((mod) => mod.slug === slug);
 
-    if (modIndex !== -1) {
-        if (selected) {
-            selectedMods.push(existingData[modIndex]);
-        } else {
-            selectedMods.splice(selectedMods.findIndex((mod) => mod.slug === slug), 1);
-        }
+		if (modIndex !== -1) {
+			if (selected) {
+				selectedMods.push(existingData[modIndex]);
+			} else {
+				selectedMods.splice(
+					selectedMods.findIndex((mod) => mod.slug === slug),
+					1
+				);
+			}
 
-        // Update the selected property in the mod object
-        existingData[modIndex].selected = selected;
-    }
+			existingData[modIndex].selected = selected;
+		}
 
-    console.log(selectedMods);
-};
+		console.log(selectedMods);
+	};
 </script>
 
 <div class="mx-auto w-full px-6">
@@ -202,7 +204,24 @@
 		Sorting by<span class="ml-1 text-[#875CEF]">{getSortLabel(sort)}</span>
 	</div>
 
-	<button on:click={logSelectedMods}>Log Selected Mods</button>
+	{#if selectedMods.length > 0}
+		<div
+			class="absolute bottom-0 left-0 right-0 z-[4] grid place-content-center py-8"
+			transition:fly={{ y: '200%', duration: 500, easing: quintOut }}
+		>
+			<button
+				class="text-md rounded-full bg-white px-4 py-2 font-bold text-black shadow-2xl duration-300"
+			>
+				Install Selected Mods
+			</button>
+		</div>
+
+		<div
+			style="-webkit-mask-image: linear-gradient(transparent, black 80%);"
+			class="absolute bottom-0 left-0 right-0 z-[3] grid place-content-center py-8 backdrop-blur-2xl"
+			transition:fly={{ y: '200%' }}
+		></div>
+	{/if}
 
 	<div class="beatforge-discover-list-items-wrapper relative mt-4">
 		{#if existingData.length > 0}

@@ -33,11 +33,11 @@
 			toggleSelection();
 		}
 	}}
-	class={`beatforge-discover-list-item border-2 bg-primary-800 hover:bg-primary-850 border-primary-850 my-2 flex w-full min-w-0 flex-row items-center gap-2 rounded-lg p-2 transition duration-[120ms] hover:duration-[0ms] md:my-0 md:gap-4 md:rounded-none md:p-4  ${
-		selected ? 'border-[#875CEF] bg-[#885cef3d]' : ''
+	class={`beatforge-focusable-element beatforge-discover-list-item border-2 my-2 flex w-full min-w-0 flex-row items-center gap-2 rounded-lg p-2 transition-all duration-[120ms] hover:duration-[0ms] md:my-0 md:gap-4 md:rounded-none md:p-4 outline-none ${
+		selected ? 'border-[#875CEF] bg-[#885cef3d]' : 'bg-primary-800 hover:bg-primary-850 border-transparent'
 	}`}
 >
-	<input type="checkbox" bind:checked={selected} class="w-6 h-6" />
+	<input tabindex="-1" type="checkbox" bind:checked={selected} class="w-6 h-6" />
 	<div
 		class="beatforge-discover-list-item-image bg-primary-600 mr-2 flex h-12 w-12 flex-shrink-0 overflow-hidden rounded-md md:h-16 md:w-16"
 	>
