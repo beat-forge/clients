@@ -6,13 +6,13 @@
 </script>
 
 <div
-	class="beatforge-client-app-wrapper h-full w-full overflow-hidden rounded-lg border-2 border-[#121212] bg-primary-950"
+	class="beatforge-client-app-wrapper bg-primary-950 h-full w-full overflow-hidden rounded-lg border-2 border-[#121212]"
 >
-	<div class="flex flex-row w-full h-full min-w-0 beatforge-client-layout">
+	<div class="beatforge-client-layout flex h-full w-full min-w-0 flex-row">
 		<SideBar />
-		<div class="flex flex-col w-full h-full min-w-0 beatforge-client-content">
+		<div class="beatforge-client-content flex h-full w-full min-w-0 flex-col">
 			<TitleBar />
-			<div class="flex flex-col w-full h-full min-w-0 pb-6 pl-6 pr-4 overflow-y-auto">
+			<div class="flex h-full w-full min-w-0 flex-col overflow-y-auto pb-6 pl-6 pr-4">
 				<slot />
 			</div>
 		</div>
@@ -21,6 +21,6 @@
 	<!-- app backdrop glow -->
 	<div
 		aria-hidden="true"
-		class="fixed top-0 left-0 w-full h-full overflow-visible bg-gradient-to-b from-[#4712B6] to-[#954C81] opacity-[0.04] pointer-events-none select-none sidebar-glow"
+		class="sidebar-glow pointer-events-none fixed left-0 top-0 z-[3] h-full w-full select-none overflow-visible bg-gradient-to-b from-[#4712B6] to-[#954C81] opacity-[0.03]"
 	/>
 </div>

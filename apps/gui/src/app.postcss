@@ -3,7 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
+img,
+a,
+button {
+	cursor: default;
 	-webkit-user-drag: none;
 	-khtml-user-drag: none;
 	-moz-user-drag: none;
@@ -100,11 +103,9 @@ input {
 	backdrop-filter: blur(20px);
 	-webkit-mask-image: linear-gradient(
 		var(--direction),
-		var(--mask-visible) 66%,
+		var(--mask-visible) 56%,
 		var(--mask-hidden)
 	);
-	mask-image: linear-gradient(var(--direction), var(--mask-visible) 36%, var(--mask-hidden));
-	top: 0px;
 }
 
 .linkActive {
@@ -112,7 +113,9 @@ input {
 	font-weight: bold;
 }
 
-input, select, form {
+input,
+select,
+form {
 	background: inherit;
 	color: inherit;
 	border: inherit;

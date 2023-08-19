@@ -98,41 +98,45 @@
 	});
 </script>
 
-<div class="w-full px-6 mx-auto max-w-7xl">
+<div class="mx-auto w-full max-w-7xl px-6">
 	<div class="beatforge-discover-header-wrapper">
 		<h1 class="relative z-[2] mt-4 max-w-[700px] text-4xl font-black leading-[1.25] tracking-wide">
 			Discover
 		</h1>
+
+		<div class="text-primary-300 mt-4 text-xs font-black">
+			<p>Total Mods: {totalHits}</p>
+		</div>
 	</div>
 
-	<div class="flex flex-row gap-4 mt-4 beatforge-discover-filter-wrapper">
+	<div class="beatforge-discover-filter-wrapper sticky top-4 z-[2] mt-4 flex flex-row gap-4">
 		<div
-			class="relative flex flex-row items-center w-full overflow-hidden rounded-md bg-primary-800 text-primary-50"
+			class="bg-primary-800 text-primary-50 relative flex w-full flex-row items-center overflow-hidden rounded-md"
 		>
 			<SearchIcon customClasses="w-4 h-4 absolute left-4 z-10 select-none pointer-events-none" />
 			<input
 				on:input={searchMore}
 				bind:value={searchValue}
-				class="flex flex-row items-center w-full gap-2 py-3 pl-12"
+				class="flex w-full flex-row items-center gap-2 py-3 pl-12"
 				placeholder="Search for mods"
 			/>
 		</div>
 
 		<div
-			class="relative flex flex-row items-center overflow-hidden rounded-md bg-primary-800 w-14 md:w-2/5"
+			class="bg-primary-800 relative flex min-w-[33%] flex-row items-center overflow-hidden rounded-md"
 		>
 			<div
-				class="absolute hidden -translate-y-1/2 pointer-events-none select-none right-4 top-1/2 md:block"
+				class="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 select-none md:block"
 			>
 				<ChevronDownIcon customClasses="w-4 h-4 z-10 select-none pointer-events-none" />
 			</div>
 			<div
-				class="absolute block -translate-y-1/2 pointer-events-none select-none right-4 top-1/2 md:hidden"
+				class="pointer-events-none absolute right-4 top-1/2 block -translate-y-1/2 select-none md:hidden"
 			>
 				<FilterIcon customClasses="w-4 h-4 z-10 select-none pointer-events-none" />
 			</div>
 			<select
-				class="flex flex-row items-center w-full gap-2 py-3 pl-4 pr-12"
+				class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-12"
 				bind:value={sort}
 				on:change={searchMore}
 			>
@@ -144,20 +148,20 @@
 		</div>
 
 		<div
-			class="relative flex flex-row items-center overflow-hidden rounded-md bg-primary-800 w-14 md:w-1/5"
+			class="bg-primary-800 relative flex min-w-[33%] flex-row items-center overflow-hidden rounded-md"
 		>
 			<div
-				class="absolute hidden -translate-y-1/2 pointer-events-none select-none right-4 top-1/2 md:block"
+				class="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 select-none md:block"
 			>
 				<ChevronDownIcon customClasses="w-4 h-4 z-10 select-none pointer-events-none" />
 			</div>
 			<div
-				class="absolute block -translate-y-1/2 pointer-events-none select-none right-4 top-1/2 md:hidden"
+				class="pointer-events-none absolute right-4 top-1/2 block -translate-y-1/2 select-none md:hidden"
 			>
 				<FilterIcon customClasses="w-4 h-4 z-10 select-none pointer-events-none" />
 			</div>
 			<select
-				class="px-4 py-1 text-xs font-bold rounded-md bg-primary-800"
+				class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-12"
 				bind:value={gameVersion}
 				on:change={searchMore}
 			>
@@ -168,10 +172,10 @@
 		</div>
 	</div>
 
-	<div class="flex mt-4 text-xs font-bold md:hidden">
+	<div class="mt-4 flex text-xs font-bold md:hidden">
 		Sorting by<span class="ml-1 text-[#875CEF]">{getSortLabel(sort)}</span>
 	</div>
-	<div class="relative mt-4 overflow-hidden beatforge-discover-list-items-wrapper rounded-b-md">
+	<div class="beatforge-discover-list-items-wrapper relative mt-4 overflow-hidden rounded-b-md">
 		{#if existingData.length > 0}
 			{#each existingData as mod}
 				{#key existingData.length}
@@ -187,12 +191,8 @@
 				{/key}
 			{/each}
 		{:else}
-			<p class="text-center text-primary-300">No mods found</p>
+			<p class="text-primary-300 text-center">No mods found</p>
 		{/if}
-
-		<div class="mt-4 text-xs font-black text-primary-300">
-			<p>Total Mods: {totalHits}</p>
-		</div>
 
 		<div bind:this={scroll_end} class="absolute bottom-[900px] h-1 w-1"></div>
 	</div>
