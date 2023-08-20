@@ -34,8 +34,13 @@ impl MigrationTrait for Migration {
                         .boolean()
                         .not_null()
                         .default(false),
+                ).col(
+                    ColumnDef::new(Instances::Timestamp)
+                        .text()
+                        .not_null()
+                        .default(Expr::current_timestamp())
                 ).to_owned()
-                ).await?;
+            ).await?;
 
         manager.create_table(
             Table::create().table(InstanceMods::Table).if_not_exists().col(
@@ -45,11 +50,12 @@ impl MigrationTrait for Migration {
                     .auto_increment()
                     .primary_key()
             )
-            // .col(
-            //     ColumnDef::new(InstanceMods::InstanceId)
-            //         .integer()
-            //         .not_null()
-            // )
+            .col(
+                ColumnDef::new(InstanceMods::Timestamp)
+                    .text()
+                    .not_null()
+                    .default(Expr::current_timestamp())
+            )
             .col(
                 ColumnDef::new(InstanceMods::ModId)
                     .text() //uuid
@@ -86,6 +92,7 @@ enum Instances {
     Path,
     Version,
     IsModded,
+    Timestamp
 }
 
 #[derive(Iden)]
@@ -94,4 +101,5 @@ enum InstanceMods {
     Id,
     InstanceId,
     ModId,
+    Timestamp
 }

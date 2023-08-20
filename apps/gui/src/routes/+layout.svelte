@@ -7,12 +7,12 @@
 
 <div
 	class="beatforge-client-app-wrapper bg-primary-950 h-full w-full overflow-hidden rounded-lg border-2 border-[#121212]"
->
+>	
 	<div class="beatforge-client-layout flex h-full w-full min-w-0 flex-row">
 		<SideBar />
 		<div class="beatforge-client-content flex h-full w-full min-w-0 flex-col">
 			<TitleBar />
-			<div class="flex h-full w-full min-w-0 flex-col overflow-y-auto pb-6 pl-6 pr-4">
+			<div id="scroll" class="flex h-full w-full min-w-0 flex-col overflow-y-auto pb-6 pl-6 pr-4">
 				<slot />
 			</div>
 		</div>

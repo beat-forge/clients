@@ -56,6 +56,9 @@ importers:
       sugar:
         specifier: ^2.0.6
         version: 2.0.6
+      svelte-infinite-scroll:
+        specifier: ^2.0.1
+        version: 2.0.1
       ui:
         specifier: workspace:^
         version: link:../../packages/ui
@@ -10256,6 +10259,10 @@ packages:
     dependencies:
       svelte: 4.2.0
     dev: true
+
+  /svelte-infinite-scroll@2.0.1:
+    resolution: {integrity: sha512-goTHCfOHRDCs8C5MeSuIc6LlAQ8zVQ+M4Y3LyvrDjx5rqSSxSrdCuQwIyWYNcO6j6/mnqRro3QB64ClBzfn+Wg==}
+    dev: false
 
   /svelte-local-storage-store@0.6.0(svelte@4.2.0):
     resolution: {integrity: sha512-UbCY/yT/YUadU5IX/gZkoRQnA+ebFZHKKQjlJvfWHnBj3CPe9sNn8ndxYz/xy4LUzGjuBLq8+wH5RYK54ba3wA==}

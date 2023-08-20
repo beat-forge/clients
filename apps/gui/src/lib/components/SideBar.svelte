@@ -4,9 +4,10 @@
 
 	import Instance from '$lib/components/Instance.svelte';
 	import { PlusIcon, SquareStack, PersonIcon } from 'ui/icons';
+	import { currentInstance } from '$lib/stores';
 
 	let instances: any[] = [];
-	$: invoke('detect_instances', { save: true }).then((res: any) => {
+	$: invoke('detect_instances').then((res: any) => {
 		instances = res;
 	});
 
@@ -31,8 +32,11 @@
 
 		<!-- style="background: rgba(255, 255, 255, 33%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);" -->
 		<div class="">
-			<a
+			<!-- <a
 				href="/discover"
+				on:click={() => {
+					currentInstance.set(null);
+				}}
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
 				style={activeUrl === `/discover`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
@@ -40,22 +44,32 @@
 			>
 				<SquareStack customClasses="w-5 h-5" />
 				<p>Discover Mods</p>
-			</a>
+			</a> -->
 
 			<!-- If loggedout -->
-			<a
+			<!-- 
 				href="/account"
-				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
+				on:click={() => {
+					currentInstance.set(null);
+				}}
+			 -->
+			<div
+				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22] pointer-events-none"
 				style={activeUrl === `/account`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
 					: ''}
 			>
 				<PersonIcon customClasses="w-5 h-5" />
 				<p>Account & Sync</p>
-			</a>
+
+				<div class="text-xs font-black text-white bg-[#ffffff22] rounded-full px-2 py-1 ml-auto">Soon</div>
+			</div>
 
 			<a
 				href="/instance/add"
+				on:click={() => {
+					currentInstance.set(null);
+				}}
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
 				style={activeUrl === `/instance/add`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
@@ -68,11 +82,11 @@
 
 		<!-- instance list -->
 		{#each instances as instance}
-			<Instance name={instance.name} version={instance.version} />
+			<Instance id={instance.id} name={instance.name} version={instance.version} />
 		{:else}
 			<!-- <div></div> -->
-			<Instance name="streaming" version="1.28.0" />
-			<Instance name="hi again" version="1.29.1" />
+			<Instance id="a" name="streaming" version="1.28.0" />
+			<Instance id="b" name="hi again" version="1.29.1" />
 			<!-- <Instance name="hi1" version="1.29.1" />
 			<Instance name="hi again2" version="1.29.1" />
 			<Instance name="hi2" version="1.29.1" />

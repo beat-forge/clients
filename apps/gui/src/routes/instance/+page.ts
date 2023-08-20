@@ -1,3 +1,3 @@
-export function load({ url }) {
-    return { instanceName: url.searchParams.get('ref') };
-}
+// export function load({ url }) {
+//     return { id: url.searchParams.get('id') };
+// }

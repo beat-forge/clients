@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { invoke } from '@tauri-apps/api/tauri';
 	import { Button } from 'ui/button';
+	
 
+	$: name = "";
 	// TODO
 	// on submit, invoke add_instance() from tauri
+	const addInstance = async () => {
+		await invoke('add_instance', { name: name })
+	}
 </script>
 
 <div class="mx-auto w-full max-w-7xl px-6">
@@ -21,13 +27,13 @@
 		<div
 			class="bg-primary-800 text-primary-50 relative flex w-full flex-row items-center overflow-hidden rounded-md"
 		>
-			<input class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-8" placeholder="C:\ ..." />
-			<div class="mx-2 my-2">
-                <!-- invoke native file picker -->
-				<Button customClasses="ml-auto w-fit whitespace-nowrap" variant="primary"
-					>Browse Files</Button
-				>
-			</div>
+			<input
+				bind:value={name}
+				class="flex w-full flex-row items-center gap-2 py-3 pl-4 pr-8"
+				placeholder="instance name"
+			/>
 		</div>
+		
+		<Button on:click={addInstance} customClasses="ml-auto w-fit whitespace-nowrap" variant="primary">Add Instance</Button>
 	</div>
 </div>

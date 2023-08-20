@@ -54,7 +54,11 @@ async fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             commands::get_instances,
-            commands::detect_instances
+            commands::detect_instances,
+            commands::add_instance,
+            commands::remove_instance,
+            commands::get_instance,
+            commands::install_mod,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

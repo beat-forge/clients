@@ -114,7 +114,7 @@
 				selectedMods.push(existingData[modIndex]);
 			} else {
 				selectedMods.splice(
-					selectedMods.findIndex((mod) => mod.slug === slug),
+					selectedMods.findIndex((mod: any) => mod.slug === slug),
 					1
 				);
 			}

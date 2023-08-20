@@ -12,6 +12,7 @@ pub struct Model {
     pub path: String,
     pub version: String,
     pub is_modded: bool,
+    pub timestamp: DateTimeUtc,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
