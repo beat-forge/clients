@@ -123,6 +123,9 @@ importers:
       svelte-check:
         specifier: ^3.5.0
         version: 3.5.0(postcss-load-config@4.0.1)(postcss@8.4.28)(svelte@4.2.0)
+      svelte-local-storage-store:
+        specifier: ^0.6.0
+        version: 0.6.0(svelte@4.2.0)
       tailwind-preset-base:
         specifier: workspace:^
         version: link:../../packages/tailwind-preset-base
