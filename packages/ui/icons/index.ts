@@ -16,9 +16,11 @@ export { default as VerifiedIcon } from './Verified.svelte';
 export { default as AtSymbolIcon } from './AtSymbol.svelte';
 export { default as BarsThree } from './BarsThree.svelte';
 export { default as CubeIcon } from './Cube.svelte';
-export { default as CogIcon } from './Cog.svelte'
-export { default as ArrowSmallLeftIcon } from './ArrowSmallLeft.svelte'
-export { default as ArrowSmallRightIcon } from './ArrowSmallRight.svelte'
-export { default as FilterIcon } from './Filter.svelte'
-export { default as PlusIcon } from './Plus.svelte'
-export { default as SquareStack } from './SquareStack.svelte'
+export { default as CogIcon } from './Cog.svelte';
+export { default as ArrowSmallLeftIcon } from './ArrowSmallLeft.svelte';
+export { default as ArrowSmallRightIcon } from './ArrowSmallRight.svelte';
+export { default as FilterIcon } from './Filter.svelte';
+export { default as PlusIcon } from './Plus.svelte';
+export { default as SquareStack } from './SquareStack.svelte';
+export { default as ClockIcon } from './Clock.svelte'
+export { default as HomeIcon } from './Home.svelte'

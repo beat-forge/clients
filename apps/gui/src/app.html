@@ -6,8 +6,15 @@
 		<meta name="viewport" content="width=device-width initial-scale=1" />
 		%sveltekit.head%
 	</head>
-	<body style="position: relative;" data-sveltekit-preload-data="hover">
+	<body style="position: relative" data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
-		<div style="background: #000000; inset: 0px; position: fixed; border-radius: 8px; z-index: -1;"></div>
+		<div
+			style="display: grid; place-items: center; background: #000000; inset: 0px; position: fixed; border-radius: 8px; z-index: -1"
+		>
+			<!-- <div style="display: flex; flex-direction: column; gap: 8px;">
+				<h1 style="font-size: 72px">:(</h1>
+				<p>Your BeatForge ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.</p>
+			</div> -->
+		</div>
 	</body>
 </html>

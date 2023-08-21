@@ -2,11 +2,12 @@
 	import { invoke } from '@tauri-apps/api/tauri';
 	import { page } from '$app/stores';
 
-	import Instance from '$lib/components/Instance.svelte';
-	import { PlusIcon, SquareStack, PersonIcon } from 'ui/icons';
+	import SidebarInstance from '$lib/components/SidebarInstance.svelte';
+	import { PlusIcon, PersonIcon, HomeIcon } from 'ui/icons';
 	import { currentInstance } from '$lib/stores';
+	import type { Instance } from '$lib/types';
 
-	let instances: any[] = [];
+	let instances: Instance[] = [];
 	$: invoke('detect_instances').then((res: any) => {
 		instances = res;
 	});
@@ -24,37 +25,24 @@
 		<!-- logo -->
 		<div class="mb-4 flex items-center justify-between">
 			<div class="text-sm font-bold text-white">
-				<!-- <a href="/" class="group w-full transition duration-[120ms] hover:bg-[#ffffff22]"> -->
 				<img src="/images/logo.svg" draggable="false" alt="logo" class="flex h-4 pl-0.5" />
-				<!-- </a> -->
 			</div>
 		</div>
 
-		<!-- style="background: rgba(255, 255, 255, 33%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);" -->
-		<div class="">
-			<!-- <a
-				href="/discover"
-				on:click={() => {
-					currentInstance.set(null);
-				}}
+		<div>
+			<a
+				href="/"
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
-				style={activeUrl === `/discover`
+				style={activeUrl === `/`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
 					: ''}
 			>
-				<SquareStack customClasses="w-5 h-5" />
-				<p>Discover Mods</p>
-			</a> -->
+				<HomeIcon customClasses="w-5 h-5" />
+				<p>Home</p>
+			</a>
 
-			<!-- If loggedout -->
-			<!-- 
-				href="/account"
-				on:click={() => {
-					currentInstance.set(null);
-				}}
-			 -->
 			<div
-				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22] pointer-events-none"
+				class="pointer-events-none -ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
 				style={activeUrl === `/account`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
 					: ''}
@@ -62,16 +50,18 @@
 				<PersonIcon customClasses="w-5 h-5" />
 				<p>Account & Sync</p>
 
-				<div class="text-xs font-black text-white bg-[#ffffff22] rounded-full px-2 py-1 ml-auto">Soon</div>
+				<div class="ml-auto rounded-full bg-[#ffffff22] px-2 py-1 text-xs font-black text-white">
+					Soon
+				</div>
 			</div>
 
 			<a
-				href="/instance/add"
+				href="/add"
 				on:click={() => {
-					currentInstance.set(null);
+					currentInstance.set(instances[0]); // todo: fix this hack so it doesn't break on non instance pages
 				}}
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
-				style={activeUrl === `/instance/add`
+				style={activeUrl === `/add`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
 					: ''}
 			>
@@ -82,27 +72,9 @@
 
 		<!-- instance list -->
 		{#each instances as instance}
-			<Instance id={instance.id} name={instance.name} version={instance.version} />
+			<SidebarInstance {instance} />
 		{:else}
-			<!-- <div></div> -->
-			<Instance id="a" name="streaming" version="1.28.0" />
-			<Instance id="b" name="hi again" version="1.29.1" />
-			<!-- <Instance name="hi1" version="1.29.1" />
-			<Instance name="hi again2" version="1.29.1" />
-			<Instance name="hi2" version="1.29.1" />
-			<Instance name="hi again3" version="1.29.1" />
-			<Instance name="hi3" version="1.29.1" />
-			<Instance name="hi again5" version="1.29.1" />
-			<Instance name="hi6" version="1.29.1" />
-			<Instance name="hi again6" version="1.29.1" />
-			<Instance name="hi7" version="1.29.1" />
-			<Instance name="hi again7" version="1.29.1" />
-			<Instance name="hi8" version="1.29.1" />
-			<Instance name="hi again8" version="1.29.1" />
-			<Instance name="hi9" version="1.29.1" />
-			<Instance name="hi again9" version="1.29.1" />
-			<Instance name="hi10" version="1.29.1" />
-			<Instance name="hi again10" version="1.29.1" /> -->
+			<div></div>
 		{/each}
 	</div>
 </div>

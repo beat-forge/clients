@@ -3,6 +3,8 @@
 	import '../fonts.css';
 	import TitleBar from '$lib/components/TitleBar.svelte';
 	import SideBar from '$lib/components/SideBar.svelte';
+
+	export let scroll: HTMLDivElement;
 </script>
 
 <div
@@ -12,7 +14,7 @@
 		<SideBar />
 		<div class="beatforge-client-content flex h-full w-full min-w-0 flex-col">
 			<TitleBar />
-			<div id="scroll" class="flex h-full w-full min-w-0 flex-col overflow-y-auto pb-6 pl-6 pr-4">
+			<div bind:this={scroll} id="scroll" class="flex h-full w-full min-w-0 flex-col overflow-y-auto pb-6 pl-6 pr-4">
 				<slot />
 			</div>
 		</div>

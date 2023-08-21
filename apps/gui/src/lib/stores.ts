@@ -1,6 +1,6 @@
-import { writable, type Writable } from "svelte/store";
-import type { Instance } from "./types";
-import type { S } from "@tauri-apps/api/event-41a9edf5";
+import type { Writable } from 'svelte/store';
+import { persisted } from 'svelte-local-storage-store';
+import type { Instance } from './types';
 
-export const currentInstance: Writable<number| null> = writable(null);
-export const selectedItems: Writable<string[]> = writable([]);
+export const currentInstance: Writable<Instance | null> = persisted('currentInstance', null);
+export const selectedItems: Writable<string[]> = persisted('selectedItems', []);

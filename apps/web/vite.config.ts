@@ -12,18 +12,14 @@ export default defineConfig(({ mode }) => {
 		API_URL: process.env.BEATFORGE_API_URL ?? file_env.BEATFORGE_API_URL,
 		GITHUB_CALLBACK_URL:
 			process.env.BEATFORGE_GITHUB_CALLBACK_URL ?? file_env.BEATFORGE_GITHUB_CALLBACK_URL,
-		MEILI_PREFIX:
-			process.env.MEILI_PREFIX ?? file_env.MEILI_PREFIX ?? 'staging'
+		MEILI_PREFIX: process.env.MEILI_PREFIX ?? file_env.MEILI_PREFIX ?? 'staging'
 	};
 
 	// if (!env.API_URL) throw new Error('BEATFORGE_API_URL is not defined');
 	// if (!env.GITHUB_CALLBACK_URL) throw new Error('BEATFORGE_GITHUB_CALLBACK_URL is not defined');
 
 	return {
-		plugins: [
-			ViteImageOptimizer(),
-			sveltekit()
-		],
+		plugins: [ViteImageOptimizer(), sveltekit()],
 		define: {
 			'import.meta.env.API_URL': JSON.stringify(env.API_URL),
 			'import.meta.env.GITHUB_CALLBACK_URL': JSON.stringify(env.GITHUB_CALLBACK_URL),

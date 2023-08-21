@@ -2,10 +2,7 @@
 	import { invoke } from '@tauri-apps/api/tauri';
 	import { Button } from 'ui/button';
 	
-
 	$: name = "";
-	// TODO
-	// on submit, invoke add_instance() from tauri
 	const addInstance = async () => {
 		await invoke('add_instance', { name: name })
 	}
