@@ -106,7 +106,7 @@
 
 		<svg
 			class="absolute w-full h-full aspect-square top-1/2 -translate-y-[40%] -right-[43.5%] p-16 select-none pointer-events-none opacity-50 -rotate-45"
-			style="mask-image: linear-gradient(black, transparent 95%)"
+			style="mask-image: linear-gradient(black, transparent 95%); -webkit-mask-image: linear-gradient(black, transparent 95%)"
 			aria-hidden="true"
 			width="512"
 			height="512"
