@@ -315,8 +315,8 @@ importers:
   packages/ui:
     dependencies:
       '@melt-ui/svelte':
-        specifier: ^0.37.0
-        version: 0.37.0(svelte@4.2.0)
+        specifier: ^0.38.0
+        version: 0.38.0(svelte@4.2.0)
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
@@ -2326,8 +2326,8 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@melt-ui/svelte@0.37.0(svelte@4.2.0):
-    resolution: {integrity: sha512-1VIsoT9qsFNNvthSAhEWsPSiqPqPWY+6Q6LRPuVb2lOTEIePIH5aC5+e6OqnKNLDvcD8/R2vTzGOaD37G89IUA==}
+  /@melt-ui/svelte@0.38.0(svelte@4.2.0):
+    resolution: {integrity: sha512-FT82ESeAbA3bnktAhyrXpRfQFCZ8y/oJ6vNNZZgOKF3jAt4++qPZ5BJgYoAqGvEevtBEcgLG6eA1gP3V08x0RA==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
