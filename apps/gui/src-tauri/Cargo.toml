@@ -26,7 +26,7 @@ tauri = { version = "1.4", features = [
 ] }
 discord-rich-presence = "0.2.3"
 directories = "5.0.1"
-regex = "1.9.3"
+regex = "1.9.4"
 sea-orm = { version = "0.12", features = ["sqlx-sqlite", "runtime-tokio"] }
 lazy_static = "1.4.0"
 async_once = "0.2.6"
