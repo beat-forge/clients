@@ -8,7 +8,7 @@
 	import type { Instance } from '$lib/types';
 
 	let instances: Instance[] = [];
-	$: invoke('detect_instances').then((res: any) => {
+	$: invoke('get_instances').then((res: any) => {
 		instances = res;
 	});
 
