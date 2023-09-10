@@ -19,6 +19,7 @@
 	$: sort = Sort.MostPopular;
 	$: searchValue = '*';
 	$: currentPage = 1;
+	$: totalPages = 1;
 
 	enum Sort {
 		Newest = 'created_at:desc',
@@ -28,6 +29,15 @@
 	}
 
 	const search = async (q: String, reset: boolean = false) => {
+		if (reset) {
+			try {
+				document.getElementById('scroll')!.scrollTop = 0;
+			} catch (e) {}
+			currentPage = 1;
+			data = [];
+			called = false;
+		}
+
 		const res = await (
 			await fetch(
 				`https://search.beatforge.net/indexes/${import.meta.env.MEILI_PREFIX}_mods/search`,
@@ -50,23 +60,21 @@
 			)
 		).json();
 
-		if (reset) {
-			currentPage = 1;
-			data = [];
-		}
-
 		if (res.hits.length > 0) {
 			data = [...data, ...res.hits];
 		}
+		totalPages = res.totalPages;
 	};
 
 	const scrollSearch = async () => {
 		currentPage++;
+		if (currentPage > totalPages) {
+			return;
+		}
 		await search(searchValue);
 	};
 
 	const textSearch = async (e: Event) => {
-		currentPage = 1;
 		searchValue = (e.target as HTMLInputElement).value;
 		await search(searchValue, true);
 	};
@@ -77,19 +85,21 @@
 		}
 	}
 
-	// TODO: Scrolling position is not set correctly when loading more items
-	onMount(async () => {
+	let called = false;
+	onMount(() => {
 		document.getElementById('scroll')!.onscroll = function (e: any) {
 			let element = e.target as HTMLDivElement;
-
-			let reachedBottom = element.scrollHeight - element.scrollTop === element.clientHeight;
-			let percentage = (element.scrollTop / (element.scrollHeight - element.clientHeight)) * 100;
-
-			if (percentage > 90 && reachedBottom) {
+	
+			let percentage = ((element.scrollTop + element.clientHeight) / element.scrollHeight) * 100;
+			// console.log(percentage);
+			if (percentage > 80 && !called) {
 				scrollSearch();
+				called = true;
+			} else if (percentage < 80) {
+				called = false;
 			}
 		};
-	});
+	})
 </script>
 
 <div class="relative mx-auto w-full max-w-7xl px-6">

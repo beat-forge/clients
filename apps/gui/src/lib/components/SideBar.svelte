@@ -6,6 +6,7 @@
 	import { PlusIcon, PersonIcon, HomeIcon } from 'ui/icons';
 	import { currentInstance } from '$lib/stores';
 	import type { Instance } from '$lib/types';
+	import { goto } from '$app/navigation';
 
 	let instances: Instance[] = [];
 	$: invoke('get_instances').then((res: any) => {
@@ -30,8 +31,21 @@
 		</div>
 
 		<div>
-			<a
-				href="/"
+			<div
+				role="button"
+				tabindex="0"
+				on:click={async () => {
+					await goto('/');
+					currentInstance.set(null);
+				}}
+				on:keydown={async (e) => {
+					if (e.key === 'Enter') {
+						e.preventDefault();
+						e.stopPropagation();
+						await goto('/');
+						currentInstance.set(null);
+					}
+				}}
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
 				style={activeUrl === `/`
 					? 'background: rgba(255, 255, 255, 23%); box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.25);'
@@ -39,7 +53,7 @@
 			>
 				<HomeIcon customClasses="w-5 h-5" />
 				<p>Home</p>
-			</a>
+			</div>
 
 			<div
 				class="pointer-events-none -ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
@@ -55,10 +69,20 @@
 				</div>
 			</div>
 
-			<a
-				href="/add"
-				on:click={() => {
-					currentInstance.set(instances[0]); // todo: fix this hack so it doesn't break on non instance pages
+			<div
+				role="button"
+				tabindex="0"
+				on:click={async () => {
+					await goto('/add');
+					currentInstance.set(null);
+				}}
+				on:keydown={async (e) => {
+					if (e.key === 'Enter') {
+						e.preventDefault();
+						e.stopPropagation();
+						await goto('/add');
+						currentInstance.set(null);
+					}
 				}}
 				class="-ml-2 flex w-[calc(100%+16px)] flex-row items-center gap-4 rounded-md px-2 py-2 transition duration-[120ms] hover:bg-[#ffffff22]"
 				style={activeUrl === `/add`
@@ -67,7 +91,7 @@
 			>
 				<PlusIcon customClasses="w-5 h-5" />
 				<p>Add Instance</p>
-			</a>
+				</div>
 		</div>
 
 		<!-- instance list -->

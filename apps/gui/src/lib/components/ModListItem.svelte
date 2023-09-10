@@ -54,7 +54,6 @@
 	data-installed={installed}
 	data-instance-id={instance_id}
 	data-mod-id={id}
-	in:fly={{ duration: 300, delay: iter * 50, y: 100, easing: quintOut }}
 	class={`beatforge-focusable-element beatforge-mod-list-item bg-primary-800 my-2 flex w-full min-w-0 flex-row items-center gap-2 rounded-lg p-2 outline-none transition-all duration-[120ms] hover:duration-[0ms] md:my-0 md:gap-4 md:rounded-none md:p-4`}
 >
 	<div
