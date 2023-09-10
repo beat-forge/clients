@@ -1,6 +1,6 @@
-use std::{io::Error, path::Path, convert::Infallible, any};
+use std::{any, convert::Infallible, io::Error, path::Path};
 
-use crate::{structs, utils, DATABASE};
+use crate::{structs::{self, InstanceUpdate}, utils, DATABASE};
 use directories::{BaseDirs, UserDirs};
 use entity::prelude::*;
 use forge_lib::structs::v1::{unpack_v1_forgemod, ForgeModTypes};
@@ -16,21 +16,41 @@ static OCULUS_PATH: &str =
 pub async fn get_instances() -> Vec<structs::Instance> {
     let db = DATABASE.get().await.clone();
 
-    Instances::find()
-        .all(&db)
-        .await
-        .unwrap()
-        .into_iter()
-        .map(|f| structs::Instance {
-            id: f.id,
-            name: f.name,
-            path: f.path,
-            version: f.version,
-            is_modded: f.is_modded,
-            timestamp: f.timestamp,
-            mods: None, // mods not returned here
-        })
-        .collect()
+    futures_util::future::join_all(
+        Instances::find()
+            .all(&db)
+            .await
+            .unwrap()
+            .into_iter()
+            .map(|f| async move {
+                let db = DATABASE.get().await.clone(); // hack
+                structs::Instance {
+                    id: f.id,
+                    name: f.name,
+                    path: f.path,
+                    version: f.version,
+                    is_modded: f.is_modded,
+                    timestamp: f.timestamp,
+                    mods: Some(
+                        InstanceMods::find()
+                            .filter(entity::instance_mods::Column::InstanceId.eq(f.id))
+                            .all(&db)
+                            .await
+                            .unwrap()
+                            .into_iter()
+                            .map(|f| structs::Mod {
+                                mod_id: f.mod_id,
+                                timestamp: f.timestamp,
+                            })
+                            .collect::<Vec<structs::Mod>>(),
+                    )
+                    .map(|f| if f.len() == 0 { None } else { Some(f) })
+                    .flatten(),
+                }
+            })
+            .collect::<Vec<_>>(),
+    )
+    .await
 }
 
 #[tauri::command]
@@ -44,11 +64,7 @@ pub async fn get_instance(id: i32) -> structs::Instance {
         .await
         .unwrap();
 
-    let instance = Instances::find_by_id(id)
-        .one(&db)
-        .await
-        .unwrap()
-        .unwrap();
+    let instance = Instances::find_by_id(id).one(&db).await.unwrap().unwrap();
 
     structs::Instance {
         id: instance.id,
@@ -195,7 +211,9 @@ pub async fn detect_instances() -> Vec<structs::Instance> {
                         let db_instance = entity::instances::ActiveModel {
                             name: Set(path.file_name().unwrap().to_str().unwrap().to_string()),
                             path: Set(path.to_str().unwrap().to_string()),
-                            version: Set(utils::get_game_version(path.to_str().unwrap().to_string())),
+                            version: Set(utils::get_game_version(
+                                path.to_str().unwrap().to_string(),
+                            )),
                             is_modded: Set(false),
                             ..Default::default()
                         };
@@ -218,7 +236,7 @@ pub async fn detect_instances() -> Vec<structs::Instance> {
             let base_path = bsm_config["installation-folder"].as_str().unwrap(); // this is the base path for bs manager, not including BSManager
             let mut bs_manager = Path::new(base_path).join("BSManager");
             bs_manager.push("BSInstances");
-			dbg!(&bs_manager);
+            dbg!(&bs_manager);
 
             for entry in std::fs::read_dir(bs_manager).unwrap() {
                 let entry = entry.unwrap();
@@ -245,7 +263,9 @@ pub async fn detect_instances() -> Vec<structs::Instance> {
                         let db_instance = entity::instances::ActiveModel {
                             name: Set(path.file_name().unwrap().to_str().unwrap().to_string()),
                             path: Set(path.to_str().unwrap().to_string()),
-                            version: Set(utils::get_game_version(path.to_str().unwrap().to_string())),
+                            version: Set(utils::get_game_version(
+                                path.to_str().unwrap().to_string(),
+                            )),
                             is_modded: Set(false),
                             ..Default::default()
                         };
@@ -277,8 +297,10 @@ pub async fn add_instance(name: String) -> structs::Instance {
     let uder = UserDirs::new().unwrap();
     let path = native_dialog::FileDialog::new()
         .set_location(uder.home_dir())
-        .show_open_single_dir().unwrap()
-        .ok_or_else(|| Error::new(std::io::ErrorKind::NotFound, "Directory Not found")).unwrap();
+        .show_open_single_dir()
+        .unwrap()
+        .ok_or_else(|| Error::new(std::io::ErrorKind::NotFound, "Directory Not found"))
+        .unwrap();
     let db = DATABASE.get().await.clone();
     let instance = entity::instances::ActiveModel {
         name: Set(name.clone()),
@@ -288,7 +310,8 @@ pub async fn add_instance(name: String) -> structs::Instance {
         ..Default::default()
     }
     .insert(&db)
-    .await.unwrap();
+    .await
+    .unwrap();
 
     structs::Instance {
         id: instance.id,
@@ -307,7 +330,8 @@ pub async fn remove_instance(name: String) -> bool {
     if let Some(i) = Instances::find()
         .filter(entity::instances::Column::Name.eq(name))
         .one(&db)
-        .await.unwrap()
+        .await
+        .unwrap()
     {
         i.delete(&db).await.unwrap();
         return true;
@@ -317,6 +341,7 @@ pub async fn remove_instance(name: String) -> bool {
 
 #[tauri::command]
 pub async fn install_mod(
+    window: tauri::Window,
     instance_id: i32,
     mod_id: String,
     // mod_version: Option<String>,
@@ -383,10 +408,19 @@ pub async fn install_mod(
     // }
 
     dbg!("nop - mod install not implemented yet");
-    let instance = Instances::find_by_id(instance_id).one(&DATABASE.get().await.clone()).await.unwrap().unwrap();
+    let instance = Instances::find_by_id(instance_id)
+        .one(&DATABASE.get().await.clone())
+        .await
+        .unwrap()
+        .unwrap();
     let im = entity::instance_mods::ActiveModel {
         instance_id: Set(instance_id),
         mod_id: Set(mod_id),
         ..Default::default()
-    }.insert(&DATABASE.get().await.clone()).await.unwrap();
+    }
+    .insert(&DATABASE.get().await.clone())
+    .await
+    .unwrap();
+
+    window.emit("instance-update", InstanceUpdate::new(instance_id, structs::InstanceUpdateKind::ModInstalled(im.mod_id))).unwrap();
 }

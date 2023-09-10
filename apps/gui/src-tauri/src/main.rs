@@ -47,9 +47,15 @@ async fn main() {
             )
             .ok();
     });
-    // db needs to block on startup, as migrations are !sync
+    
+    // db needs to block on startup, as migrations are !async
     let db = DATABASE.get().await.clone();
     migration::Migrator::up(&db, None).await.unwrap();
+
+    // detect instances on startup
+    tokio::spawn(async {
+        commands::detect_instances().await;
+    });
 
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![

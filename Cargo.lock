@@ -157,6 +157,7 @@ dependencies = [
  "entity",
  "forge-lib",
  "futures",
+ "futures-util",
  "lazy_static",
  "migration",
  "minreq",

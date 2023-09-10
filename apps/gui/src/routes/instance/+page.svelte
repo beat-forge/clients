@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ModListItem from '$lib/components/ModListItem.svelte';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import {
 		Button,
 		CategoryIcon,
@@ -14,8 +14,10 @@
 	import { currentInstance } from '$lib/stores';
 	import Sugar from 'sugar';
 	import { debounce } from '$lib/utils';
+	import { listen, type UnlistenFn } from '@tauri-apps/api/event';
+	import { ModStatus, type SearchMod } from '$lib/types';
 
-	$: data = [] as any[];
+	$: data = [] as SearchMod[];
 	$: sort = Sort.MostPopular;
 	$: searchValue = '*';
 	$: currentPage = 1;
@@ -61,6 +63,10 @@
 		).json();
 
 		if (res.hits.length > 0) {
+			console.log(($currentInstance?.mods ?? []).includes(res.hits[0].id));
+			console.log(res.hits[0].id);
+			console.log($currentInstance?.mods[0].mod_id);
+			(<SearchMod[]>res.hits).map((m) => (m.status = (($currentInstance?.mods ?? []).map((cm) => cm.mod_id == m.id).reduce((a, b) => a || b, false))? ModStatus.Installed : ModStatus.NotInstalled)); //i love js :3
 			data = [...data, ...res.hits];
 		}
 		totalPages = res.totalPages;
@@ -86,7 +92,7 @@
 	}
 
 	let called = false;
-	onMount(() => {
+	onMount(async () => {
 		document.getElementById('scroll')!.onscroll = function (e: any) {
 			let element = e.target as HTMLDivElement;
 	
@@ -176,16 +182,9 @@
 				{#each data as mod, i}
 					{#key data.length}
 						<ModListItem
-							iter={i}
-							name={mod.name}
-							id={mod.id}
-							slug={mod.slug}
-							author={mod.author.username}
-							instance_id={$currentInstance?.id.toString() ?? ''}
-							description={mod.description}
-							icon={mod.icon}
-							selected={mod.selected}
-							installed={mod.installed ?? false}
+							_iter={i}
+							mod={mod}
+							instance_id={parseInt($currentInstance?.id ?? '')}
 						/>
 					{/key}
 				{/each}
