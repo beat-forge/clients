@@ -33,12 +33,12 @@ async_once = "0.2.6"
 entity = { path = "./entity" }
 migration = { path = "./migration" }
 tokio = { version = "1.33.0", features = ["macros"] }
-futures = "0.3.28"
+futures = "0.3.29"
 native-dialog = "0.6.4"
 anyhow = "1.0.75"
 minreq = { version = "2.11.0", features = ["json-using-serde", "rustls", "https-rustls"] }
 forge-lib = { git = "https://github.com/beat-forge/lib" }
-futures-util = "0.3.28"
+futures-util = "0.3.29"
 
 
 [profile.release]
