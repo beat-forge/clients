@@ -761,8 +761,24 @@ dependencies = [
  "block",
  "cocoa-foundation",
  "core-foundation",
- "core-graphics",
- "foreign-types",
+ "core-graphics 0.22.3",
+ "foreign-types 0.3.2",
+ "libc",
+ "objc",
+]
+
+[[package]]
+name = "cocoa"
+version = "0.25.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f6140449f97a6e97f9511815c5632d84c8aacf8ac271ad77c559218161a1373c"
+dependencies = [
+ "bitflags 1.3.2",
+ "block",
+ "cocoa-foundation",
+ "core-foundation",
+ "core-graphics 0.23.1",
+ "foreign-types 0.5.0",
  "libc",
  "objc",
 ]
@@ -777,7 +793,7 @@ dependencies = [
  "block",
  "core-foundation",
  "core-graphics-types",
- "foreign-types",
+ "foreign-types 0.3.2",
  "libc",
  "objc",
 ]
@@ -850,7 +866,20 @@ dependencies = [
  "bitflags 1.3.2",
  "core-foundation",
  "core-graphics-types",
- "foreign-types",
+ "foreign-types 0.3.2",
+ "libc",
+]
+
+[[package]]
+name = "core-graphics"
+version = "0.23.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "970a29baf4110c26fedbc7f82107d42c23f7e88e404c4577ed73fe99ff85a212"
+dependencies = [
+ "bitflags 1.3.2",
+ "core-foundation",
+ "core-graphics-types",
+ "foreign-types 0.5.0",
  "libc",
 ]
 
@@ -973,12 +1002,6 @@ dependencies = [
  "quote",
  "syn 1.0.109",
 ]
-
-[[package]]
-name = "cty"
-version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b365fabc795046672053e29c954733ec3b05e4be654ab130fe8f1f94d7051f35"
 
 [[package]]
 name = "darling"
@@ -1333,7 +1356,28 @@ version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1"
 dependencies = [
- "foreign-types-shared",
+ "foreign-types-shared 0.1.1",
+]
+
+[[package]]
+name = "foreign-types"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d737d9aa519fb7b749cbc3b962edcf310a8dd1f4b67c91c4f83975dbdd17d965"
+dependencies = [
+ "foreign-types-macros",
+ "foreign-types-shared 0.3.1",
+]
+
+[[package]]
+name = "foreign-types-macros"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1a5c6c585bc94aaf2c7b51dd4c2ba22680844aba4c687be581871a6f518c5742"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.28",
 ]
 
 [[package]]
@@ -1341,6 +1385,12 @@ name = "foreign-types-shared"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b"
+
+[[package]]
+name = "foreign-types-shared"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aa9a19cbb55df58761df49b23516a86d432839add4af60fc256da840f66ed35b"
 
 [[package]]
 name = "forge-lib"
@@ -2116,6 +2166,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "itertools"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b1c173a5686ce8bfa551b3563d0c2170bf24ca44da99c7ca4bfdab5418c3fe57"
+dependencies = [
+ "either",
+]
+
+[[package]]
 name = "itoa"
 version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2457,20 +2516,22 @@ dependencies = [
 
 [[package]]
 name = "native-dialog"
-version = "0.6.4"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bbf55edb2747e4e4b3a9cd3989194b88aae32274b4422635dcf98aa6e84197b"
+checksum = "84e7038885d2aeab236bd60da9e159a5967b47cde3292da3b15ff1bec27c039f"
 dependencies = [
  "ascii",
  "block",
- "cocoa",
+ "cocoa 0.25.0",
+ "core-foundation",
  "dirs-next",
  "objc",
  "objc-foundation",
  "objc_id",
  "once_cell",
- "raw-window-handle 0.4.3",
+ "raw-window-handle",
  "thiserror",
+ "versions",
  "wfd",
  "which",
  "winapi",
@@ -3230,15 +3291,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "16abd0c1b639e9eb4d7c50c0b8100b0d0f849be2349829c740fe8e6eb4816429"
 dependencies = [
  "rand_core 0.5.1",
-]
-
-[[package]]
-name = "raw-window-handle"
-version = "0.4.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b800beb9b6e7d2df1fe337c9e3d04e3af22a124460fb4c30fcc22c9117cefb41"
-dependencies = [
- "cty",
 ]
 
 [[package]]
@@ -4010,7 +4062,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c12bc9199d1db8234678b7051747c07f517cdcf019262d1847b94ec8b1aee3e"
 dependencies = [
- "itertools",
+ "itertools 0.10.5",
  "nom",
  "unicode_categories",
 ]
@@ -4364,9 +4416,9 @@ dependencies = [
  "bitflags 1.3.2",
  "cairo-rs",
  "cc",
- "cocoa",
+ "cocoa 0.24.1",
  "core-foundation",
- "core-graphics",
+ "core-graphics 0.22.3",
  "crossbeam-channel",
  "dispatch",
  "gdk",
@@ -4391,7 +4443,7 @@ dependencies = [
  "once_cell",
  "parking_lot",
  "png",
- "raw-window-handle 0.5.2",
+ "raw-window-handle",
  "scopeguard",
  "serde",
  "tao-macros",
@@ -4443,7 +4495,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9bfe673cf125ef364d6f56b15e8ce7537d9ca7e4dae1cf6fbbdeed2e024db3d9"
 dependencies = [
  "anyhow",
- "cocoa",
+ "cocoa 0.24.1",
  "dirs-next",
  "embed_plist",
  "encoding_rs",
@@ -4460,7 +4512,7 @@ dependencies = [
  "open",
  "percent-encoding",
  "rand 0.8.5",
- "raw-window-handle 0.5.2",
+ "raw-window-handle",
  "regex",
  "semver",
  "serde",
@@ -4552,7 +4604,7 @@ dependencies = [
  "http",
  "http-range",
  "rand 0.8.5",
- "raw-window-handle 0.5.2",
+ "raw-window-handle",
  "serde",
  "serde_json",
  "tauri-utils",
@@ -4569,11 +4621,11 @@ version = "0.14.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8141d72b6b65f2008911e9ef5b98a68d1e3413b7a1464e8f85eb3673bb19a895"
 dependencies = [
- "cocoa",
+ "cocoa 0.24.1",
  "gtk",
  "percent-encoding",
  "rand 0.8.5",
- "raw-window-handle 0.5.2",
+ "raw-window-handle",
  "tauri-runtime",
  "tauri-utils",
  "uuid 1.4.1",
@@ -5003,6 +5055,16 @@ name = "version_check"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
+
+[[package]]
+name = "versions"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c73a36bc44e3039f51fbee93e39f41225f6b17b380eb70cc2aab942df06b34dd"
+dependencies = [
+ "itertools 0.11.0",
+ "nom",
+]
 
 [[package]]
 name = "vswhom"
@@ -5521,8 +5583,8 @@ checksum = "88ef04bdad49eba2e01f06e53688c8413bd6a87b0bc14b72284465cf96e3578e"
 dependencies = [
  "base64 0.13.1",
  "block",
- "cocoa",
- "core-graphics",
+ "cocoa 0.24.1",
+ "core-graphics 0.22.3",
  "crossbeam-channel",
  "dunce",
  "gdk",
