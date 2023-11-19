@@ -28,11 +28,11 @@ cd clients
 ### Web Client
 
 ```bash
-# Install dependencies for the web client
-pnpm install --filter=web
+# Install dependencies for the web-legacy client
+pnpm install --filter=web-legacy
 
-# Start the web client in development mode
-pnpm run dev --filter=web
+# Start the web-legacy client in development mode
+pnpm run dev --filter=web-legacy
 ```
 
 ### GUI Client

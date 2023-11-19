@@ -10,7 +10,7 @@ RUN npm install -g pnpm
 WORKDIR /app
 COPY . .
 
-# Switch to the web directory
+# Switch to the web-legacy directory
 WORKDIR /app/apps/web/
 
 # Expose the port
