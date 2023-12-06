@@ -11,6 +11,11 @@ const config: CodegenConfig = {
       presetConfig: {
         gqlTagName: "gql",
       },
+      config: {
+        scalars: {
+          Uuid: "string",
+        },
+      },
     },
     "./schema.graphql": {
       plugins: ["schema-ast"],
