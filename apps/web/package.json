@@ -4,14 +4,19 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "pnpm compile",
     "build": "next build",
+    "predev": "pnpm watch",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "compile": "env-cmd graphql-codegen",
+    "watch": "env-cmd graphql-codegen -w"
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "env-cmd": "^10.1.0",
     "geist": "^1.2.0",
     "graphql": "^16.8.0",
     "lucide-react": "^0.294.0",
@@ -22,6 +27,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -33,5 +41,8 @@
     "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@parcel/watcher": "^2.3.0"
   }
 }
