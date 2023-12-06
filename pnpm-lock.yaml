@@ -260,6 +260,9 @@ importers:
       autoprefixer:
         specifier: ^10.0.1
         version: 10.4.15(postcss@8.4.31)
+      concurrently:
+        specifier: ^8.2.0
+        version: 8.2.0
       eslint:
         specifier: ^8
         version: 8.47.0
