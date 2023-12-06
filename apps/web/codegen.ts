@@ -12,6 +12,9 @@ const config: CodegenConfig = {
         gqlTagName: "gql",
       },
     },
+    "./schema.graphql": {
+      plugins: ["schema-ast"],
+    },
   },
   ignoreNoDocuments: true,
 }

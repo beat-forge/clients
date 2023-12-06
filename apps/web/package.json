@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",
+    "@tanstack/react-table": "^8.10.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "env-cmd": "^10.1.0",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
+    "@graphql-codegen/schema-ast": "^4.0.0",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
