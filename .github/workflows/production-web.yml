@@ -10,7 +10,7 @@ permissions:
 jobs:
   release-web:
     runs-on: ubuntu-latest
-    if: contains(github.event.release.tag_name, 'web')
+    if: contains(github.event.release.tag_name, 'web-legacy')
     steps:
       - uses: actions/checkout@v4
 
@@ -45,15 +45,15 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --filter=web
+        run: pnpm install --filter=web-legacy
 
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/web:latest
+          tags: ghcr.io/${{ github.repository_owner }}/web-legacy:latest
           context: .
-          file: ./web.Dockerfile
+          file: ./web-legacy.Dockerfile
           labels: |
             org.opencontainers.image.title=BeatForge Web
             org.opencontainers.image.description=The frontend for BeatForge

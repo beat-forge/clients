@@ -31,3 +31,4 @@ yarn-error.log*
 
 # rust
 target/
+/apps/web/src/__generated__/

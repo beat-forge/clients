@@ -5,7 +5,7 @@ export default {
   presets: [base],
   content: [
     './stories/**/*.svelte',
-    '../../apps/web/src/lib/**/*.svelte', // for using 'apps/web'
+    '../../apps/web-legacy/src/lib/**/*.svelte', // for using 'apps/web-legacy'
     '../../packages/ui/**/*.svelte', // for using 'packages/ui'
   ],
 };
