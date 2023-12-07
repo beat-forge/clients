@@ -1,25 +1,28 @@
-"use client"
-
 import { gql } from "@beatforge/web/__generated__"
-import { useQuery } from "@apollo/client"
+import ModsTable from "@beatforge/web/app/mods/ModsTable"
+import getApolloRSCClient from "@beatforge/web/apollo/getApolloRSCClient"
 
 const getModsQuery = gql(/* GraphQL */ `
   query GetMods {
     mods {
       name
-      id
+      versions {
+        version
+      }
+      author {
+        username
+        displayName
+      }
     }
   }
 `)
 
-const Mods = () => {
-  const { data, error } = useQuery(getModsQuery)
-  return (
-    <main className="">
-      <h1>Mods</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </main>
-  )
+const Mods = async () => {
+  const mods = await getApolloRSCClient().query({
+    query: getModsQuery,
+  })
+
+  return <ModsTable mods={mods.data.mods} />
 }
 
 export default Mods

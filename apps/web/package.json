@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",
+    "@apollo/experimental-nextjs-app-support": "^0.5.2",
     "@tanstack/react-table": "^8.10.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
