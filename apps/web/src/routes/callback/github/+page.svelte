@@ -1,5 +1,5 @@
 <script lang="ts">
-	import jwt_decode from 'jwt-decode';
+	import { jwtDecode } from 'jwt-decode';
 	import { user } from '$lib/stores/user';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -15,7 +15,7 @@
 			// I "fixed" this with a try/catch and reloading the page on login
 			// - fero
 			try {
-				user.set(jwt_decode(value.data.jwt));
+				user.set(jwtDecode(value.data.jwt));
 			} catch (e) {
 				console.error('An error occurred setting the JWT', e)
 			}
