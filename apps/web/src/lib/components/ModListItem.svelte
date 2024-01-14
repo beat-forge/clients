@@ -21,9 +21,9 @@
 
     let updatedAtProper: string;
     try {
-        updatedAtProper = Sugar.Date.relative(new Date(updatedAt * 1000))
+        updatedAtProper = Sugar.Date.relative(new Date(updatedAt * 1000)).toString();
     } catch (e) {
-        updatedAtProper = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000)))
+        updatedAtProper = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000))).toString();
     }
 </script>
 

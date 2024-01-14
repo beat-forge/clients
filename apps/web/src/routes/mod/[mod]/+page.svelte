@@ -18,6 +18,7 @@
 			copiedState.set(false)
 		}, 2500)
 	}
+
 </script>
 
 <div class="h-full w-full">

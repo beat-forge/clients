@@ -14,6 +14,8 @@
 	export let approved: boolean;
 	export let downloadUrl: string;
 
+	console.log(downloadUrl)
+
     let isHovered: boolean = false
 </script>
 

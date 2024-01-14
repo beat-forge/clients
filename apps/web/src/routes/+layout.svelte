@@ -10,6 +10,22 @@
 
 	import type { LayoutServerData } from './$types';
 	export let data: LayoutServerData;
+
+	import { Client, cacheExchange, fetchExchange, setContextClient } from '@urql/svelte';
+
+	const client = new Client({
+		url: `${import.meta.env.API_URL}/graphql`,
+		exchanges: [cacheExchange, fetchExchange],
+		fetchOptions: () => {
+			return {
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+				}
+			};
+		}
+	});
+
+	setContextClient(client);
 </script>
 
 <!-- <NavBarDisclaimer /> -->
