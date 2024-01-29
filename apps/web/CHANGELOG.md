@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.0](https://github.com/beat-forge/clients/compare/web-v1.0.1...web-v1.1.0) (2024-01-29)
+
+
+### Features
+
+* instances. ([7531143](https://github.com/beat-forge/clients/commit/7531143616cf5b347e169844d3eee915723e9913))
+* **web:** more landingv2 stuff ([f5a9ed1](https://github.com/beat-forge/clients/commit/f5a9ed1d6719eb96ef24a78af05902e5345ceabc))
+
+
+### Bug Fixes
+
+* :construction: instances page refactor ([0c8648d](https://github.com/beat-forge/clients/commit/0c8648d3be343e575de4dd36095e08ca6831a356))
+* add {} ([527130b](https://github.com/beat-forge/clients/commit/527130bb6fd5432ecc0399c73aed445664c373c3))
+* **deps:** update dependency jwt-decode to v4 ([c2188a3](https://github.com/beat-forge/clients/commit/c2188a3516edef99fee2038ed6722dc756655646))
+* up to d ate with new api changes ([e409266](https://github.com/beat-forge/clients/commit/e409266342d8129eb71df7c8b974942bb196dfd6))
+* **web:** dates in the `/profiles` endpoint ([c8e2377](https://github.com/beat-forge/clients/commit/c8e23773a38481067f8d293a9334241c3aa09ea5))
+* **web:** failing build due to 404s ([bfa3d49](https://github.com/beat-forge/clients/commit/bfa3d4928937d08ed542b7d86cee52b5bf4ea82d))
+* **web:** mask-image inconsistency between chrome/ff ([c97f439](https://github.com/beat-forge/clients/commit/c97f439f3deffd276cc25d01b000a0c45c6a559a))
+* **web:** overflow issues ([6ab6504](https://github.com/beat-forge/clients/commit/6ab6504bc7141a36c9951f05cc64a7b915d01a29))
+* **web:** overflow issues on new landingv2 sections ([760433e](https://github.com/beat-forge/clients/commit/760433e6c53979dde705d3324cbe572c6e93a0f2))
+
 ## [1.0.1](https://github.com/beat-forge/clients/compare/web-v1.0.0...web-v1.0.1) (2023-08-15)
 
 ### Bug Fixes
