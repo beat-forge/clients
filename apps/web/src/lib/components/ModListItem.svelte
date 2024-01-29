@@ -29,6 +29,7 @@
     } catch (e) {
         updatedAtProper = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000))).toString();
     }
+    
 </script>
 
 <a href={`/mod/${slug}`}>
