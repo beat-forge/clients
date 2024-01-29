@@ -311,9 +311,10 @@
 					description={mod.description}
 					category={mod.category}
 					downloads={mod.stats.downloads}
-					updatedAt={mod.updatedAt}
+					updatedAt={mod.updatedAt * 1000} 
 					icon={mod.icon}
 				/>
+				<!-- Date is * 1000 due to meilisearch using a diffrent date format - niko -->
 			{/each}
 		{:else}
 			<p class="text-center text-primary-300">No mods found</p>

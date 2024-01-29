@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 
-export const load = (async ({ params, fetch }) => {
+export const load = (async ({ params }) => {
 	const id = params.id;
 	try {
 		const response = await fetch(`${import.meta.env.API_URL}/graphql`, {
@@ -10,7 +10,7 @@ export const load = (async ({ params, fetch }) => {
 			},
 			body: JSON.stringify({
 				query: `
-                    query($user: Uuid!, $auth: String) {
+                    query($user: UUID!, $auth: String) {
                         userById(id: $user, auth: $auth) {
                             username
                             displayName
@@ -60,7 +60,9 @@ export const load = (async ({ params, fetch }) => {
 				data: data.data.userById
 			}
 		};
-	} catch (error) {
+	} catch (error: any) {
+        console.log(error);
+
 		return {
 			status: 500,
 			body: {
@@ -68,4 +70,7 @@ export const load = (async ({ params, fetch }) => {
 			}
 		};
 	}
+    // return {
+    //     id: id
+    // }
 }) satisfies PageLoad;

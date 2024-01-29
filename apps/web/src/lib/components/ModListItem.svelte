@@ -19,9 +19,13 @@
 	export let updatedAt: number
 	export let icon: string;
 
+    $: {
+        console.log(updatedAt)
+    }
+
     let updatedAtProper: string;
     try {
-        updatedAtProper = Sugar.Date.relative(new Date(updatedAt * 1000)).toString();
+        updatedAtProper = Sugar.Date.relative(new Date(updatedAt)).toString();
     } catch (e) {
         updatedAtProper = Sugar.Date.relative(new Date(Date.parse(updatedAt * 1000))).toString();
     }
