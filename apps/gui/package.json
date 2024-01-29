@@ -19,6 +19,7 @@
 		"@sveltejs/kit": "^1.22.6",
 		"@tauri-apps/api": "^1.4.0",
 		"@tauri-apps/cli": "^1.4.0",
+		"@types/semver": "^7.5.6",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
 		"@typescript-eslint/parser": "^6.4.0",
 		"autoprefixer": "^10.4.15",
@@ -43,6 +44,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@urql/svelte": "^4.0.4",
+		"semver": "^7.5.4",
 		"sugar": "^2.0.6",
 		"svelte-infinite-scroll": "^2.0.1",
 		"ui": "workspace:^"
